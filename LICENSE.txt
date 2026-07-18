@@ -1,0 +1,70 @@
+DaDaBIK license
+
+This program, DaDaBIK, is copyrighted by its author, Eugenio Tacchini and the term dadabik is a deposited trademark.
+
+This instance is copyrighted by Milnes Consultancy Ltd (SC592645) and is for their use, or those of authorised users, in providing services to players of the Gameplan PBM series of games only.
+
+Article 1
+
+This program is distributed "as is" and WITHOUT ANY WARRANTY, either expressed or implied, without even the implied warranties of merchantability or fitness for a particular purpose.
+
+In no event shall the author of this program, the company "Tacchini Eugenio" or any collaborator be liable for any damages whatsoever, including, without limitation, incidental and consequential damages, lost profits, lost savings, lost data or other incidental or consequential damages, whether or not the author of this program, the company "Tacchini Eugenio" or any collaborator is advised of the possibility of such damages.
+
+This program is distributed under the terms of this license, the DaDaBIK license.
+
+Article 2
+
+This license is only valid if you purchased DaDaBIK starting from https://dadabik.com/download and you followed the purchase workflow proposed by the DaDaBIK website, finally completing the purchase through the reseller Fastspring.com. If you get DaDaBIK with any other means, you don't have the right to use the program and you don't have any right on the program including (but not limited to) the right to copy, license, redistribute (even for free) or resell the program.
+
+You, the licensee, assume responsibility for the selection of the program DaDaBIK to achieve your intended results, and for the installation, use, and results obtained from the program. Installing the program constitutes your acceptance of the terms and conditions contained in this document. If you do not accept these terms and conditions, then do not install the software.
+
+This license gives to you, who bought and downloaded the program from the website dadabik.com, a non-exclusive and non-transferrable right to use the program. You DO NOT have the right, instead, to license, redistribute (even for free) or resell the program. Some of the source files distributed with DaDaBIK are encrypted with IonCube, you are not allowed to extract the source code or decrypt them and you have the right to modify only the files distributed unencrypted.
+
+This license allows you to generate maximum 5, 10 or 50 active DaDaBIK applications (depending on the DaDaBIK edition you purchased, respectively Pro, Enteprise or Platinum). You can, however, generate as many test applications as you want. A test application is an application generated for your testing purposes, not used in a production environment and that you will completely delete (code and database) after 15 days of its generation.
+
+Each DaDaBIK application has its own specific URL: e.g. if you are installing the same DaDaBIK application on www.myfirstcustomer.com and on www.mysecondcustomer.com/backend (for example because you are using the same application for two customers), this counts as two different applications.
+
+This license doesn't allow you to create a "DaDaBIK in the cloud" service, i.e. a cloud service which allows users to create DaDaBIK applications.
+
+For example (the terms of the license, however, are not limited to the cases explained in this examples) you can use DaDaBIK to create a database application for you or for other people (including your paying customers), even modifying the source code (only for the files we provided the unencrypted source code), for a private intranet or for a public website, even installing the final application on your customer's server but you cannot redistribute the program files in any format via Websites, FTP severs, peer-to-peer networks or via any other means.
+
+You can purchase a Lifetime license or a Monthly subscription license. If you purchase a monthly subscription license you have the right to use DaDaBIK (and the applications you develop with it) only if your subscription is active; if you stop paying your monthly fee, DaDaBIK will stop working and your license will be revoked. Your Web server must be connected to the Internet for serial number and subscription validation. All payments are non-refundable.
+
+The 14-day free trial may be used only once per user or organization. Any attempt to obtain or use multiple free trials, including by using different email addresses or accounts, will be considered a fraudulent activity. In case of detected fraud or abuse, we reserve the right to suspend or terminate the user's subscription and restrict future access to lifetime licenses only.
+
+Article 3
+
+Some items/libraries used in this program (htmLawed, TinyMCE, Chart.js, Jquery, palette.js. bootstrap, select2, TCPDF, Sortable, flatpickr, Foundation, Normalize.css, Split.js, Font Awesome, Boxicons, Spout, jquery.dirty, manrope font, TwoFactorAuth, tagify, codemirror, Bacon/BaconQrCode, picqer/php-barcode-generator, , eluceo/ical) are distributed under different licenses (LGPL, MIT, Apache 2.0, CC BY, SIL Open Font License, your use of those items/libraries is therefore subject to the terms of the respective licenses (https://www.gnu.org/licenses/lgpl-3.0.en.html https://opensource.org/licenses/MIT https://www.apache.org/licenses/LICENSE-2.0.html https://creativecommons.org/licenses/by/2.0/ https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL); tagify is distributed under a custom license (you can find a copy of the license in the tagify folder of the DaDaBIK packge).
+
+Some optional features of DaDaBIK interact with external services via APIs.
+Currently, the only such feature is DaDaBrain AI, which uses the OpenAI API: no third-party service software or libraries are distributed as part of the DaDaBIK package; the use of these services is subject to the respective providers’ terms, conditions, and privacy policies.
+
+If you are unsure about what you are allowed to do under the terms of this license, feel free to contact the author writing to info@dadabik.org (we understand English, Italian, Spanish and French).
+
+Article 4.1
+
+Technical support is not included. If you buy DaDaBIK Enterprise or Platinum, however, you have 5 (20 for Platinum) email support tickets to use within one year (three years for Platinum) from the purchase date. DaDaBIK Platinum also provides phone support (via Skype/Teams) (max 3h or 10 call sessions to use during the first three years); the calls need to be requested via email and are normally booked within one business day. If you purchased DaDaBIK PRO, DaDaBIK Free or you don't have remaining support tickets, you can only use the public support forum. While all e-mail support tickets are normally answered within 1 business day, for forum posts there is no guarantee of response.
+
+The support provided is technical support related to DaDaBIK, we will assume you are using DaDaBIK on a server that respects the requirements mentioned in the documentation (for example, we assume you have PHP installed, we can't help you with the installation of PHP); if you need support for custom code you wrote or you need to write, we can only provide some general guidelines or little code snippet: providing more code or checking great amount of customer's custom code is beyond the scope of the support.
+
+Article 4.2
+
+If you still have remaining email support tickets and you don't get an answer to your email support ticket within one business day or if you still have remaining phone support minutes/calls and your call is not booked within one business day, you have the right to cancel the whole email/phone support service by sending an email having "Support refund" as subject and get a refund of €50 (€100 for Platinum): this is the only compensation we will provide in case of lack of support and after the refund we will no longer provide any support. Bug submissions are welcome and we investigate any bug submission received but we can't guarantee to work on and solve every bug or issue submitted.
+
+We reserve the right to revoke, at any time and at our sole discretion, your support service, refunding you with €50 (€100 for Platinum); this is the only compensation we will provide in case of support cancellation.
+
+Article 5
+
+The Court of Piacenza (Italy) shall be the exclusive Court competent for the resolution of any disputes arising in connection with this license.
+
+Article 6
+
+We reserve the right to revoke your license at any time if you violate the terms and conditions contained in this document and to ban you from the forum if we consider that your behaviour is inappropriate.
+We also reserve the right to revoke your DaDaBIK license at any time if we consider, at our sole discretion: the use you (or your collaborators) did of the license inappropriate or your behaviour (or your collaborators' behaviour), with respect to the use of the software, inappropriate; in this case we will give you a one week notice before revoking the license and refund you with an amount of money equal to the cost of the DaDaBIK license at the moment you purchased it. This amount of money wil be the only compensation we will provide in case of license cancellation.
+
+
+Article 7
+
+The information in this document is subject to change without notice and should not be construed as a commitment by the author of this software, the company "Tacchini Eugenio" or by any collaborator.
+
+When you install DaDaBIK or you upgrade a DaDaBIK installation, you must accept the current version of the license (https://dadabik.com/index.php?function=show_license), which, in case there have been changes, replaces the previous version.
