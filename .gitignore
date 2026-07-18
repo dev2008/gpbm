@@ -7,3 +7,5 @@ loader-wizard.php
 *.wmv
 sql/*
 *.sql
+*.log
+
