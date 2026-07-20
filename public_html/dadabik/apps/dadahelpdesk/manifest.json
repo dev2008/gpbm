@@ -1,0 +1,8 @@
+{
+"id": "dadahelpdesk",
+"name": "Dada HelpDesk",
+"description": "Dada HelpDesk is a simple HelpDesk application. It can be used within a company to manage, for example, the IT help requests.",
+"config_requirements": "$enable_advanced_sql_report = 1, $enable_custom_php_pages = 1",
+"version": "1.0",
+"author": "Eugenio Tacchini"
+}

@@ -1,0 +1,80 @@
+<?php
+/* ===== gplan_pbm specific ===== */
+$host = 'localhost';
+$db_name = 'gplan_pbm';
+$user = 'gplan_pbm';
+$pass = 'G#a1m9ep8la@0n';
+$secret_key = 'thedodoisveryextinctitwentextinctin1697thatwasaverysurprisingthing@£$%^&*()';
+
+/* ===== Session / internal tables (app-specific, must be unique) ===== */
+$dadabik_session_name = 'gpbmsessionA1';
+$prefix_internal_table = 'zpbm_';
+
+/* ===== Install ===== */
+$default_install_enable_tables_on_creation = 'no';
+
+/* ===== App configuration ===== */
+$enable_sql_logging = 0;
+$enable_access_logging = 0;
+$debug_mode = 1;
+$enable_uploads = 1;
+$serial_number = '0DR6URUU';
+$maintenance_mode = 0;
+$maintenance_message = '<h1>Maintenance</h1>';
+$dbms_type = 'mysql';
+$timezone = 'Europe/London';
+$languages_ar = array ('english');
+$enable_custom_php_pages = 1;
+$enable_custom_button_functions = 1;
+$files_url = 'http://files.gpbm.local/';
+$images_url = 'http://images.gpbm.local/';
+
+//Dadabik v13.5
+$ui_style = 'modern';
+$always_hide_show_revisions_button = 1;
+$enable_user_entities = 1;
+$grant_permissions_after_table_installation = 2;
+
+//Dadabrain disabled
+$enable_dadabrain = 0;
+$show_dadabrain_form = 0;
+
+// error handling parameters
+$error_enable_reporting = 1;
+$error_include_sql_query = 1;
+$error_show_generic_message = 1;
+$error_generic_message = 'Sorry, something went wrong, please contact Alan.';
+$error_reporting_config = E_ALL;
+$error_log_to_db = 1;
+
+//General Settings
+$enable_data_tab_operations = 0;
+$enable_create_view = 0;
+$enable_report_generation = 0;
+$enable_pivot_generation = 0;
+$export_to_pdf_feature = 0;
+$export_to_csv_feature = 0;
+$csv_separator = ";";
+$date_format = 'literal_english';
+$date_format_edit = 'd-m-Y';
+$date_time_format_edit = 'd-m-Y H:i:S';
+$seconds_after_automatic_unlock = 28800;
+$enable_delete_all_feature = 0;
+$number_failed_login_before_blocking = 5;
+$enable_forgotten_password = 1;
+$enable_email_confirmation = 1;
+$enable_users_self_registration = 1;
+
+//Permissions management
+$enable_multiple_groups_permissions = 0;
+$grant_permissions_autoincrement_after_table_installation = 0;
+
+// group 1 - admin
+$permissions_template['table_default'][1] = '111111'; // all the table permissions set to "1", means YES
+$permissions_template['field_default'][1] = '1111111'; // all the field permissions set to "1", means YES
+// group 2 - normal
+$permissions_template['table_default'][2] = '101111'; // all the table permissions set to "1" except from the second (delete)
+$permissions_template['field_default'][2] = '1111011'; // all the field permissions set to "1" apart from quick search
+// group 3 - public
+$permissions_template['table_default'][3] = '000000';  // all the table permissions set to "0"
+$permissions_template['field_default'][3] = '0000000'; // all the field permissions set to "0"

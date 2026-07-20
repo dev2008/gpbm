@@ -1,0 +1,1610 @@
+/*******************************************************/
+/************************************************ GENERAL STYLES */
+
+
+body {
+	
+	background-color: #ffffff;
+	font-family: "Helvetica Neue", sans-serif;
+    color: #000; /* hack, was 333 */
+    font-size: 16px;
+    /* font-weight: 350; */
+    line-height: 1.45;
+}
+
+body {margin: 0 0 0 0; padding: 0 0 0 0; height:100%;  border:none}
+
+.main_table {
+    border-collapse: collapse;
+}
+
+strong { font-weight: bold; }
+
+
+a {
+	
+	color: #66603c;
+}
+
+a:not(.bottom_menu):not(.btn):not([class*="btn-"]) {
+  color: #000; /* or whatever color you want for regular links */
+}
+/*
+
+
+p {
+	
+	font-size: 14px;
+}
+
+th {
+	
+	font-size: 14px;
+}
+td {
+	
+	font-size: 14px;
+}
+input{
+	
+	font-size: 14px;
+}
+select{
+	
+	font-size: 14px;
+}
+option{
+	
+	font-size: 14px;
+}
+*/
+textarea{
+	
+	/* font-size: 14px; */
+	border-style: outset;
+}
+
+hr{
+	height: 1px;
+	border-style: none;
+	color: black; /* need this for IE */
+	background-color: black;
+}
+.icon{
+	font-size: 24px ;
+}
+
+
+/*******************************************************/
+/************************************************ SHOW ITEMS PAGE */
+
+/* "n records found" message */
+.n_results_found {
+	color:black;
+	font-weight: bold;
+}
+
+/* "page n of m" sentence */
+.page_n_of_m {
+	color:black;
+}
+
+/* links of the navigation bar ( << < 1 2 3......) */
+a.navig {
+	color:white;
+	padding:5px;
+	text-decoration:none;
+	background-color:#a9b299;
+}
+a.navig:hover {
+	color:black;
+	padding:5px;
+	text-decoration:none;
+	background-color:#ffffff;
+}
+
+
+.generic_button{
+	color:white;
+	padding:5px;
+	text-decoration:none;
+	background-color:#a9b299;
+}
+.generic_button:hover {
+	color:black;
+	padding:5px;
+	text-decoration:none;
+	background-color:#ffffff;
+}
+
+/* previous next links */
+a.previous_next {
+	color:#66603c;
+	font-size:16px;
+	background-color:#fdfdfd;
+	padding: 5px;
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+a.previous_next:hover {
+	color:#fdfdfd;
+	font-size:16px;
+	background-color:#66603c;
+	padding: 5px;
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+
+.previous_next_container{
+	display:inline;
+	margin-top: 10px;
+}
+
+
+/* create new item button  */
+a.create_new_item {
+	color:#66603c;
+	font-size:16px;
+	background-color:#fdfdfd;
+	padding: 5px;
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+a.create_new_item:hover {
+	color:#fdfdfd;
+	font-size:16px;
+	background-color:#66603c;
+	padding: 5px;
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+
+a.top_link_admin {
+	color: black;
+	text-decoration: none;
+  	transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a.top_link_admin:hover {
+  color: #4a89cc;
+  text-decoration: underline;
+}
+
+a.top_link_admin_selected {
+  color: #4a89cc;
+  text-decoration: underline;
+}
+
+/* current page in the navigation bar ( << < 1 2 3......) */
+.navig {
+	color:black;
+}
+
+/* order by links */
+/* normal */
+a.order_link {
+	color:#000000;
+	font-size: 14px;
+	font-weight:normal;
+	text-decoration: none;
+}
+/* currently selected */
+a.order_link_selected {
+	color:#000000;
+	font-size: 14px;
+	font-weight:bold;
+	text-decoration: none;
+}
+
+/* the small arrow near the column head which represents currently the order by field */
+.arrow {
+	font-size: 14px;
+}
+
+/* results table */
+table.results {
+}
+
+/* result rows */
+.tr_results_header {
+}
+
+/* results_1 and results_2 differ only for the background-color, this create the alternate row colors effect */
+.tr_results_1 {
+	font-size: 8pt;
+	vertical-align: top;
+	/* white-space: nowrap; */
+	background-color: #ffffff;
+}
+.tr_results_2 {
+	font-size: 8pt;
+	vertical-align: top;
+/* white-space: nowrap; */
+	background-color: #EFEFEF;
+}
+
+.tr_highlighted_onmouseover{ /* a results table row when the mouse pointer is over it */
+	font-size: 8pt;
+	color: #ffffff;
+	vertical-align: top;
+/* white-space: nowrap; */
+	background-color: #a8b19b;
+}
+.tr_highlighted_onclick{ /* a results table row when the click on it */
+	font-size: 8pt;
+	color: #ffffff;
+	vertical-align: top;
+/* white-space: nowrap; */
+	background-color: #a8b19b;
+}
+
+/* coloumn headings */
+th.results {
+	white-space: nowrap;
+	padding:10px;
+	text-align: left;
+	background: #d5c287; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fefcea 0%, #d5c287 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#d5c287)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fefcea 0%,#d5c287 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fefcea 0%,#d5c287 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fefcea 0%,#d5c287 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fefcea 0%,#d5c287 100%); /* W3C */
+}
+
+th.results_ie9{ /* just for IE 8 9 */
+/* white-space: nowrap; */
+	padding:10px;
+	text-align: left;
+	background: #d5c287; /* Old browsers */
+}
+
+/* control (edit, delete, details) cells */
+/* results_1 and results_2 differ only for the background-color, this create the alternate row colors effect */
+td.controls_1 {
+	font-size: 8pt;
+	background-color: #ffffff;
+}
+td.controls_2 {
+	font-size: 8pt;
+	background-color: #ffffff;
+}
+
+a.export_to_csv{
+	color: #66603c;
+	text-decoration:none;
+}
+
+/* "Total items: n" sentence */
+.total_records {
+}
+
+
+/*******************************************************/
+/************************************************ DETAIL PAGE */
+/* label */
+.detail_page_label{
+	text-align: right;
+	font-weight: bold;
+}
+
+/*******************************************************/
+
+
+/*******************************************************/
+/************************************************ LEFT MENU */
+
+/* for the styles related to the left menu, please see /include/eosmenu/eosMenu.css */
+
+/*******************************************************/
+
+
+
+/*******************************************************/
+/************************************************ GENEARL FORM STYLE */
+/* derived work from: http://codecanyon.net/item/css3-form-elements-pack/2831697 */
+
+
+/*
+@media (max-width: 600px) {
+	
+	
+}
+
+.form_element{
+	 float:left;
+	 margin-right:20px;
+}
+
+*/
+
+/* tooltip */
+.tooltip2 {
+	outline:none;
+}
+.tooltip2 strong {
+	line-height:30px;
+}
+.tooltip2 .tooltip2_content {
+	z-index: 10;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	left:-9999em;
+	padding: 9px 12px 15px 12px;
+	margin-top: -30px;
+	margin-left: 15px;
+	width: 220px;
+	line-height: 16px;
+	position: absolute;
+	color: #FFF;
+	text-shadow:1px 1px 0px #000000;
+	border: 1px solid #000;
+	background: #121212;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-moz-transition: opacity 0.3s;
+	-o-transition: opacity 0.3s;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	white-space:normal; 
+}
+.tooltip2:hover .tooltip2_content {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	left:auto;
+}
+/*
+Uncomment the following markup to make the tooltips
+disappear when the field is clicked
+*/
+
+
+.tooltip2 input:focus ~ .tooltip2_content {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+/*
+FEEDBACK MESSAGES
+*/
+.msg_error, 
+.msg_ok, 
+.msg_alert {
+	font-size:16px; 
+
+  line-height: 1.6;
+  width: 93%;
+  margin: 12px auto;
+  padding: 16px 20px 16px 36px;
+	text-shadow: 0 1px 0px rgba(255, 255, 255, 0.4);
+	line-height:22px;
+  	width: 800px;
+	clear:both;
+	margin:8px auto 8px 0px; 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 0px 4px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 0 0px 4px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.5);
+	box-shadow: 0 0px 4px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.5);
+}
+.msg_error p, 
+.msg_ok p, 
+.msg_alert p {
+	padding:0 0 0 30px;
+	margin:0;
+}
+.msg_error p {
+	background:url("../images/msg/del.png") no-repeat 0 0; 
+}
+
+.msg_ok {
+  background-color: #d1fae5;
+  color: #14532d;
+  border: 1px solid #bbf7d0;
+  padding: 16px 20px 0px;
+  margin: 12px 0;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.05);
+}
+
+.msg_error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  padding: 16px 20px 0px;
+  margin: 12px 0;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.05);
+}
+
+
+
+.msg_ok p {
+	background:url("../images/msg/ok.png") no-repeat 0 0; 
+}
+
+
+.msg_alert {
+  background-color: #fef9c3;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  padding: 16px 20px 0px;
+  margin: 12px 0;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.05);
+}
+
+
+.msg_alert p {
+	background:url("../images/msg/alert.png") no-repeat 0 0; 
+}
+
+#confirmation_message_2_close_link,
+#confirmation_message_close_link,
+#error_message_close_link,
+#alert_message_close_link,
+#alert_message_2_close_link {
+  display: none !important;
+}
+
+
+/*******************************************************/
+
+/*******************************************************/
+/************************************************ FORM LAYOUT AND ADDITIONAL ELEMENT STYLES */
+
+
+/* rows containing insert, save and search buttons */
+.tr_button_form {
+	text-align: left;
+}
+
+/* rows containing the all/any in the search form */
+.tr_operator_form{
+	text-align: center;
+}
+
+/* the cell that contains the label in the form */
+.td_label_form{
+	text-align: right;
+	vertical-align: top;
+	padding-bottom: 40px;
+/* white-space: nowrap; */
+}
+
+/* the cell that contains the input (textbox, textarea, etc) in the form */
+.td_input_form{
+	vertical-align: bottom;
+/* white-space: nowrap; */
+}
+
+/* the cell that contains the hint in the form */
+.td_hint_form{
+	vertical-align: top;
+}
+
+/* NULL word */
+.null_word{
+	font-style: italic;
+}
+
+/* insert, save and search buttons */
+/*
+.button_form{
+	color:#66603c;
+	font-size:16px;
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+
+.button_form:hover{
+	background-color:#66603c;
+	color: #fdfdfd;
+	background-image: none;
+}
+*/
+/* buttons (insert, save, search and go back) container */
+.save_buttons_container{
+	margin-top: 10px;
+}
+
+.button_form_quick_search{
+	font-size:14px;
+}
+
+.button_form_quick_search:hover{
+	background-color:#66603c;
+	color: #fdfdfd;
+	background-image: none;
+}
+
+
+
+
+/*
+.change_table{
+	margin-top: 0px;
+	margin-left: 0px;
+}
+*/
+
+/* form fields can be grouped together using separators, this is the style of such separator */
+
+
+.form_fields_set{
+	display:table;
+	border-spacing: 10px;
+	border-collapse: separate;
+}
+
+.form_row{
+	display:table-row;
+	border: 0px solid #000;
+}
+
+.form_hint{
+}
+
+
+label,.null_checkbox_cell,.form_input_element,.form_hint,.search_operator{
+	display:table-cell;
+	 border: 0px solid #000;
+	vertical-align: top;
+}
+
+label{
+	margin-top: 15px;
+}
+	
+
+@media (max-width: 800px) {
+	label,.null_checkbox_cell,.form_input_element,.form_row,.form_hint,.previous_next_container,.form_fields_set{
+		display:block;
+		max-width: 250px;
+	}	
+	input{
+		max-width: 250px;
+	}
+	.save_go_back{
+		display:none;
+	}
+	.detail_page_label{
+		text-align: left;
+	}
+}
+
+
+/*******************************************************/
+/************************************************ LOGIN FORM */
+
+
+/* todo */
+.input_login_form{
+	border-width:1px;
+	border-color: #cccccc;
+	border-style: solid;
+	padding: 5px;
+	font-size:20pt;
+}
+
+/* todo */
+.login_button{
+	color:#66603c;
+	font-size:16px;
+	background-color:white;
+	padding: 5px;
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+/*******************************************************/
+
+
+
+/*******************************************************/
+/************************************************ TABLE-BASED LAYOUT */
+
+/* the main big table that contain the whole page */
+.main_table{
+	width:100%;
+	height:100%;
+	background-color: #ffffff;
+	border:0px solid black;
+	vertical-align: bottom;
+}
+
+/* the only cell of main_table */
+.main_table_td{
+	vertical-align: middle;
+	text-align: center;
+	height:100%;
+	padding: 0px;
+}
+
+/* the table containing all the interface (subtable of main_table) */
+.table_interface_container{
+	background-color:#fff;
+	width:100%;
+	/* height:100%; */
+	padding:0px;
+	border:0px solid black;
+	border-spacing: 0px;
+  	border-collapse: collapse;	
+}
+
+/* the table containing all the interface, if you are in the login page */
+.table_interface_container_login{
+	background-color:#eeeeee;
+	padding:0px;
+	border:0px solid black;
+	border-spacing: 0px;
+  	border-collapse: collapse;
+}
+
+/* the logo row of the container table */
+.table_interface_container_tr_logo{
+	background-color: #ffffff;
+	width:100%;
+	height:10px;
+	padding:0px;
+}
+
+/* the logo row of the container table, in the admin section */
+.table_interface_container_tr_logo_admin{
+	background-color: #ffffff;
+	width:100%;
+	height:10px;
+	padding:0px;
+}
+
+/* the top menu (home, insert, search,...) row of the container table, see table_interface_container_table_top_menu for additional settings */
+.table_interface_container_tr_top_menu{	
+}
+
+/* the top menu (home, insert, search,...) subtable of the container table */
+
+.table_interface_container_table_top_menu{
+	background-color: #3d8c8d;
+	width:100%;
+	padding:4;
+	white-space: nowrap;
+	background: #a9b299; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fefcea 0%, #a9b299 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#a9b299)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fefcea 0%,#a9b299 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fefcea 0%,#a9b299 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fefcea 0%,#a9b299 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fefcea 0%,#a9b299 100%); /* W3C */
+}
+
+
+.table_interface_container_table_top_menu_ie9{ /* just for IE 8 9 */
+	width:100%;
+	padding:4;
+	background: #a9b299; /* Old browsers */	
+}
+
+/* the content (main part of the page) only cell of the container table, see table_interface_container_table_content for additional settings */
+.table_interface_container_td_content{
+	vertical-align: top;
+	padding: 0;
+	height: 100%;
+}
+
+
+
+/* the content (main part of the page) subtable of the container table */
+.table_interface_container_table_content{
+	vertical-align: top;
+	border: 0px solid black;
+	border-spacing: 0;
+  	border-collapse: collapse;
+}
+
+/* the content (main part of the page) subtable of the container table, when you are in the login page */
+.table_login_form{
+	text-align: center;
+	border-width:0px;
+	border-color: #000000;
+	border-style: solid;
+	background-color:#eeeeee;
+	font-size:20pt;
+	padding: 5px;
+}
+
+
+/* left menu */
+/* left menu cell */
+.td_left_menu{
+	vertical-align: top;
+	text-align: left;
+	padding: 0px; /* this is for mobile, changes to 20px when desktop (media query)
+	/*background-color: #D5D9BD;*/
+	background-color: #2F4050;
+	white-space: nowrap;
+}
+/* left menu links */
+a.left_menu{
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+}
+a.left_menu_active{
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+	background-color:#ffffff;
+}
+a.left_menu:hover{
+background-color:#ffffff;
+}
+
+/* content cell, this cell contains all the content you have at the right of the left menu: forms, results grid, ... */
+.td_content{
+	vertical-align: top;
+	text-align: left;
+	padding: 20px;
+	/* padding-top:0px; createx */
+}
+
+/* the menu (home, insert, search,...) row of the container table, see table_interface_container_table_top_menu_admin for additional settings */
+.table_interface_container_tr_top_menu_admin_area{
+}
+/* the menu (home, insert, search,...) subtable of the container table */
+.table_interface_container_table_top_menu_admin_area{
+	/*background: #ffa64d;
+	background-color: #0b0f19;*/
+	color: rgba(255, 255, 255, 0.85);
+	width:100%;
+    height: 50px;
+	padding:4;
+	white-space: nowrap;
+	/* background: -moz-linear-gradient(top,  #fefcea 0%, #ff7700 100%); */ /* FF3.6+ */
+	/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#ff7700));*/ /* Chrome,Safari4+ */
+	/* background: -webkit-linear-gradient(top,  #fefcea 0%,#ff7700 100%);*/ /* Chrome10+,Safari5.1+ */
+	/* background: -o-linear-gradient(top,  #fefcea 0%,#ff7700 100%);*/ /* Opera 11.10+ */
+	/* background: -ms-linear-gradient(top,  #fefcea 0%,#ff7700 100%);*/ /* IE10+ */
+	/* background: linear-gradient(to bottom,  #fefcea 0%,#ff7700 100%);*/ /* W3C */
+}
+.table_interface_container_table_top_submenu_admin_area{
+	background-color: #ffbb4d;
+	background: #ffbb4d; /* Old browsers */
+	background-color: #ffa64d;
+	background-color: #5268be;
+	background-color: #848792;
+	width:100%;
+    height: 50px;
+	padding:4;
+	white-space: nowrap;
+	/* background: -moz-linear-gradient(top,  #fefcea 0%, #ff7700 100%); */ /* FF3.6+ */
+	/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#ff7700));*/ /* Chrome,Safari4+ */
+	/* background: -webkit-linear-gradient(top,  #fefcea 0%,#ff7700 100%);*/ /* Chrome10+,Safari5.1+ */
+	/* background: -o-linear-gradient(top,  #fefcea 0%,#ff7700 100%);*/ /* Opera 11.10+ */
+	/* background: -ms-linear-gradient(top,  #fefcea 0%,#ff7700 100%);*/ /* IE10+ */
+	/* background: linear-gradient(to bottom,  #fefcea 0%,#ff7700 100%);*/ /* W3C */
+}
+
+.table_interface_container_table_top_menu_admin_area_ie9{
+	width:100%;
+	padding:4;
+	background: #ff7700; /* Old browsers */
+}
+
+/* links of the TOP menu (insert, search,...) */
+/* they used to be at the bottom, they still have the old name */
+a.bottom_menu{
+	color: black;
+	color: rgba(255, 255, 255, 0.85);
+	font-size: 18px;
+	text-decoration: none;
+}
+/* a.bottom_menu_active{
+	color: black;
+	color: #0b0f19;
+	font-size: 18px;
+	text-decoration: none;
+	background-color:#ffffff;
+} */
+
+a.bottom_menu_active{
+	color: #f1e89b !important;
+	font-size: 18px !important;
+	text-decoration: none;
+	font-weight: 500;
+}
+/*
+a.bottom_menu:hover{
+	background-color:#fff;
+	color: #0b0f19;
+}
+	*/
+a.bottom_menu:hover{
+	color: #f1e89b !important;
+	font-size: 18px !important;
+	text-decoration: none;
+	border-bottom: 2px solid currentColor;
+}
+
+/* links for the static pages */
+a.static_pages_menu{
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+}
+a.static_pages_menu_active{
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+	background-color:#ffffff;
+}
+a.static_pages_menu:hover{
+	background-color:#ffffff;
+}
+
+/* home link */
+a.home{
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+}
+a.home:hover{
+	background-color:#ffffff;
+}
+
+/*******************************************************/
+/************************************************ AJAX LOADER (used for custom required fields and cascade fields) */
+/* ajax loader */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100px;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('../images/ajax_loader.gif') 
+                50% 50% 
+                no-repeat;   
+}
+
+/* When the body has the loading class, scrollbar hidden and modal visible */
+body.loading {
+    overflow: hidden;   
+}
+
+body.loading .modal {
+    display: block;
+}
+
+/* the confirmation message used sometimes after the loader (tipically a "done!" message) */
+.confirmation_message {
+    display:    none;
+    text-align: center;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100px;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 );   
+}
+
+/* When the body has the loading class, scrollbar hidden and confirmation_message visible */
+body.showing_confirmation_message {
+    overflow: hidden;   
+}
+
+body.showing_confirmation_message .confirmation_message {
+    display: block;
+}
+
+/*******************************************************/
+/************************************************ OTHERS */
+
+/* buttons of the admin section */
+.button_admin
+{
+/*font-size: 16px;*/
+}
+
+/* subtitles ("Search for items", "Edit the itme", etc.) */
+.subtitle{
+font-size: 18px;
+font-weight: bold;
+}
+
+/* change language listbox */
+.css_form .select_element_change_language {
+width: 200px;
+}
+
+/* bottom right credits */
+.powered_by_dadabik{
+	font-size: 12px
+}
+
+div.break {
+	page-break-before:always
+}
+
+/* the popup div that shows the help in the interface configurator */
+#div_help
+{
+    position: absolute;
+    display: none;
+    width: 400px;
+    border: 2px solid #ff7700;
+}
+
+#div_help_content
+{
+    background-color: White;
+    height: 200px;
+    padding: 8px;
+    overflow: scroll;
+}
+
+#div_help_content_title
+{
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+/* the popup div that shows the template instructions in the datagrid configurator */
+#div_template_instructions
+{
+    position: absolute;
+    display: none;
+    width: 400px;
+    border: 2px solid #ff7700;
+}
+
+#div_template_instructions_content
+{
+    background-color: White;
+    height: 200px;
+    padding: 8px;
+    overflow: scroll;
+}
+
+#div_template_instructions_content_title
+{
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+/* the popup div that shows in-line help in the front-end */
+#div_help_frontend
+{
+    position: absolute;
+    display: none;
+    width: 500px;
+    border: 2px solid #ff7700;
+}
+
+#div_help_frontend_content
+{
+    background-color: White;
+    height: 300px;
+    padding: 8px;
+    overflow: scroll;
+}
+
+#div_help_frontend_content_title
+{
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+/* when you need code snippets for in-line help */
+.code_snippet
+{
+color:black;background:white;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;
+}
+
+/* styles used only for the admin section */
+
+.tr_form_separator{
+	text-align: left;
+	font-weight:bold;
+	color: #000000;
+	white-space: nowrap;
+	padding:20px;
+	text-align: left;
+	background-color: #e5e7eb;
+	color: black;
+	/* background: -moz-linear-gradient(top,  #fefcea 0%, #d5c287 100%);  *//* FF3.6+ */
+	/* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#d5c287)); */ /* Chrome,Safari4+ */
+	/* background: -webkit-linear-gradient(top,  #fefcea 0%,#d5c287 100%); */ /* Chrome10+,Safari5.1+ */
+	/* background: -o-linear-gradient(top,  #fefcea 0%,#d5c287 100%);  *//* Opera 11.10+ */
+	/* background: -ms-linear-gradient(top,  #fefcea 0%,#d5c287 100%);  */ /* IE10+ */
+	/* background: linear-gradient(to bottom,  #fefcea 0%,#d5c287 100%); */ /* W3C */
+	border-bottom: 1px solid #d1d5db;
+}
+
+
+@media (max-width: 480px) {
+    .main-menu-container {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .main-menu {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        width: auto;
+        overflow: auto;
+    }
+}
+
+.main-menu {
+    font-family: arial, sans-serif;
+    background-color: black;
+    min-width: 200px;
+    max-width: 250px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.main-menu > li > ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+.main-menu a {
+    display: block;
+    background-color: black;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.main-menu .sub-menu {
+    display: none;
+}
+
+.main-menu .sub-menu a {
+    background: #1a1a1a;
+}
+
+.main-menu .menu-icon-open {
+    display: none;
+}
+
+.main-menu .menu-icon-collapsed {
+    display: none;
+}
+
+.main-menu li.has-sub-menu .menu-icon-open {
+    display: none;
+}
+
+.main-menu li.has-sub-menu .menu-icon-collapsed {
+    display: inline-block;
+}
+
+.main-menu li.has-sub-menu.sub-menu-opened .sub-menu {
+    display: block;
+}
+
+.main-menu li.has-sub-menu.sub-menu-opened .menu-icon-open {
+    display: inline-block;
+}
+
+.main-menu li.has-sub-menu.sub-menu-opened .menu-icon-collapsed {
+    display: none;
+}
+
+.main-menu li.selected-on-load > a {
+    border-left: 3px solid #FFF;
+}
+
+.main-menu li.selected > a {
+    border-left: 3px solid #e6e6e6;
+}
+
+.main-menu .is-label {
+    padding: 10px 20px;
+    font-weight: 700;
+}
+
+.main-menu .is-separator {
+    border-bottom: 1px solid white;
+}
+
+.main-menu a {
+    color: white;
+}
+
+.main-menu a:hover,
+.main-menu a:focus {
+    background-color: black;
+}
+
+.main-menu a.active,
+.main-menu a.active:hover,
+.main-menu a.active:focus {
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+/* override font jquery ui dialog */
+.ui-widget{
+	font-family: Verdana, Arial, Helvetica, sans-serif !important;
+	font-size: 14px !important;
+}
+
+
+
+/* some front-end styles, slightly modified, that I use in the admin as well */
+
+select {
+    box-sizing: border-box;
+    height: 2.4375rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    box-shadow: "";
+    transition: "";
+    background-color: #FFF;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg width='32' height='60' xmlns='http://www.w3.org/2000/svg'><polygon id='svg_1' fill=' rgb%280, 0, 0%29' points='0,0 32,0 16,24' transform='rotate(-180 16,11.999999999999998) '/><polygon id='svg_2' fill=' rgb%280, 0, 0%29' points='0,32.14095640182495 32,32.14095640182495 16,56.140958309173584 '/></svg>");
+    background-size: 9px 12px;
+    background-position: right -1rem center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    padding-right: 1.5rem;
+    max-width: 400px; /* hack, added */
+}
+
+@media screen and (max-width: 767px) { /* hack, added */
+	select {
+    	max-width: 300px;
+    }
+}
+
+select:focus {
+    border: 1px solid #333;
+    background-color: #f9f9f9;
+    outline: none;
+    box-shadow: "";
+    transition: "";
+}
+
+@media print , (min-width: 0\0
+) {
+    select {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==");
+    }
+}
+
+
+
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'],
+input[type='file'],
+textarea {
+    box-sizing: border-box;
+    height: 2.4375rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    box-shadow: "";
+    border-radius: 4px;
+    transition: "";
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type='file'] { /* hack, added */
+	height: auto;
+}
+
+[type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus,
+input[type='file']:focus,
+textarea:focus {
+    border: 1px solid #333;
+    background-color: #f9f9f9;
+    outline: none;
+    box-shadow: "";
+    transition: "";
+}
+
+textarea {
+    max-width: 100%;
+}
+
+textarea[rows] {
+    height: auto;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: "1px solid #DDD";
+}
+
+input:disabled, input[readonly],
+textarea:disabled,
+textarea[readonly] {
+    background-color: false;
+    cursor: false;
+}
+/*
+[type='submit'],
+[type='button'] {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+*/
+input[type='search'] {
+    box-sizing: border-box;
+}
+
+.input-group input, .input-group select {
+    display: inline-block;
+}
+
+@media print , (min-width: 320px) {
+    .input-group {
+        width: 100%;
+        white-space: nowrap;
+        display: table;
+    }
+
+    .input-group .input-element {
+        display: table-cell;
+    }
+
+    .input-group .input-element > input, .input-group .input-element > select {
+        width: 100%;
+    }
+}
+
+
+button, input[type='button'], input[type='submit'], .button {
+border-radius: 6px;
+font-weight: 600;
+}
+/*
+
+button, input[type='button'], input[type='submit'], .button {
+    border: 0px solid;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    color: black;
+    background-color: #d3d3d3; 
+  text-decoration: none;
+}
+button:focus, button:hover, button:active, input[type='button']:focus, input[type='button']:hover, input[type='button']:active, input[type='submit']:focus, input[type='submit']:hover, input[type='submit']:active, .button:focus, .button:hover, .button:active {
+	color: black;
+	background-color: #d3d3d3;
+}
+*/
+
+.boxes_admin {
+        background: #e5e7eb;
+        color: black;
+        font-size: 20px;
+        padding: 10px 15px;
+        font-weight: bold;
+		border-bottom: 1px solid #d1d5db;
+    }
+    
+
+.boxes_admin_outer {
+    margin-top: 15px;
+    border: 2px solid #e5e7eb;
+}
+
+.yes_no_btn{
+    width: 120px;
+}
+
+.btn-yes-all{
+
+	background-color: #518A88;
+	border-color: #518A88;
+	color: white;
+}
+
+.btn-yes-all:hover{
+
+	background-color: #317068;
+	border-color: #317068;
+	color: white;
+}
+
+.btn-no-all{
+
+	background-color: #BA4653;
+	border-color: #BA4653;
+	color: white;
+}
+
+.btn-no-all:hover{
+
+	background-color: #9A2633;
+	border-color: #9A2633;
+	color: white;
+}
+.form-switch .form-check-input:checked {
+    background-color: #00875a;
+    border-color: #00875a;
+    background-color: #518A88;
+    border-color: #518A88;
+    border: none;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+}
+
+
+.list-group-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -1px;
+    border: 1px solid rgba(0,0,0,.125);
+    background-color:#f1f3f4;
+    width:300px;
+}
+.indented-menu-item{
+    text-indent: 3em;
+    background-color:#d3d5d5 !important;
+}
+.cursor-not-allowed{
+    cursor: not-allowed;
+}
+.cursor-grab{
+    cursor: grab;
+}
+
+
+
+.btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.btn-icon{
+    width: 38px;
+    height: 38px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.btn-primary, .btn-primary:visited{
+    background-color: rgb(80, 103, 193);
+}
+
+.btn-primary:hover, .btn-outline-primary:hover{
+    background-color: #3d54ad
+}
+
+.btn-outline-primary, .btn-outline-primary:focus {
+    color: rgb(80, 103, 193);
+}
+
+.btn-outline-primary:hover{
+    color: white;
+}
+
+.btn-primary, .btn-outline-primary{
+    border-color: rgb(80, 103, 193);
+}
+
+.btn-delete {
+    color: white;
+    background-color: #d3323a;
+    text-decoration: none;
+    padding: 0.2em;
+}
+
+.btn-delete:focus, .btn-delete:hover, .btn-delete:active, .btn-danger:focus, .btn-danger:hover, .btn-danger:active {
+    color: white;
+    background-color: #ad252c;
+}
+                 
+.btn-xs{
+    height: 32px;
+    padding: 0.2em;
+}
+
+/* upload component */
+.dropzone {
+    padding: 8px;
+    border: 2px dashed rgb(209, 213, 219);
+}
+
+.dropzone_enter {
+    border-color: #555 !important;
+}
+
+.upload_button {
+    border-radius: 999px;
+    font-weight: 500;
+    padding: 8px 16px;
+    background: rgba(156, 163, 175);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.upload_button:hover {
+    background: rgb(107, 114, 128);
+}
+
+/* basic settings page */
+
+.color_picker_basic_settings{
+	vertical-align: bottom;
+	margin-right:10px;
+	cursor: pointer;
+}
+
+.CodeMirror {
+	border: 1px solid;
+	border-radius: 5px;
+	border-color: #c5c5c5;
+	padding: 4px;
+}
+
+.CodeMirror-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.CodeMirror-disabled .CodeMirror-cursor {
+  display: none !important;
+}
+
+.table_interface_container_table_top_menu_admin_area{
+	background-color: #1d2430;
+}
+
+.table_interface_container_table_top_submenu_admin_area{
+	background-color: #29313e;
+}
+
+
+
+
+p, ul {
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-bottom: 0.25rem;
+}
+
+a.tool-name {
+  font-weight: 600;
+  color: #0b5394; /* Dark blue, tool-like */
+  text-decoration: none;
+  border-bottom: 2px solid #d2e3fc;
+  padding-bottom: 1px;
+}
+
+a.tool-name:hover {
+  color: #083d77;
+  border-bottom-color: #a8cfff;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary,
+.btn-primary:visited {
+  background-color: #4a89cc; 
+  color: white;
+  border-color: #4a89cc;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: #3a6eaa;  
+  border-color: #3a6eaa;
+}
+
+/* OUTLINE PRIMARY */
+.btn-outline-primary,
+.btn-outline-primary:focus {
+  color: #4a89cc;
+  background-color: transparent;
+  border-color: #4a89cc;
+  box-shadow: none;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active {
+  background-color: #3a6eaa;
+  color: white;
+  border-color: #3a6eaa;
+}
+
+.btn-outline-primary:focus-visible,
+.btn-primary:focus-visible {
+  outline: 2px solid #3a6eaa;
+  outline-offset: 2px;
+}
+
+.view-app-button {
+  background-color: #2d6db3; 
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.view-app-button,
+.view-app-button:visited,
+.view-app-button:active,
+.view-app-button:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+.view-app-button:hover {
+  background-color: #3c7dc0;
+  text-decoration: none;
+}
+
+#dadabik_logo{
+    height:90px;
+    width:auto;
+}

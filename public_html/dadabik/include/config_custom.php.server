@@ -1,0 +1,8 @@
+<?php
+/*
+Add here the config.php parameters you want to modify, together with their values; see the documentation https://dadabik.com/index.php?function=show_documentation#config for furhter details
+*/
+
+// add your config parameters here
+$parameter_example = 'value';
+

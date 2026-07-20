@@ -1,0 +1,18 @@
+1 - create a folder and name it with the name of the app
+
+2 - create a file mysql.sql (or postgres.sql or sqlite.sql) containing the SQL dump of your database (including the "dadabik" tables) and copy it into the folder. You should:
+	- empty the tables dadabik_logs and dadabik_failed_login before dumping
+	- pay attention to the SQL code generated if you have VIEWS, for example with MySQL if you create a dump as ROOT, you can get something like CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `my_view`, which won't work if your final user import the app without being root. You could remove this part "ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER"
+
+3 - create a file config.php copying the file config_template.php and copy the file into the folder
+
+4 - copy in the folder manifest.json (see dadahelpdesk/manifest.json for an example) and all the custom code you wrote:
+	- custom_functions.php (create the file even if it is empty)
+	- custom_functions.js (create the file even if it is empty)
+	- custom language files (e.g. english_custom.php, if any)
+	- additional config.php parameters or overrides of existent parameters (add them to the config.php file you created at step 3 )
+	- the folder uploads_prepackaged_app, containing the files you need to copy to the uploads folder (if any)
+	- the folder custom_php_files_prepackaged_app, containing your custom php pages (if any)
+	- the folder templates_prepackaged_app, containing your custom PDF templates (create the folder even if it is empty )
+	
+Please note that prepackaged apps don't support yet the new custom files structure introduced in DaDaBIK 10 (different files for custom formatting functions, custom validation functions, etc ...) so you have to copy all and only the PHP custom code you wrote in custom_functions.php

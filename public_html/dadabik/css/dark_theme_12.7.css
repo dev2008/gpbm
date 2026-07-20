@@ -1,0 +1,247 @@
+/* page background */
+body  {
+    background-color: #191919;
+}
+
+.tr_results_1, .tr_results_2  {
+    background-color: #191919 !important;
+
+}
+
+.results{
+    background-color: #191919 !important;
+}
+
+.td_content, .list_view_sort_by_container, .table_login_form, .table_interface_container_td_content{
+    background: #191919;
+    background-color: #191919;
+}
+
+
+/* text color */
+body, input, a{
+    color:#CFCFCF;
+}
+
+a:hover, a:active, a:focus {
+    color: #CFCFCF;
+}
+
+.subtitle{
+    color: #cfcfcf;
+}
+
+.ui-widget-content{
+    color:#CFCFCF;
+}
+
+:root {
+    --chart-text-color: #CFCFCF;
+}
+
+.form-select {
+    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23cfcfcf' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+
+/* results grid header text color */
+.tr_results_header{
+    color: white;
+}
+
+.grid table thead th.results > a.order_link,
+.grid table thead th.results > a.order_link_selected {
+    color: white;
+}
+
+/* secondary buttons text color */
+.btn-outline-primary, .btn-outline-primary:visited{
+    color: #CFCFCF !important;
+}
+
+/* results grid cells border */
+.results_grid_cell{
+    border: 1px solid #2f2f2f;
+}
+
+/* form element border color, background color, text color */
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'],
+input[type='file'],
+textarea, .form-select {
+    
+    border: 1px solid #666666;
+    color: #FFFFFF !important;
+    background-color: #424242 !important;
+}
+
+[type='text']:disabled, [type='password']:disabled, [type='date']:disabled, [type='datetime']:disabled, [type='datetime-local']:disabled, [type='month']:disabled, [type='week']:disabled, [type='email']:disabled, [type='number']:disabled, [type='search']:disabled, [type='tel']:disabled, [type='time']:disabled, [type='url']:disabled, [type='color']:disabled,
+input[type='file']:disabled,
+textarea:disabled, .form-select:disabled {
+    background-color: #505050 !important;
+
+}
+
+[type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus,
+input[type='file']:focus,
+textarea:focus, .form-select:focus {
+    border-color: #FF9800 !important;
+    background-color: #505050 !important;
+    color: #FFFFFF !important;
+
+}
+
+/* select2 component (used if User-friendly searchable? is set to YES)
+
+/* Select2 container */
+.select2-container .select2-selection {
+    border: 1px solid #666666;
+    background-color: #424242;
+    color: #FFFFFF;
+}
+
+/* Multiple select box */
+.select2-container--default .select2-selection--multiple {
+    background-color: #424242;
+    border: 1px solid #666666;
+}
+
+/* Selected tags in multiple select */
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #666 !important;
+    color: #fff !important;
+    border: 1px solid #888;
+}
+
+/* Remove button on tags */
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #ddd !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+    color: #fff !important;
+}
+
+/* Dropdown styles */
+.select2-dropdown {
+    border: 1px solid #666666;
+    background-color: #424242;
+    color: #FFFFFF;
+}
+
+/* Hover effect in dropdown */
+.select2-results__option--highlighted {
+    background-color: #999 !important;
+    color: #000 !important;
+}
+
+/* Style for selected options inside the dropdown */
+.select2-container--default .select2-results__option[aria-selected="true"] {
+    background-color: #555 !important;
+    color: #fff !important;
+}
+
+/* Selected value inside the select box (single select) */
+.select2-selection__rendered {
+    color: #fff !important;
+}
+
+/* end select2 component 
+
+
+
+
+.uploader_result{
+    color: #FFFFFF;
+
+}
+
+.required_asterisk{
+    color: #FF9800;
+}
+
+/* upload container background and text color */
+.uploader_container{
+    background-color: #505050;
+    color: black;
+}
+
+/* pagination numbers, background and text color */
+.pagination__to-page  {
+    background-color: #191919;
+}
+
+a.pagination__current-page:hover {
+    color: #000;
+}
+
+/* previous/next buttons background and text color */
+a.previous_next, a.previous_next:hover {
+    color: #cfcfcf;
+}
+
+a.previous_next, a.previous_next:hover {
+    background-color: #191919;
+}
+
+/* list view, pane background color */
+.details_pane.even{
+	background-color: #202020; /* should be same color as the menu */
+}
+.details_pane.odd{
+	background-color: #202020; /* should be same color as the menu */
+}
+
+/* popup windows, background color */
+.ui-widget-content{
+    background-color: #202020; /* should be same color as the menu */
+}
+
+/* results grid, highlighted rows, background color */
+.grid table tbody tr.tr_highlighted_onmouseover > td,
+.grid table tbody tr.tr_highlighted_onclick > td {
+    background-color: #5a5a5a;
+}
+
+/* messages */ 
+/* Error Message */
+.msg_error {
+    background: #3a1d1d;
+    color: #FFCDD2;
+}
+
+.msg_error::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFCDD2'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15c-.83 0-1.5-.67-1.5-1.5S11.17 14 12 14s1.5.67 1.5 1.5S12.83 17 12 17zm1-4h-2V7h2v6z'/%3E%3C/svg%3E");
+}
+
+/* Success Message */
+.msg_ok {
+    background: #1B5E20;
+    border-left: 4px solid #66BB6A;
+    color: #C8E6C9;
+}
+
+.msg_ok::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C8E6C9'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9l-7 7z'/%3E%3C/svg%3E");
+}
+
+/* Warning Message */
+.msg_alert {
+    background: #4E342E;
+    border-left: 4px solid #FFA000;
+    color: #FFCC80;
+}
+
+.msg_alert::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFCC80'%3E%3Cpath d='M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z'/%3E%3C/svg%3E");
+}
+
+.live_edit_error_message {
+    color: #b5493f;
+}
+
+
+/* additional customizations */
+.table_interface_container{
+    border-bottom: 0px;
+}
+
+

@@ -1,0 +1,712 @@
+Delivered-To: alanscottmilnes@gmail.com
+Received: by 2002:a05:7300:e128:b0:10e:4a65:fdb9 with SMTP id hd40csp1050860dyb;
+        Sat, 13 Apr 2024 11:58:04 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF9vEDiz9dAwP2U7gDFW8u+0/82J8T1X+HMkLZiMVb7TWzRRZTed8TkuiHzQVozxLM/cdiO
+X-Received: by 2002:a05:600c:4f95:b0:418:201f:f991 with SMTP id n21-20020a05600c4f9500b00418201ff991mr1559509wmq.40.1713034684194;
+        Sat, 13 Apr 2024 11:58:04 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1713034684; cv=none;
+        d=google.com; s=arc-20160816;
+        b=RMDW9UXKCAM+B4Z19MFcnE5XMTi+Psn+KTOYX0asG3rTIS3LHZ3eQYxYHDUJoB1Gfz
+         Uj/Ocp8aWewZ/41G8pCMg/oOgjv23PUMLyVJlcWgWMycErK+lbVfnK6mIjUKBJwrlPlN
+         7cyLN6+RISsk67rjgFNBgxUvI//X/8qRRKAuSePsXoSKKqj9IGH5n4DAkLeLgpHKt2c1
+         YZXvmrKEtnjpwra2Vy1XZEBcpBHQ4bbsJW7OHmzLCDViLfG42f5Zryh+Y1+Gn1R1olCF
+         rRotsVXTLSJgcHH4PO3Y4zLA55BRRn4cgfQJNa9VM9gVtvy+fSsmAkTnn/ic8HHLPTjJ
+         lR4A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:subject:to:from:mime-version:date;
+        bh=hmCjWtldOboYedm0TyZP/auySXjOFLKobuEW/T0y694=;
+        fh=F/gVCkt009k/5ClmKGit34h78GMq6e53qQv3kJwfpFM=;
+        b=ppxP5eWJfBd6XiCNUxULZ2JUPO7sO62BmFaLlxFlxDcc+CswGnkvguJ2ztUKMb6XEl
+         HCp2xB9o3OhqYzAiWPVkiR/viaxCAQlkUvEZSO9DeIzczCiBbWFcY7R+WUv8GdZr+7kG
+         /YR0KaMc4kBXpkh7cVI8X7Op//z94tdm+1CBDdNLYFB1Y5bnhX9beV3rg3P/BNDIguiX
+         SqLYuIUX4GPfuSl7QYMqW5NjlSgutjwdVpia2XJIR8DDL0AFskOdiDAi47g9NLOoXLAJ
+         uIaM04TMgJzVTBU+wyDNUUj6jmMYV0H39hcSze/2FoWEvsYIkzjd0PCUfi43dcgCbyLD
+         LGlQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of danny@pbmsports.com designates 213.120.69.122 as permitted sender) smtp.mailfrom=danny@pbmsports.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=pbmsports.com
+Return-Path: <danny@pbmsports.com>
+Received: from re-prd-fep-044.btinternet.com (mailomta29-re.btinternet.com. [213.120.69.122])
+        by mx.google.com with ESMTPS id l23-20020a05600c1d1700b004165507eaf6si3745268wms.34.2024.04.13.11.58.03
+        for <alanscottmilnes@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Sat, 13 Apr 2024 11:58:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of danny@pbmsports.com designates 213.120.69.122 as permitted sender) client-ip=213.120.69.122;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of danny@pbmsports.com designates 213.120.69.122 as permitted sender) smtp.mailfrom=danny@pbmsports.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=pbmsports.com
+Received: from re-prd-rgout-001.btmx-prd.synchronoss.net ([10.2.54.4])
+          by re-prd-fep-044.btinternet.com with ESMTP
+          id <20240413185803.XEOI24338.re-prd-fep-044.btinternet.com@re-prd-rgout-001.btmx-prd.synchronoss.net>
+          for <alanscottmilnes@gmail.com>; Sat, 13 Apr 2024 19:58:03 +0100
+Authentication-Results: btinternet.com; none
+X-SNCR-Rigid: 6577B4650E4EEE85
+X-Originating-IP: [86.137.234.81]
+X-OWM-Source-IP: 86.137.234.81
+X-OWM-Env-Sender: danny@pbmsports.com
+X-VadeSecure-score: verdict=clean score=49/300, class=clean
+X-RazorGate-Vade: gggruggvucftvghtrhhoucdtuddrgedvledrudeiiedgudefgecutefuodetggdotefrodftvfcurfhrohhfihhlvgemuceutffkvffkuffjvffgnffgvefqofdpqfgfvfenuceurghilhhouhhtmecufedtudenucfpohcuuggrthgvuchfihgvlhguucdlgeelmdenucfjughrpegtggfhvffukfesmhdtreertddtvdenucfhrhhomhepffgrnhhnhicuofgtvehonhhnvghllhcuoegurghnnhihsehpsghmshhpohhrthhsrdgtohhmqeenucggtffrrghtthgvrhhnpeeuuddvgeevvdeivddvfeefffdvgefhteehuefhvedugeevgeefhfekteeuiefftdenucffohhmrghinhepphgsmhhsphhorhhtshdrtghomhdpshhofhhtshhimhdrtghordhukhdpshhiuggvthhrrggtkhhsrdgtohdruhhkpdhslhgrtghkrdgtohhmnecukfhppeekiedrudefjedrvdefgedrkedunecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehhvghlohepffgrnhhnhidqrfevrdhhohhmvgdpihhnvghtpeekiedrudefjedrvdefgedrkedupdhmrghilhhfrhhomhepuggrnhhnhiesphgsmhhsphhorhhtshdrtghomhdpnhgspghrtghpthhtohepuddprhgtphhtthhopegrlhgrnhhstghothhtmhhilhhnvghssehgmhgrihhlrdgtohhmpdhrvghvkffrpehhohhsthekiedqudefjedqvdefgedqkedurdhrrghnghgvkeeiqddufeejrdgsthgtvghnthhrrghlphhluhhsrdgtohhmpdgruhhthhgpuhhsvghrpeflrghn
+	ihgtvgdrshhhrggtkhhlvghtohhnsegsthhinhhtvghrnhgvthdrtghomhdpghgvohfkrfepifeupdfovfetjfhoshhtpehrvgdqphhrugdqrhhgohhuthdqtddtud
+X-RazorGate-Vade-Verdict: clean 49
+X-RazorGate-Vade-Classification: clean
+Received: from Danny-PC.home (86.137.234.81) by re-prd-rgout-001.btmx-prd.synchronoss.net (authenticated as Janice.shackleton@btinternet.com)
+        id 6577B4650E4EEE85 for alanscottmilnes@gmail.com; Sat, 13 Apr 2024 19:58:03 +0100
+Date: Sat, 13 Apr 2024 19:58:03 +0100 (added by postmaster@btinternet.com)
+Content-Type: multipart/mixed; boundary="===============4117924667222968766=="
+MIME-Version: 1.0
+From: Danny McConnell <danny@pbmsports.com>
+To: alanscottmilnes@gmail.com
+Subject: Game Report from Ab Initio Games NCAA5-PI, Turn 13
+Message-ID: <171303468143.3124.8553257137205717203@pbmsports.com>
+
+--===============4117924667222968766==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+alanscottmilnes@gmail.com
+0
+NCAA5-PI, Turn 13
+<STARTREP>
+<BK.Team Report><L>
+<P.70><B>GAMEPLAN (Advanced)   League NCAA5   Season 2034   Playoff   13/4/24<L.54.1>
+Pittsburgh Panthers (Alan Milnes)      turn credits = 23.7<C><L.18.1>
+<Z>__________________________________________________________________________________________________________________________________<L.48.1>
+<C><B>OFFENCE<C><L.6.1>
+                               yards     yards     time<L.33.1>
+no name     downs   score     to down   to line    gone    fmtn  plays and weights        react<L.36.1>
+ 1 START 1  1234  -20 to 20   1 to 99   1 to 99   0 to  1  U     RT -4                        4<L.35.1>
+ 2 START 2  1234  -20 to 20   1 to 99   1 to 99  30 to 31  U     RT +8                        4<L.35.1>
+ 3 HALF     1234  -20 to 2    1 to 99   1 to 99  28 to 29  C     OS     DL     OS     TW      A<L.35.1>
+ 4 LATELGL  1234  -20 to -2   1 to 99   1 to  5  HT to 59  Z     SL                           4<L.35.1>
+ 5 VLATEL   1234  -20 to 0    1 to 99  15 to 99  58 to 59  Z     DL                           4<L.35.1>
+ 6 LATELFG  1234   -2 to 5    1 to 99   1 to 25  58 to 59  O     RW                           4<L.35.1>
+ 7 GOAL     1234  -20 to 20   1 to 99   1 to  6   0 to 59  U     LO     RN     LI     RT      S<L.35.1>
+ 8 LATEL    1234  -20 to 0    1 to 99   1 to 99  HT to 59  C     DL     OP     OS             S<L.35.1>
+ 9 VLATEW   1234    1 to 20   1 to 99   1 to 99  58 to 59  A     QR                           4<L.35.1>
+10 LATEW    1234   15 to 20   1 to 99   1 to 99  56 to 59  A     QR     QR     QR     PS      S<L.35.1>
+11 REDZ     1234  -20 to 20   1 to 99   1 to 20   0 to 59  O     LL     PW     OP     CW      S<L.35.1>
+12 PURPLE   1234  -20 to 20   1 to 99  95 to 99   0 to 59  C     DL +12                       4<L.35.1>
+13 SHORT    1234  -20 to 20   1 to  2   1 to 99   0 to 59  A     QR     DO     QR     QR      S<L.35.1>
+14 VLONG    12    -20 to 20  20 to 99   1 to 99   0 to 59  Z     DR                           4<L.35.1>
+15 LONG     1234  -20 to 20  LY to 99   1 to 99   0 to 59  Z     DS     DR     SL     DR      A<L.35.1>
+16 DEFAULT  1234  -20 to 20   1 to 99   1 to 99   0 to 75  O     DL     DV     PS     RW      A<L.35.1>
+<B><L.24.1>
+DEFENCE<C><L.6.1>
+                               yards     yards     time<L.33.1>
+no name     downs   score     to down   to line    gone    fmtn  plays and weights        react<L.36.1>
+17 SCREWUP  1234  -20 to 20  11 to 99   1 to 99   0 to 59  A     OX                           4<L.35.1>
+18 HRUN 1   1     -20 to 20   1 to 99   1 to 99   0 to 59  W     ND -7  MD +3  IX     OX      3<L.35.1>
+19 HRUN 2   2     -20 to 20   1 to 99   1 to 99   0 to 59  W     ND     MD +6  OX     IX      3<L.35.1>
+20 HRUN 34  34    -20 to 20   1 to 99   1 to 99   0 to 59  W     ND -6  MD     IX     OX +6   3<L.35.1>
+21 HPASS 1  1     -20 to 20   1 to 99   1 to 99   0 to 59  D     WC -7  LD -3  ZD -1  BZ      3<L.35.1>
+22 HPASS 2  2     -20 to 20   1 to 99   1 to 99   0 to 59  D     WC -6  LD +6  ZD -1  BZ      3<L.35.1>
+23 HPASS 34 34    -20 to 20   1 to 99   1 to 99   0 to 59  D     WC     LD     ZD +6  BZ      3<L.35.1>
+24 PASS 1   1     -20 to 20   1 to 99   1 to 99   0 to 59  S     WC     MD -3  ND +5  BZ      3<L.35.1>
+25 PASS 2   2     -20 to 20   1 to 99   1 to 99   0 to 59  S     WC +3  MD     ND     BZ      3<L.35.1>
+26 PASS 34  34    -20 to 20   1 to 99   1 to 99   0 to 59  S     WC -3  MD -3  ND +5  BZ      3<L.35.1>
+27 RUN 1    1     -20 to 20   1 to 99   1 to 99   0 to 59  I     WC -7  IX -3  OX -1  RD +6   3<L.35.1>
+28 RUN 2    2     -20 to 20   1 to 99   1 to 99   0 to 59  I     WC -6  IX     OX     RD      3<L.35.1>
+29 RUN 34   34    -20 to 20   1 to 99   1 to 99   0 to 59  I     WC     IX +9  OX     RD +3   3<L.35.1>
+30 FBACK 1  1     -20 to 20   1 to 99   1 to 99   0 to 59  X     RD     TS     MD     WC      3<L.35.1>
+31 FBACK 2  2     -20 to 20   1 to 99   1 to 99   0 to 59  X     RD -7  TS -3  MD -1  WC      3<L.35.1>
+32 FBACK 34 1234  -20 to 20   1 to 99   1 to 99   0 to 75  X     RD +6  TS     MD     WC      3<L.35.1>
+<L.24.1>
+Game Parameters:  NFG 28  LFG 33  SYO 2  LYO 11  SYD 2  LYD 11  HUT 52<L.42.1>
+Special Teams:   Kick KO  KickRet KR  Punt PN  PuntRet PR      Fourth Downs:   Late A  Midfld A  Near A  Short A  TwoMins A<L.54.1>
+<B><U>Training & Keys<UC><C><L.48.1>
+Current Orders  Offence: PW PW  Defence: MD MD  Keys: RI RN  Bonus Play: ND MD  Bonus Cat: DRI DRO<L.48.1>
+Offence Run      RI RT RL LT RO RN DR DE DT CW DW PW RW SW EV DV OR OT QR QD QS QK<L.33.1>
+Training:         0  2  0  1  0  6  2  1  3  0  0  5  7  0  2  7  0  0  5  2  2  1<L.33.1>
+Keys:             2  1  1  0  2  7  3  0  0  2  5  1  0  3  1  0  7  1  4  5  0  0<L.48.1>
+Offence Pass     QL QO SL SO LL LO SC DL DO DS OP OS PS<L.33.1>
+Training:         0  0  2  1  2  0  0  7  0  3  1  1  7<L.33.1>
+Keys:             1  1  1  4  4  3  2  4  3  3  7  0  0<L.48.1>
+Dumpoff Passes   SP LP DP<L.33.1>
+Training:         7  3  5<L.33.1>
+Keys:             0  0  3<L.48.1>
+Defence          IX OX FD GL LD MD ND OV RD TS UN WC ZS ZD<L.33.1>
+Training:         7  7  1  1  4  3  4  2  7  1  3  7  1  4<L.48.1>
+Special Teams    PN PR KO KR FG FB<L.33.1>
+Training:         5  4  5  4  4  4<L.48.1>
+<P>
+<BK.Roster><L>
+<B>GAMEPLAN   NCAA5   2034 Season, Week 13   Pittsburgh   13/4/24<L.18.1>
+___________________________________________________________________________<L.54.1>
+<U>Current Roster<UC><C><L.12.1>
+<L.18.1>
+<ST.29.69.98><L.18.1>
+Pos Num Name<T>Age Val Strengths           Status<T>Pos Num Name<T>Age Val Strengths       Status<T><L.42.1>
+QB    4 Max Browne<T> 4  5  ORO OPSx2 OPLx2      <T>DRE  40 James Folston<T> 1  2  DRI DBZ          <L>
+BQ   13 Jeff George Jr<T> 4  -  -                    -<T>DRT  92 Burt Grossman<T> 4  -  -                -<L>
+FB   35 George Aston<T> 3  -  -                    -<T>NT   91 Patrick Jones II<T> 2  3  DRI DRO DBZ      <L>
+HB   22 Israel Abanikanda<T> 1  -  -                    -<T>DLT  10 Keyshon Camp<T> 2  -  -                -<L>
+RB   37 Qadree Ollison<T> 3  -  -                    -<T>DLE  98 Kirk Christodoulou<T> 2  -  -                -<L>
+TE1  43 Cole Mitchell<T> 4  3  ORO OPS OPL          <T>ROLB 36 Chase Pine<T> 1  -  -                -<L>
+TE2  44 Jason Collier<T> 4  -  -                    -<T>RILB 52 Darrin Smith<T> 1  -  -                -<L>
+RT   60 Owen Drexel<T> 3  -  -                    -<T>MLB  51 Preston Lavant<T> 1  -  -                -<L>
+RG   68 Blake Zubovic<T> 3  3  ORI ORO OQB          <T>LILB 54 Dylan Bennett<T> 1  3  DRI DRO DPS      <L>
+C    61 Ryan Jacoby<T> 3  3  ORI ORO OQB          <T>LOLB 32 Sirvocea Dennis<T> 1  -  -                -<L>
+LG   57 Greyson Riffe<T> 1  3  ORI ORO OQB          <T>RCB  26 Judson Tallandier<T> 3  -  -                -<L>
+LT   70 Ryan Baer<T> 2  3  ORI ORO OQB          <T>SS   48 Matthew Amofa<T> 1  3  DRO DPS DPL      <L>
+WR1  20 Myles Austin<T> 3  2  OPS OPL DPR DKR      <T>FS   28 Noah Biglow<T> 1  -  -                -<L>
+WR2  81 Daejon Reynolds<T> 2  2  OPS OPL DKR          <T>LCB   2 Maurice Ffrench<T> 1  -  -                -<L>
+WR3  83 Darian Street<T> 3  -  -                    -<T>NCB  45 Steve Israel<T> 1  -  -                -<L>
+WR4  29 Josh Junko<T> 3  -  -                    -<T>PN    7 Guy Collura<T> 2  -  -                -<L>
+<T><T>KK   -  -<T> -  -  -                -<L.36.1>
+Defence Formation: 3-4 (NT=91)   Roster Total: 38<L.45.1>
+Key to Status:- CFA=Conditional Free Agent, CW=Conditional Waiver, Red=Reduced, Loss-Cat is Step Loss, Gain+Cat is Step Gain<L.45.1>
+Strengths  ORI ORO OPS OPL OQB OPN OFG DRI DRO DPS DPL DBZ DPR DKR   PLAY UP   Played Up: 2   <U>LPs: 13<UC><L.36.1>
+Squad:       4   6   5   5   4   0   0   3   3   2   1   2   1   2<L>
+Form:        0   3   5   4   4   0   0   2   1   0   0   0   0   1   Best: OPS OQB DRO  Worst: DPS DPS  Form gains: none<L.54.1>
+Average:    -1  +2  +2  +4  +1  -2  -1   0  -2  -1  -1  -2   0  +1<L>
+Relative:   -1  +2  +5  +6  +3           0  -2  -4  -3  -4        <L.54.1>
+<B><U>Bids & Actions<UC><C><L.45.1>
+Free Agent: No Bid<L.36.1>
+Action 1:   CX DRO: OK<L.36.1>
+Action 5:   SS  0 : OK<L.36.1>
+<L.18.1>
+<B><U>Runners & Receivers<UC><C><L.48.1>
+RC RI RT RL LT RO RN DR DE DT TR TW CW DW FW PW RW SW EV RV DV OR OT QR QD QS QK <L>
+35 37 35 22 35 37 37 22 35 37 22 37 22 37 35 22 37 22 20 20 20 37 35  4  4  4  4 <L.48.1>
+QL QI QO SM SL SI SO SP LL LI LO LP FL FI FO FP DC SC DL DI DO DP DS OP OS PO PL PI PA PS <L>
+20 20 81 20 20 81 81 20 43 43 43 43 35 35 35 22 37 35 20 20 20 81 81 81 81 81 20 81 81 20 <L.48.1>
+<P>
+<P.70><B><BK.1st Quarter><L>
+GAMEPLAN   NCAA5   2034 Season   13/4/24<L>
+<L>
+Gold Bowl Final,  Georgia Tech Yellow Jackets vs Pittsburgh Panthers<L>
+________________________________________________________________________<L>
+<L>
+<ST.118><C><B>1st Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+ 0:00  PI                     KO KR    kickoff into endzone, touched back to 20<L>
+ 0:00  GT  80  1st and 10   W LL ND    pass complete to TE, for gain of 13 yards <L>
+ 0:31      67  1st and 10   I CW WC    trap block, HB, breakout and forced out of bounds for gain of 17 yards <L>
+ 1:03      50  1st and 10   S DT ND    trap block, HB, breakout and forced out of bounds for gain of 10 yards <L>
+ 1:26      40  1st and 10   W LL ND    pass overthrown, intercepted at gain of 9 yards, and run back 9 yards <L>
+ 1:50  PI  60  1st and 10   U RT RD    FB run for gain of 3 yards <L>
+ 2:12      57  2nd and 7    O DL RD    pass complete to WR, and out of bounds for gain of 28 yards <L>
+ 2:42      29  1st and 10   O DL GL    pass dumped off to TE at gain of 6 yards, and run for gain of 7 yards <L>
+ 3:07      16  1st and 10   O LL SB    QB scramble, pass dumped off short to WR for gain of 9 yards <L>
+ 3:33       7  2nd and 1    O PW SB    HB run and forced out of bounds for gain of 4 yards <L>
+ 3:54       3  1st & Goal   U LO GL   <Z> pass complete to TE, for gain of 3 yards <L>
+                                       is touchdown Pittsburgh Panthers, PAT good<T>0-7 PI<C><L>
+ 4:14                         KO KR    kickoff to 11, run back 13 yards<L>
+ 4:35  GT  76  1st and 10   W RI MD    HB run for gain of 3 yards <L>
+ 4:57      73  2nd and 7    J RI RD    HB run for gain of 3 yards <L>
+ 5:19      70  3rd and 4    I OR IX    HB run and out of bounds for gain of 3 yards <L>
+ 5:39      67  4th and 1    P PN PR    punt for 48 yards, run back 4 yards <L>
+ 6:00  PI  77  1st and 10   O DV RD    WR stuffed, for no gain <L>
+ 6:22      77  2nd and 10   O PS LD    pass dropped, incomplete<L>
+ 6:42      77  3rd and 10   O RW LD    lead block, HB, breakout for gain of 9 yards <L>
+ 7:08      68  4th and 1    A QR LD    quarterback run, for gain of 2 yards <L>
+ 7:30      66  1st and 10   O DL RD    no open receiver, QB sacked for loss of 5 yards <L>
+ 8:05      71  2nd and 15   Z DS LD    pass dumped off short to WR at gain of 6 yards, and breakout for gain of 41 yards <L>
+ 8:50      24  1st and 10   O DV ND    WR run and forced out of bounds for loss of 2 yards <L>
+ 9:17      26  2nd and 12   Z DS SB   <Z> pass complete to WR, for gain of 26 yards <L>
+                                       is touchdown Pittsburgh Panthers, PAT good<T>0-14 PI<C><L>
+ 9:42                         KO KR    kickoff into endzone, touched back to 20<L>
+ 9:42  GT  80  1st and 10   W RN ND    HB run for gain of 2 yards <L>
+10:04      78  2nd and 8    S DT WC    HB run for gain of 7 yards <L>
+10:31      71  3rd and 1    S QS MD    quarterback sneak, for gain of 2 yards <L>
+10:53      69  1st and 10   I CW WC    HB run and out of bounds for gain of 10 yards <L>
+11:17      59  1st and 10   S DT MD    HB run for loss of 3 yards <L>
+11:49      62  2nd and 13   D SC WC    pass complete to RB, at loss of 2 yards, and run for gain of 13 yards <L>
+12:14      51  3rd and 2    W RI ND    misdirection, HB, breakout for gain of 5 yards <L>
+12:36      46  1st and 10   I OP IX    QB hurried, intercepted at gain of 14 yards, and run back 8 yards <L>
+13:02  PI  60  1st and 10   O PS RD    pass complete to WR, and out of bounds for gain of 13 yards <L>
+13:31      47  1st and 10   O PS RD    pass complete to WR, and out of bounds for gain of 15 yards <L>
+14:01      32  1st and 10   O RW ND    HB run for gain of 6 yards <L>
+14:27      26  2nd and 4    O DL OX    QB scramble, pass dumped off to RB for gain of 9 yards <L>
+14:54      17  1st and 10   O OP GL    pass complete to WR, and out of bounds for gain of 14 yards <L>
+<L.8.1>
+<Z>Yellow Jackets: rushing 9 for 54 yds inside and 2 for 5 yds outside, passing 3 for 2 and 24 yds short, 1 for 0 and 0 yds long<L>
+<C>Panthers: rushing 1 for 3 yds inside and 6 for 19 yds outside, passing 5 for 7 and 109 yds short, 7 for 3 and 68 yds long<L>
+<P>
+<BK.2nd Quarter><L>
+<B>2nd Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+15:00  PI   3  1st & Goal   U RN OX    HB run for loss of 1 yard <L>
+15:27       4  2nd & Goal   U LI GL   <Z> pass complete to TE, for gain of 4 yards <L>
+                                       is touchdown Pittsburgh Panthers, PAT good<T>0-21 PI<C><L>
+15:48                         KO KR    kickoff to 3, run back 10 yards<L>
+16:09  GT  87  1st and 10   W OT ND    quarterback scramble, and out of bounds for gain of 16 yards <L>
+16:36      71  1st and 10   I OR IX    HB run and out of bounds for gain of 6 yards <L>
+17:00      65  2nd and 4    W RI MD    HB run for gain of 3 yards <L>
+17:22      62  3rd and 1    S QS WC    quarterback sneak, for gain of 2 yards <L>
+17:44      60  1st and 10   S DS ND    pass dropped, incomplete<L>
+18:04      60  2nd and 10   Z FI RD    pass complete to RB, at gain of 7 yards, and run for gain of 9 yards <L>
+18:33      44  1st and 10   I OR IX    pitchout to HB, breakout and out of bounds for gain of 7 yards <L>
+18:57      37  2nd and 3    W RI MD    HB run for gain of 2 yards <L>
+19:19      35  3rd and 1    S QS ND    quarterback sneak, for gain of 2 yards <L>
+19:41      33  1st and 10   W LL MD    pass complete to TE, and out of bounds for gain of 13 yards <L>
+20:03      20  1st and 10   I RL WC    HB run for gain of 6 yards <L>
+20:29      14  2nd and 4    J RI RD    offside against defence, for penalty of 5 yards<L>
+20:50       9  1st & Goal   I RL IX    HB stuffed, for loss of 4 yards <L>
+21:15      13  2nd & Goal   D SC WC    pass complete to RB, at loss of 3 yards, and run for gain of 11 yards <L>
+21:42       5  3rd & Goal   I LO IX    pass interference against offence, for loss of 10 yards<L>
+22:04      15  3rd & Goal   D DS ZD    pass dropped, incomplete<L>
+22:24      15  4th & Goal   F FG FB   <Z> field goal attempt of 32 yards, good<T>3-21 PI<C><L>
+22:44                         KO KR    kickoff to 9, run back 8 yards<L>
+23:05  PI  83  1st and 10   O DL ZS    pass dumped off to TE and out of bounds for gain of 13 yards <L>
+23:45      70  1st and 10   O DV RD    WR stuffed, and out of bounds for loss of 2 yards <L>
+24:20      72  2nd and 12   Z DR ZD    HB run for gain of 10 yards <L>
+24:59      62  3rd and 2    A DO SB    pass dumped off to TE and out of bounds for gain of 4 yards <L>
+25:31      58  1st and 10   O PS GL    pass out of bounds, incomplete<L>
+26:03      58  2nd and 10   O RW GL    HB run for gain of 5 yards <L>
+26:39      53  3rd and 5    O DL RD    pass batted away, intercepted at gain of 23 yards, and not run back<L>
+27:12  GT  70  1st and 10   I LO IX    pass complete to TE, at gain of 4 yards, and breakout for gain of 7 yards <L>
+27:44      59  1st and 10   S RV ND    WR run for loss of 3 yards <L>
+<B><L.54.1>
+Two Minute Warning (first half)<C><L.54.1>
+28:00  GT  62  2nd and 13   D QD BZ    quarterback draw, for gain of 7 yards <L>
+28:10      55  3rd and 6    I CW RD    HB run for gain of 3 yards <L>
+28:17      52  4th and 3    P PN PR    punt of 41 yards, downed on 11<L>
+28:25  PI  89  1st and 10   O DV RD    misdirection, WR, breakout and out of bounds for gain of 7 yards <L>
+28:34      82  2nd and 3    O PS GL    pass overthrown, incomplete <L>
+28:41      82  3rd and 3    O RW RD    HB run for loss of 1 yard <L>
+28:58      83  4th and 4    P PN PR    punt for 52 yards, run back 6 yards <L>
+29:39  GT  63  1st and 10   I CW IX    HB stuffed, for loss of 2 yards <L>
+29:48      65  2nd and 12   D SO LD    pass interference against offence, for loss of 10 yards<L>
+29:56      75  2nd and 22   D SC ZD    pass complete to RB, at loss of 2 yards, and run for gain of 10 yards <L>
+<L.8.1>
+<Z>Yellow Jackets: rushing 9 for 19 yds inside and 4 for 26 yds outside, passing 5 for 5 and 56 yds short, 2 for 0 and 0 yds long<L>
+<C>Panthers: rushing 1 for 10 yds inside and 5 for 8 yds outside, passing 3 for 3 and 21 yds short, 3 for 0 and 0 yds long<L>
+<P>
+<BK.3rd Quarter><L>
+<B>3rd Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+30:00  GT                     KO KR    kickoff to 14, run back 15 yards<L>
+30:33  PI  71  1st and 10   U RT RD    FB run breakout and out of bounds for gain of 13 yards <L>
+31:09      58  1st and 10   U RT SB    offside against defence, for penalty of 5 yards<L>
+31:41      53  1st and 5    U RT GL    FB run for loss of 1 yard <L>
+32:24      54  2nd and 6    O DL GL    no open receiver, QB sacked for loss of 7 yards <L>
+33:02      61  3rd and 13   Z SL MD    pass complete to WR, for gain of 15 yards <L>
+33:41      46  1st and 10   O DV GL   <Z> misdirection, WR, breakout for gain of 46 yards <L>
+                                       is touchdown Pittsburgh Panthers, PAT bad<T>3-27 PI<C><L>
+34:20                         KO KR    kickoff to 4, run back 2 yards<L>
+34:42  GT  94  1st and 10   W LL ND    QB scramble, pass dumped off to RB at gain of 5 yards, and breakout for gain of 37 yards <L>
+35:13      52  1st and 10   S SI MD    pass complete to WR, at gain of 4 yards, and run for gain of 9 yards <L>
+35:40      39  1st and 10   W RI MD    HB run for gain of 3 yards <L>
+36:02      36  2nd and 7    J LL RD    pass complete to TE, for gain of 13 yards <L>
+36:32      23  1st and 10   I LO IX    pass complete to TE, and forced out of bounds for gain of 8 yards <L>
+36:57      15  2nd and 2    I RL RD    HB run for gain of 2 yards <L>
+37:19      13  1st and 10   I LO IX    blitz picked up, pass complete to TE, and pushed out of bounds for gain of 8 yards <L>
+37:44       5  2nd and 2    I RL WC    HB run for gain of 4 yards <L>
+38:07       1  1st & Goal   I RL WC   <Z> HB run for gain of 1 yard <L>
+                                       is touchdown Georgia Tech Yellow Jackets, conversion bad<T>9-27 PI<C><L>
+38:27                         KO KR    kickoff into endzone, touched back to 20<L>
+38:27  PI  80  1st and 10   O PS RD    pass out of bounds, incomplete<L>
+38:59      80  2nd and 10   O RW ES    HB run for gain of 9 yards <L>
+39:35      71  3rd and 1    A QR LD    quarterback run, and out of bounds for gain of 2 yards <L>
+40:07      69  1st and 10   O DL RD    pass picked off, intercepted at gain of 18 yards, and not run back<L>
+40:46  GT  49  1st and 10   I OP RD    pass dropped, incomplete<L>
+41:06      49  2nd and 10   Z QL TS    pass complete to WR, at gain of 5 yards, and run for gain of 10 yards <L>
+41:33      34  1st and 10   W RN MD    HB run for gain of 1 yard <L>
+41:55      33  2nd and 9    Z DR MD    lead blockers, HB, breakout for gain of 8 yards <L>
+42:25      25  3rd and 1    S QS BZ    quarterback sneak, for gain of 2 yards <L>
+42:47      23  1st and 10   I LO RD    pass out of bounds, incomplete<L>
+43:07      23  2nd and 10   S DS WC    pass dropped, incomplete<L>
+43:27      23  3rd and 10   D FI ZD    pass dumped off short to WR at gain of 1 yard, and run for gain of 1 yard <L>
+43:47      21  4th and 8    F FG FB   <Z> field goal attempt of 38 yards, good<T>12-27 PI<C><L>
+44:07                         KO KR    kickoff to 7, run back 1 yards<L>
+44:40  PI  92  1st and 10   O DV RD    WR stuffed, and pushed out of bounds for loss of 3 yards <L>
+44:58      95  2nd and 13   C DL SB    quarterback scramble, for gain of 9 yards <L>
+<L.8.1>
+<Z>Yellow Jackets: rushing 6 for 20 yds inside and 1 for 1 yds outside, passing 8 for 7 and 101 yds short, 2 for 0 and 0 yds long<L>
+<C>Panthers: rushing 2 for 12 yds inside and 5 for 63 yds outside, passing 2 for 1 and 15 yds short, 3 for 0 and 0 yds long<L>
+<P>
+<BK.4th Quarter><L>
+<B>4th Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+45:00  PI  86  3rd and 4    O PS SB    QB scramble, pass dumped off short to WR at gain of 8 yards, and breakout for gain of 29 yards <L>
+45:45      49  1st and 10   O PS RD    pass complete to WR, for gain of 27 yards <L>
+46:30      22  1st and 10   O RW SB    HB run for gain of 4 yards <L>
+47:06      18  2nd and 6    O CW ND    HB run for gain of 5 yards <L>
+47:42      13  3rd and 1    O LL OX   <Z> pass complete to TE, for gain of 13 yards <L>
+                                       is touchdown Pittsburgh Panthers, PAT good<T>12-34 PI<C><L>
+48:21                         KO KR    kickoff to 11, run back 36 yards<L>
+48:41  GT  53  1st and 10   D QD WC    quarterback draw, for gain of 18 yards <L>
+49:15      35  1st and 10   D QD ZD    quarterback draw, for gain of 14 yards <L>
+49:44      21  1st and 10   D DL LD    pass dropped, incomplete<L>
+50:04      21  2nd and 10   D SC ZD    pass complete to RB, at loss of 2 yards, and breakout for gain of 13 yards <L>
+50:28      10  1st & Goal   I OT RD    FB run for gain of 4 yards <L>
+50:50       6  2nd & Goal   J RI MD    HB run for gain of 4 yards <L>
+51:14       2  3rd & Goal   J RI RD    HB run for gain of 1 yards, fumbled and not recovered <L>
+51:40  PI  99  1st and 10   C DL SB    pass complete to WR, for gain of 27 yards <L>
+52:25      72  1st and 10   O DL RD    QB hurried, pass thrown away, incomplete<L>
+52:57      72  2nd and 10   O DV ZD    misdirection, WR, breakout and forced out of bounds for gain of 8 yards <L>
+53:31      64  3rd and 2    A QR SB    quarterback run, for gain of 3 yards <L>
+54:05      61  1st and 10   O PS RD    pass thrown away, incomplete<L>
+54:37      61  2nd and 10   O RW RD    HB run for loss of 1 yard <L>
+55:22      62  3rd and 11   Z SL LD    pass broken up, incomplete<L>
+55:54      62  4th and 11   P PN PR    punt for 51 yards, run back 15 yards <L>
+56:33  GT  74  1st and 10   D SC LD    pass complete to RB, at loss of 4 yards, and breakout for gain of 32 yards <L>
+57:18      46  1st and 10   D QL WC    pass dumped off short to WR for gain of 10 yards <L>
+57:52      36  1st and 10   D QD WC    quarterback draw, for gain of 10 yards <L>
+<B><L.54.1>
+Two Minute Warning (second half)<C><L.54.1>
+58:00  GT  26  1st and 10   D QD BZ    quarterback draw, and forced out of bounds for gain of 12 yards <L>
+58:09      14  1st and 10   I OT OX    pitchout to HB, breakout for gain of 5 yards <L>
+58:18       9  2nd and 5    J RI TS    HB run for gain of 4 yards <L>
+58:26       5  3rd and 1    S QS ND    quarterback stuffed, for loss of 2 yards <L>
+58:37       7  4th and 3    W RN OX    HB run for loss of 4 yards <L>
+58:54  PI  89  1st and 10   A QR RD    quarterback run, and forced out of bounds for gain of 2 yards <L>
+59:26      87  2nd and 8    A QR LD    quarterback run, and forced out of bounds for gain of 7 yards <L>
+59:34      80  3rd and 1    A QR GL    quarterback run, and out of bounds for gain of 2 yards <L>
+59:41      78  1st and 10              quarterback flop, downs the ball to run out the clock<L>
+<L.8.1>
+<Z>Yellow Jackets: rushing 9 for 65 yds inside and 2 for 1 yds outside, passing 3 for 3 and 49 yds short, 1 for 0 and 0 yds long<L>
+<C>Panthers: rushing 1 for 5 yds inside and 7 for 25 yds outside, passing 5 for 3 and 77 yds short, 2 for 1 and 27 yds long<L>
+<P>
+<E><ST.66><L>
+<B><U>Georgia Tech Yellow Jackets<UC><T><U>Pittsburgh Panthers<UC><L.54.1>
+Dave Flesfader<T>Alan Milnes<L.54.1>
+1st 2nd 3rd 4th Final<T>1st 2nd 3rd 4th Final<T><L>
+ 0   3   9   0    12<T>14   7   6   7    34<T><L.54.1>
+<C>Time  1stDn 3rdDn 4thDn Short Long Sfty<T>Time  1stDn 3rdDn 4thDn Short Long Sfty<T><L>
+28:37   28   5/12   0/1  8/14  0/6   0<T>31:23   24   7/11   1/1  9/10  3/6   0<T><L.54.1>
+Att Comp Pct Yds AvgA AvgC Lng Int TD Pop Hrd Skd Yds<T>Att Comp Pct Yds AvgA AvgC Lng Int TD Pop Hrd Skd Yds<T><L>
+ 25  17 68.0 230  9.2 13.5  42   2  0   0   2   0   0<T> 27  18 66.7 317 11.7 17.6  47   2  4   0   5   2  12<T><L.54.1>
+Att Yds AvgR Lng Fum Rec TD Stf Scr Yds<T>Att Yds AvgR Lng Fum Rec TD Stf Scr Yds<T><L>
+ 42 191  4.5  18   1   0  1   3  11  83<T> 28 145  5.2 t46   0   0  1   3   7  27<T><L.54.1>
+FGA EPA CPA  Punt Yds AvgG AvgN Bk FC OB TB Dn Fm Ret In20<T>FGA EPA CPA  Punt Yds AvgG AvgN Bk FC OB TB Dn Fm Ret In20<T><L>
+2/2 0/0 0/1    2   89 44.5 42.5  0  0  0  0  1  0   1   1<T>0/0 4/5 0/0    2  103 51.5 41.0  0  0  0  0  0  0   2   0<T><L.54.1>
+Pens Yds  KR Yds  PR Yds <T>Pens Yds  KR Yds  PR Yds  In Yds <T><L>
+  3   25   4  61   2  21<T>  1    5   3  24   1   4   2  17<T><L.54.1>
+RI  RL  RN  DR  DT  CW  RV  OR  OT  QR  QD  QS  <T>RT  RN  DR  CW  PW  RW  DV  QR  <L>
+9   5   3   1   3   4   1   4   1   1   5   5   <T>3   1   1   1   1   7   7   7   <L>
+28  9   -1  8   14  28  -3  21  4   16  61  6   <T>15  -1  10  5   4   31  54  27  <L.54.1>
+QL  SI  LL  LO  FI  SC  DL  DS  OP  <T>SL  LL  LI  LO  DL   DO  DS  OP  PS  <L>
+2/1 1/1 5/3 4/3 2/1 5/5 1/0 3/0 2/0 <T>2/1 2/1 1/1 1/1 11/2 1/0 2/1 1/1 9/3 <L>
+15  13  39  27  16  66  0   0   0   <T>15  13  4   3   55   0   26  14  55  <L.54.1>
+SP  FP  <T>SP  LP  FP  <L>
+0/2 0/1 <T>0/3 0/3 0/1 <L>
+12  42  <T>93  30  9   <L.54.1>
+SB  OX  ES  GL  LD  MD  ND  RD  ZS  ZD  <T>BZ  IX  OX  LD  MD  ND  RD  TS  WC  ZD  <L>
+10  3   1   11  7   1   3   19  1   2   <T>3   10  2   3   11  11  10  2   13  5   <L>
+123 21  9   79  67  15  9   137 13  18  <T>21  51  1   28  49  94  42  19  104 35  <L.54.1>
+<Z>Rushing:-   <C>Yellow Jackets, Hollings 29-107-1, King 11-83, White 1--3, Wilder 1-4<L>
+<Z>            <C>Panthers, Aston 3-15, Abanikanda 3-19, Austin 7-54-1, Ollison 8-30, Browne 7-27<L>
+<L.9.1>
+<Z>Passing:-   <C>Yellow Jackets, King 17-25-2-230<L>
+<Z>            <C>Panthers, Browne 18-27-2-317-4<L>
+<L.9.1>
+<Z>Receiving:- <C>Yellow Jackets, Cooper 6-66, Hollings 7-124, White 4-40<L>
+<Z>            <C>Panthers, Austin 9-218, Mitchell 6-50-3, Reynolds 2-40-1, Abanikanda 1-9<L>
+<L.9.1>
+<E><DU>
+<P.70><BK.League Report><L>
+<B>NCAA5  League Report  Gameplan Advanced Vn 2.17  Week 13 of 11  13/4/24<ST.66><C><L.45.1>
+<L.12.1>
+<B><U>Gold Bowl<UC><L.45.1>
+<Z>Georgia Tech Yellow Jackets (Dave Flesfader) UP  0 3 9 0 (12)<T>Pittsburgh Panthers (Alan Milnes) UP  14 7 6 7 (34)<C><L.31.1>
+FG 2/2, EP 0/0, CP 1/0, Punt 2, 3rd 5/12, 4th 0/1, 1st 28<T>FG 0/0, EP 5/4, CP 0/0, Punt 2, 3rd 7/11, 4th 1/1, 1st 24<L.31.1>
+Pass 17 for 25, 230 yds, Lg 42, 68%, In 2, Hrd 2, Skd 0<T>Pass 18 for 27, 317 yds, Lg 47, 4 TD, 67%, In 2, Hrd 5, Skd 2<L.31.1>
+Rush 42 for 191 yds, Lg 18, 1 TD, avg 4.5, Fm 1, QB 11 for 83 yds<T>Rush 28 for 145 yds, Lg t46, 1 TD, avg 5.2, Fm 0, QB 7 for 27 yds<L.31.1>
+KR 4 for 61 yds, PR 2 for 21 yds, FumR 0 for 0 yds<T>KR 3 for 24 yds, PR 1 for 4 yds, IntR 2 for 17 yds<L.31.1>
+Calls Fm I D, Run QD RI, Pass SC FP, Def RD GL<T>Calls Fm O A, Run DV RW, Pass SP DL, Def WC MD<L.40.1>
+<L.12.1>
+<B>Consolation Gold<L.45.1>
+<Z>Ohio State Buckeyes (Gordon Milnes) UP  14 13 0 0 (27)<T>Iowa State Cyclones (David Trice) UP  7 10 19 0 (36)<C><L.31.1>
+FG 0/0, EP 4/3, CP 0/0, Punt 2, 3rd 5/14, 4th 3/6, 1st 21<T>FG 1/1, EP 5/3, CP 0/0, Punt 5, 3rd 3/9, 4th 1/1, 1st 21<L.31.1>
+Pass 22 for 34, 373 yds, Lg t66, 4 TD, 65%, In 1, Hrd 9, Skd 3<T>Pass 17 for 22, 352 yds, Lg t74, 3 TD, 77%, In 0, Hrd 0, Skd 1<L.31.1>
+Rush 32 for 108 yds, Lg 26, avg 3.4, Fm 1, QB 17 for 54 yds<T>Rush 31 for 146 yds, Lg 14, 2 TD, avg 4.7, Fm 1, QB 1 for 14 yds<L.31.1>
+KR 5 for 110 yds, PR 4 for 18 yds, FumR 1 for 19 yds<T>KR 4 for 78 yds, PR 0 for 0 yds, FumR 1 for 13 yds<L.31.1>
+Calls Fm S D, Run QR EV, Pass DL DP, Def LD ZD<T>Calls Fm S P, Run DR LT, Pass OP QI, Def DD MD<L.40.1>
+<L.12.1>
+<B><U>Silver Bowl<UC><L.45.1>
+<Z>New Mexico Lobos (Martyn Williams) UP  14 10 7 0 (31)<T>Notre Dame Fighting Irish (Darren Halford) UP  3 8 7 21 (39)<C><L.31.1>
+FG 1/1, EP 4/4, CP 0/0, Punt 2, 3rd 3/8, 4th 0/2, 1st 21<T>FG 4/1, EP 4/4, CP 1/1, Punt 0, 3rd 10/15, 4th 0/0, 1st 33<L.31.1>
+Pass 6 for 9, 69 yds, Lg 21, 1 TD, 67%, In 1, Hrd 2, Skd 1<T>Pass 20 for 27, 248 yds, Lg 28, 3 TD, 74%, In 1, Hrd 1, Skd 0<L.31.1>
+Rush 42 for 207 yds, Lg 20, 3 TD, avg 4.9, Fm 0, QB 3 for 24 yds<T>Rush 47 for 287 yds, Lg 52, 2 TD, avg 6.1, Fm 0, QB 7 for 36 yds<L.31.1>
+KR 7 for 152 yds, PR 0 for 0 yds, IntR 1 for 12 yds<T>KR 2 for 32 yds, PR 2 for 11 yds, FumR 0 for 0 yds<L.31.1>
+Calls Fm I A, Run RT QR, Pass LO PA, Def RD IX<T>Calls Fm W Z, Run RN RO, Pass OP SL, Def FS ES<L.40.1>
+<L.12.1>
+<B>Consolation Silver<L.45.1>
+<Z>Air Force Falcons (Greg Salmon) UP  0 13 0 0 (13)<T>Army Black Knights (Dominic Williams) UP  14 7 10 3 (34)<C><L.31.1>
+FG 0/0, EP 2/1, CP 0/0, Punt 3, 3rd 4/9, 4th 0/2, 1st 18<T>FG 2/2, EP 4/4, CP 0/0, Punt 1, 3rd 9/15, 4th 1/1, 1st 28<L.31.1>
+Pass 16 for 27, 185 yds, Lg 17, 1 TD, 59%, In 3, Hrd 1, Skd 3<T>Pass 20 for 29, 261 yds, Lg 30, 69%, In 1, Hrd 2, Skd 3<L.31.1>
+Rush 22 for 87 yds, Lg t14, 1 TD, avg 4.0, Fm 0, QB 4 for 21 yds<T>Rush 40 for 204 yds, Lg 52, 3 TD, avg 5.1, Fm 1, QB 9 for 43 yds<L.31.1>
+KR 6 for 113 yds, PR 1 for 2 yds, FumR 0 for 0 yds<T>KR 2 for 96 yds, 1 TD, PR 0 for 0 yds, IntR 1 for 13 yds<L.31.1>
+Calls Fm W O, Run DR QR, Pass OP LL, Def LD RD<T>Calls Fm W H, Run CW DW, Pass LO DP, Def RD ZD<L.40.1>
+<L.12.1>
+<B><U>Bronze Bowl<UC><L.45.1>
+<Z>Maryland Terrapins (Patrick Lee) UP  14 7 3 7 (31)<T>Navy Midshipmen (Ray Gillham) UP  0 0 0 6 (6)<C><L.31.1>
+FG 1/1, EP 4/4, CP 0/0, Punt 2, 3rd 2/9, 4th 1/2, 1st 23<T>FG 0/0, EP 0/0, CP 1/0, Punt 2, 3rd 7/12, 4th 0/2, 1st 20<L.31.1>
+Pass 19 for 28, 263 yds, Lg 32, 3 TD, 68%, In 1, Hrd 2, Skd 2<T>Pass 20 for 28, 228 yds, Lg 27, 1 TD, 71%, In 3, Hrd 1, Skd 1<L.31.1>
+Rush 25 for 119 yds, Lg 47, 1 TD, avg 4.8, Fm 0, QB 3 for 5 yds<T>Rush 34 for 98 yds, Lg 15, avg 2.9, Fm 3, QB 13 for 25 yds<L.31.1>
+KR 2 for 51 yds, PR 1 for 4 yds, DefR 2 for 40 yds<T>KR 3 for 38 yds, PR 2 for 15 yds, IntR 1 for 38 yds<L.31.1>
+Calls Fm J I, Run CW DW, Pass OP LL, Def RD WC<T>Calls Fm I H, Run OR RC, Pass SO SP, Def RD ND<L.40.1>
+<L.12.1>
+<B>Consolation Bronze<L.45.1>
+<Z>Texas Longhorns (Graham Beaton) UP  0 0 0 9 (9)<T>Wake Forest Demon Deacons (Andy Starkey) UP  7 6 14 3 (30)<C><L.31.1>
+FG 2/1, EP 1/0, CP 0/0, Punt 7, 3rd 3/16, 4th 1/2, 1st 7<T>FG 1/1, EP 4/3, CP 0/0, Punt 6, 3rd 7/14, 4th 0/0, 1st 23<L.31.1>
+Pass 11 for 16, 109 yds, Lg t33, 1 TD, 69%, In 1, Hrd 2, Skd 2<T>Pass 18 for 28, 239 yds, Lg 31, 3 TD, 64%, In 1, Hrd 2, Skd 2<L.31.1>
+Rush 35 for 58 yds, Lg 10, avg 1.7, Fm 1, QB 8 for 16 yds<T>Rush 39 for 120 yds, Lg 9, 1 TD, avg 3.1, Fm 1, QB 5 for 18 yds<L.31.1>
+KR 4 for 155 yds, PR 2 for 5 yds, FumR 0 for 0 yds<T>KR 1 for 20 yds, PR 7 for 39 yds, IntR 1 for 28 yds<L.31.1>
+Calls Fm I A, Run SW QR, Pass DI LO, Def RD JB<T>Calls Fm A D, Run PW RN, Pass DO SO, Def RD GL<L.40.1>
+<L.31.1>
+<ST.60><B>Pre-Season Schedule<C><L.36.1>
+Air Force Falcons at Pittsburgh Panthers<T>Notre Dame Fighting Irish at Wake Forest Demon Deacons<L.31.1>
+Navy Midshipmen at Iowa State Cyclones<T>Army Black Knights at Ohio State Buckeyes<L.31.1>
+Georgia Tech Yellow Jackets at Maryland Terrapins<T>Texas Longhorns at New Mexico Lobos<L.31.1>
+<B>DEADLINE:   Saturday 27th April<C><L.40.1>
+Address: Danny McConnell, 82 Scotts Lane, Bromley, Kent, BR2 0LX.  <L.31.1>
+Email: danny@pbmsports.com, Websites: www.pbmsports.com, www.softsim.co.uk & www.sidetracks.co.uk <L.31.1>
+Turnfees: #3.50 for one, #14 for four, #32 for ten, #56 for twenty.  Cheques made payable to: SSI Ltd<L.42.1>
+<Z>Next Few Months <C> Please don't be surprised if a few turns run late at some point over the next few months. Unfortunately my<L.31.1>
+father is unwell, so I'm spending time up and down some motorways, potentially at short notice. Please keep an eye on the latest<L.31.1>
+news of the website, as I will post there if things are delayed (and I am able to do so). However, assume games run on time......<L.31.1>
+<L.12.1>
+<Z>Processing and Late Turns <C> Please note that the deadline is 9am Saturday, UK time, but appreciate I may run games Saturday or<L.31.1>
+Sunday, and don't chase me up for "missing turns" until Monday. If I've got an issue which means turns delayed beyond that, you <L.31.1>
+should find an update on www.pbmsports.com in the Latest News section, so please check there first.<L.31.1>
+<L.12.1>
+<Z>Online Turnsheets <C> Please make sure when you input turns online you get the week/turn number correct (it's on your turnsheet).<L.31.1>
+If you get it wrong, there's a risk the turn gets missed. Please also avoid double submission of turns - if they're within minutes<L.31.1>
+the system will only take the latest set, but if they're spread out both may be input and you'll get charged 0.1 credit.<L.31.1>
+<L.12.1>
+<Z>Slack <C> There's an independent (i.e. I'm not on it) group on Slack of various players in various games (Gameplan, Raceplan, <L.31.1>
+Baseball, etc) covering things run here (and probably offering hints and advice, which may or may not be accurate). For more<L.31.1>
+information, go to gameplanpbm.slack.com, or for an invite contact Alan Milnes on alan@gameplan.org.uk<L.31.1>
+<L.12.1>
+<Z>Trial Startups <C> The offer of a free trial startup remains available throughout 2024. If you fancy picking up a new team, or <L.31.1>
+trying a different game, check out the options on www.pbmsports.com and drop me a line<L.31.1>
+<E><DU>
+<BK.Scouting Report><L>
+<P.70><L>
+<B>GAMEPLAN   NCAA5   Pittsburgh Panthers   Season 2035, Week 0   13/4/24<L.18.1>
+___________________________________________________________________________<L.54.1>
+<U>Scouting Report<UC><C><L.36.1>
+<ST.12><L.18.1>
+<Z>Week 0,<T>Game:-  Pittsburgh Panthers (0-0) Alan Milnes <L.36.1>
+<T>Versus  Air Force Falcons (0-0) Greg Salmon<C><L.18.1>
+<L.18.1>
+<ST.44><L.18.1>
+Pos Num Age NomVal  Name<T>Pos Num Age NomVal  Name<T><L.42.1>
+QB   11   1  -  -   Chance Harridge<T>DRE  38   1  -  -   Brandon Bernadoni<L>
+BQ    4   1  -  -   Brad Booth<T>DRT  91   4  -  -   Eric Thompson<L>
+FB   46   2  -  -   Tim Gershitz<T>NT   96   1  -  -   Brandon Conyers<L>
+HB    2   1  -  -   Rich Davis<T>DLT  77   4  -  -   Brett Waller<L>
+RB   18   3  -  -   Mark Carlson<T>DLE  90   3  -  -   Charles Bueker<L>
+TE1  98   1  -  -   Todd Jolly<T>ROLB 42   2  2 DRI  Monty Coleman<L>
+TE2   9   2  -  -   Leotis Palmer<T>RILB 43   4  3 DRI  Joe Cianciolo<L>
+RT   61   2  3 OQB  Blane Neufeld<T>MLB  48   4  3 DRI  John Rudzinski<L>
+RG   62   2  -  -   Vance Shaffer<T>LILB 54   4  -  -   Justin Kasmarcak<L>
+C    60   4  3 OQB  Cory Crossetti<T>LOLB 44   3  2 DRI  Trevor Hightower<L>
+LG   97   3  2 OQB  Joey Ashcroft<T>RCB  21   2  3 DPL  Joel Buelow<L>
+LT   79   4  -  -   Scott Diehl<T>SS   45   3  2 DPL  Alex Renshaw<L>
+WR1   3   3  -  -   Bryan Blew<T>FS   31   2  3 DPL  Chase Waterhouse<L>
+WR2  80   1  -  -   Rickey Amezaga<T>LCB   1   2  3 DPL  Paul Mayo<L>
+WR3  83   4  -  -   J.P. Waller<T>NCB  32   4  -  -   Felix Cole<L>
+WR4  85   4  -  -   Dennis Poland<T>PN   81   3  1 OPN  Robert Barkers<L>
+<T>KK   93   4  -  -   Michael Greenaway<L.36.1>
+Defence Formation: 4-3 (MLB=48)   Roster Total: 32<L.45.1>
+Key to Status:- CFA=Conditional Free Agent, CW=Conditional Waiver, Red=Reduced, Loss-Cat is Step Loss, Gain+Cat is Step Gain<L.45.1>
+<L.18.1>
+<B><U>Stats Breakdown<UC><L.33.1>
+<ST.44.88><L.18.1>
+<Z>Air Force Falcons, last game, offence<T>Air Force Falcons, season, offence<T>Pittsburgh Panthers, season, offence<C><L.45.1>
+<U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<L.36.1>
+Inside       -      3:5    10:39     -   <T>Inside       -     41:175 137:749    -   <T>Inside     12:29   55:247  20:115    -   <L.36.1>
+Outside     4:21     -      5:22     -   <T>Outside    36:183    -     87:558    -   <T>Outside    37:195   3:11  104:753  51:492<L.36.1>
+<U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<L.36.1>
+Short       3/6:31    4/15:57     -      <T>Short     22/41:223  79/156:1382    -      <T>Short       5/8:28   17/37:147  40/101:678<L.36.1>
+Long        -          -         4/10:61 <T>Long        -          -        47/160:991<T>Long        -          -        62/196:1784<L.36.1>
+Dumpoff     3/0:24     2/0:12     -      <T>Dumpoff    24/0:156   13/0:92     2/0:37 <T>Dumpoff    22/0:292   21/0:280   31/0:878<L.36.1>
+<L.18.1>
+<Z>Air Force Falcons, last game, defence<T>Air Force Falcons, season, defence<T>Pittsburgh Panthers, season, defence<C><L.45.1>
+<U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<L.36.1>
+Inside      2:26    8:14    9:85     -   <T>Inside     36:155  50:176  91:295    -   <T>Inside     37:155  27:112  95:436    -   <L.36.1>
+Outside     7:17     -     14:62     -   <T>Outside    61:265    -    139:655  24:168<T>Outside    58:179    -    152:994  21:66 <L.36.1>
+<U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<L.36.1>
+Short       5/6:38    8/10:94     1/6:9  <T>Short     22/25:210  30/65:300  29/68:325<T>Short     22/29:172  57/96:939  34/76:496<L.36.1>
+Long        -          -         3/10:55 <T>Long        -          -        41/140:1115<T>Long        -          -        44/130:1112<L.36.1>
+Dumpoff     -          -          3/0:65 <T>Dumpoff    11/0:95     9/0:104   31/0:664<T>Dumpoff    18/0:140    5/0:27    24/0:372<L.36.1>
+<L.18.1>
+<P>
+<BK.Scouting Report - Game Summary><P.70><B><L>
+GAMEPLAN    Game Summary    NCAA5    13/4/24<L.12.1>
+________________________________________________________________________<L.45.1>
+<Z>Consolation Bowl: Silver, Air Force Falcons<C> at Army Black Knights<ST.39.61.79.122><L.54.1>
+<Z><U>1st Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+<Z>AI   0:00  AI 38  Kick Return 26 yds<T>3 plays for 10 yds<T>FP pass 7 yds<T><C>intercepted<L.33.1>
+AR   1:39  AR 39  Interception<T>9 plays for 61 yds<T>DP pass 26 yds<T>RC run 1 yd for TD, PAT good<T>0-7 AR<L.33.1>
+<Z>AI   5:28  AI 25  Kick Return 14 yds<T>10 plays for 56 yds<T>LL pass 14 yds<T>failed to convert on 4th Down<L.33.1>
+<C>AR  10:01  AR 19  After 4th Down<T>11 plays for 81 yds<T>CW run 52 yds<T>PW run 2 yds for TD, PAT good<T>0-14 AR<L.33.1>
+<Z>AI  14:37  AI 23  Kick Return 10 yds<T>1 play for 17 yds<T>OP pass 17 yds<T>end of quarter<L.33.1>
+<L.8.1>
+Falcons: rushing 6 for 5 yds inside and 2 for 17 yds outside, passing 2 for 2 and 21 yds short, 3 for 2 and 29 yds long<L>
+<C>Black Knights: rushing 6 for 59 yds inside and 6 for 26 yds outside, passing 3 for 2 and 20 yds short, 3 for 2 and 42 yds long<L>
+<L.21.1>
+<Z><U>2nd Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+<Z>AI  15:00  AI 40  Start Quarter<T>3 plays for loss<T>-<T>punt of 53 yards<L.33.1>
+<C>AR  16:45  AR 13  Fair Catch<T>4 plays for 20 yds<T>LO pass 11 yds<T>punt of 28 yards<L.33.1>
+<Z>AI  18:45  AI 41  Punt Return 2 yds<T>8 plays for 59 yds<T>OP pass 16 yds<T>DR run 14 yds for TD, PAT good<T>7-14 AR<L.33.1>
+<C>AR  22:11  AR 25  Kick Return 8 yds<T>8 plays for 37 yds<T>LO pass 10 yds<T><Z>fumbled<L.33.1>
+AI  25:46  AI 43  Fumble<T>5 plays for 57 yds<T>OP pass 16 yds<T>OP pass 16 yds for TD, PAT bad<T>13-14 AR<L.33.1>
+<C>AR  28:00  AR 12  Kick Return<T><T>-<T>return 88 yds for TD, PAT good<T>13-21 AR<L.33.1>
+<Z>AI  28:07  AI 31  Kick Return 10 yds<T>3 plays for 6 yds<T>RN run 6 yds<T>punt of 63 yards<L.33.1>
+<C>AR  28:51  AR 20  Touchback<T>4 plays for 23 yds<T>FI pass 13 yds<T>time expired<L.33.1>
+<L.8.1>
+<Z>Falcons: rushing 3 for 24 yds inside and 3 for 14 yds outside, passing 9 for 5 and 60 yds short, 4 for 2 and 32 yds long<L>
+<C>Black Knights: rushing 3 for 17 yds inside and 5 for 16 yds outside, passing 7 for 6 and 47 yds short, 1 for 0 and 0 yds long<L>
+<L.21.1>
+<Z><U>3rd Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+AR  30:00  AR  8  Kickoff<T>13 plays for 70 yds<T>OP pass 17 yds<T>39 yd field goal attempt, good<T>13-24 AR<L.33.1>
+<Z>AI  35:49  AI 20  Touchback<T>5 plays for 12 yds<T>FP pass 9 yds<T>punt of 66 yards<L.33.1>
+<C>AR  38:22  AR  2  Fair Catch<T>8 plays for 65 yds<T>LO pass 30 yds<T><Z>intercepted<L.33.1>
+AI  41:56  AI 25  Interception<T>1 play for no gain<T>-<T><C>intercepted<L.33.1>
+AR  42:21  <Z>AI 27  <C>Interception<T>4 plays for 27 yds<T>OP pass 22 yds<T>PW run 2 yds for TD, PAT good<T>13-31 AR<L.33.1>
+<Z>AI  43:58  AI 48  Kick Return 36 yds<T>3 plays for 13 yds<T>QR run 7 yds<T>end of quarter<L.33.1>
+<L.8.1>
+Falcons: rushing 2 for 3 yds inside and 2 for 4 yds outside, passing 4 for 3 and 18 yds short, 2 for 0 and 0 yds long<L>
+<C>Black Knights: rushing 5 for 29 yds inside and 7 for 22 yds outside, passing 6 for 3 and 49 yds short, 5 for 3 and 55 yds long<L>
+<L.21.1>
+<Z><U>4th Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+<Z>AI  45:00  <C>AR 39  <Z>Start Quarter<T>1 play for no gain<T>-<T><C>intercepted & ret 13 yds<L.33.1>
+AR  45:24  AR 41  Interception<T>13 plays for 46 yds<T>DP pass 23 yds<T>30 yd field goal attempt, good<T>13-34 AR<L.33.1>
+<Z>AI  54:01  AI 30  Kick Return 17 yds<T>10 plays for 40 yds<T>LL pass 13 yds<T>failed to convert on 4th Down<L.33.1>
+<C>AR  58:08  AR 30  After 4th Down<T>3 plays for 20 yds<T>LO pass 9 yds<T>time expired<L.33.1>
+<L.8.1>
+<Z>Falcons: rushing 2 for 12 yds inside and 2 for 8 yds outside, passing 6 for 2 and 25 yds short, 1 for 0 and 0 yds long<L>
+<C>Black Knights: rushing 5 for 20 yds inside and 3 for 15 yds outside, passing 6 for 3 and 25 yds short, 1 for 1 and 23 yds long<L>
+<E><DU>
+<BK.Draftsheet><L>
+<B>GAMEPLAN   NCAA5   TRAINING CAMP   <X>NCAA5-PI<L.45.1>
+Pittsburgh Panthers  (Alan Milnes)   13/4/24      turn credits = 23.7<C><L.18.1>
+<Z>__________________________________________________________________________________________________________________________________<L.48.1>
+<C><L.18.1>
+<ST.29.69.98><L.18.1>
+Pos Num Name<T>Age Val Strengths           Status<T>Pos Num Name<T>Age Val Strengths       Status<T><L.42.1>
+QB    4 Max Browne<T> 1  -  -                    -<T>DRE  40 James Folston<T> 2  2  DRI DBZ          -       <L>
+BQ   13 Jeff George Jr<T> 1  -  -                    -<T>DRT  92 Burt Grossman<T> 1  -  -                -<L>
+FB   35 George Aston<T> 4  -  -                    -<T>NT   91 Patrick Jones II<T> 3  3  DRI DRO DBZ      -       <L>
+HB   22 Israel Abanikanda<T> 2  -  -                    -<T>DLT  10 Keyshon Camp<T> 3  -  -                -<L>
+RB   37 Qadree Ollison<T> 4  -  -                    -<T>DLE  98 Kirk Christodoulou<T> 3  -  -                -<L>
+TE1  43 Cole Mitchell<T> 1  -  -                    -<T>ROLB 36 Chase Pine<T> 2  -  -                -<L>
+TE2  44 Jason Collier<T> 1  -  -                    -<T>RILB 52 Darrin Smith<T> 2  -  -                -<L>
+RT   60 Owen Drexel<T> 4  -  -                    -<T>MLB  51 Preston Lavant<T> 2  -  -                -<L>
+RG   68 Blake Zubovic<T> 4  3  ORI ORO OQB          -       <T>LILB 54 Dylan Bennett<T> 2  3  DRI DRO DPS      -       <L>
+C    61 Ryan Jacoby<T> 4  3  ORI ORO OQB          -       <T>LOLB 32 Sirvocea Dennis<T> 2  -  -                -<L>
+LG   57 Greyson Riffe<T> 2  3  ORI ORO OQB          -       <T>RCB  26 Judson Tallandier<T> 4  -  -                -<L>
+LT   70 Ryan Baer<T> 3  3  ORI ORO OQB          -       <T>SS   48 Matthew Amofa<T> 2  3  DRO DPS DPL      -       <L>
+WR1  20 Myles Austin<T> 4  2  OPS OPL DPR DKR      -       <T>FS   28 Noah Biglow<T> 2  -  -                -<L>
+WR2  81 Daejon Reynolds<T> 3  2  OPS OPL DKR          -       <T>LCB   2 Maurice Ffrench<T> 2  -  -                -<L>
+WR3  83 Darian Street<T> 4  -  -                    -<T>NCB  45 Steve Israel<T> 2  -  -                -<L>
+WR4  29 Josh Junko<T> 4  -  -                    -<T>PN    7 Guy Collura<T> 3  -  -                -<L>
+<T><T>KK   -  -<T> -  -  -                -<L.36.1>
+Defence Formation: 3-4 (NT=91)   Roster Total: 30<L.45.1>
+Key to Status:- CFA=Conditional Free Agent, CW=Conditional Waiver, Red=Reduced, Loss-Cat is Step Loss, Gain+Cat is Step Gain<L.45.1>
+<Z>Total Strengths:-  <C>Total Safe: 30  <L.45.1>
+CFAs must be fixed (cost 5 LPs per nominal value) or waived (get 8 LPs times nominal value plus 4 LPs each other strength).<L.45.1>
+<B>Team Strengths<C><L.45.1>
+             ORI ORO OPS OPL OQB OPN OFG DRI DRO DPS DPL DBZ DPR DKR Tot<L>
+Squad Total:  4   4   2   2   4   0   0   3   3   2   1   2   1   2   30<L>
+Form Totals:  0   0   0   0   0   0   0   0   1   0   0   0   0   0    1<Z>      Losing Points: 61<C><L.45.1>
+<ST.66><B>Actions <C>(last turn):<L.45.1>
+<L.9.1>
+<B>[Z] Free Agent Bid<C>   (minimum bid is 10 LP per nominal value)<E><L.42.1>
+  num     bid<L.42.1>
+[     ] [      LP ]<L.54.1>
+<B>[X] Special Actions<C>   (action types allowed are coach, rename, FA, FX, SS, SW and WA.)<E><L.42.1>
+ code   shirt   name<L.45.1>
+[    ] [     ] [                      ]<L.45.1>
+[    ] [     ] [                      ]<L.45.1>
+[    ] [     ] [                      ]<L.45.1>
+[    ] [     ] [                      ]<L.45.1>
+[    ] [     ] [                      ]<L.45.1>
+<L.18.1>
+<B>[Z] Recruiting <E><L.45.1>
+ code   value   shirt   name<L.45.1>
+[    ] [     ] [     ] [                      ]<L.45.1>
+[    ] [     ] [     ] [                      ]<L.45.1>
+[    ] [     ] [     ] [                      ]<L.45.1>
+<C>Note: To specify recruiting, use draft codes (ie. QR, LS, FQ etc are allowed).<L>
+Up to three players are allowed, with a maximum of three strengths each: cost is 10 LP per actual strength.<L>
+                                                                                                   NCAA5-PI<L>
+<E><DU>
+<BK.Turnsheet><P.70><B><L>
+<C> <B>GAMEPLAN   VERSION 2.17 ADVANCED   13/4/24   TURNSHEET   <X>NCAA5-PI<L.54.1>
+<C> <B>Pittsburgh Panthers (Alan Milnes)<Z><C>     Sn 2035 Wk 0 vs Air Force     <Z>Deadline: Saturday 27th April<C><L.24.1>
+ <B>___________________________________________________________________________<L.48.1>
+<C> <Z>In all cases fill in only those boxes you wish to change from your last game. If you don't want to change it, don't fill it in. <L.48.1>
+<C> Address: Danny McConnell, 82 Scotts Lane, Bromley, Kent, BR2 0LX.  <L.60.1>
+ <B><U>G: Game Parameters<UC><L.6.1>
+<ST.73><L.6.1>
+<C><T>Field goal ranges are yards to the goal line.<E><L.30.1>
+<C> <E> NFG    LFG    SYO    LYO    SYD    LYD    HUT<L.6.1>
+<T><C>Short yardages must be values 1 to 5.<E><L.18.1>
+<BX>F----7 F----7 F----7 F----7 F----7 F----7 F----7 <L.18.1>
+<T><C><BC>Long yardages must be values 6 to 19.<BX><E><L.18.1>
+!    ! !    ! !    ! !    ! !    ! !    ! !    ! <L.18.1>
+<T><C>Hurry up is time gone (0 to 59 minutes).<E><L.18.1>
+L----J L----J L----J L----J L----J L----J L----J <L.18.1>
+<BC><ST.43.98><L.30.1>
+<C> <B><U>A: Gameplan Changes<UC><L.36.1>
+<E><BX>F----T--------T------T-------T-------T-------T-------7F------T----T----T----T----T----7<L.36.1>
+! No !  Name  ! Down ! Score !<BC> YdsDn <BX>!<BC> YdsLn <BX>!<BC> TimeG <BX>!!<BC>  Fm  <BX>! A  ! B  ! C  ! D  ! Rn !<L.36.1>
+K----+--------+------+---T---+---T---+---T---+---T---3K------+----+----+----+----+----3<L.36.1>
+!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+L----I--------I------I---I---I---I---I---I---I---I---JL------I----I----I----I----I----J<L.36.1>
+<BC><C> Write "clear" in a box if you want to remove that play call from your gameplan. <L.30.1>
+<ST.46.99><L.30.1>
+ <B><U>P: Special Teams<UC><T><U>H: Fourth Downs<UC><L.42.1>
+<C> <E>KICK  RETURN  PUNT  RETURN     LATE  MIDFLD  NEAR  SHORT  TWOMIN    <L.24.1>
+<BX>F----7 F----7 F----7 F----7    F----7 F----7 F----7 F----7 F----7 <L.18.1>
+<L.18.1>
+!    ! !    ! !    ! !    ! <BC>   <BX>!    ! !    ! !    ! !    ! !    ! <L.18.1>
+<L.18.1>
+L----J L----J L----J L----J    L----J L----J L----J L----J L----J <L.18.1>
+<BC><L.9.1>
+<C> Special Teams strategies are KO or KS, KR or KV, PN or PC, PR, PV or PB.<L.30.1>
+ Fourth Downs are A=All, G=Goaline, L=Late, M=Midfield, N=None, S=Short, T=TwoMins, or 1 to 9 (yards).<L.60.1>
+ <B><U>T: Team Training & Game Bonuses<UC><L.6.1>
+<ST.101><L.30.1>
+<C> <E>OFFENCE       DEFENCE       KEY PLAYS     BONUS PLAYS   BONUS CATS<L.6.1>
+<T><C>Not used in warmup games.<E><L.18.1>
+<BX>F----T----7   F----T----7   F----T----7   F----T----7   F-----T-----7 <L.18.1>
+<T><C><BC>Training and keys do not<E><L.18.1>
+<BX>!    !    !   !    !    !   !    !    !   !    !    !   !     !     ! <L.18.1>
+<T><C>accumulate in pre-season.<E><L.18.1>
+L----I----J   L----I----J   L----I----J   L----I----J   L-----I-----J <L.18.1>
+<BC><L.30.1>
+<C> <B><U>S: Sort Gameplan<UC><E><L.30.1>
+<C> <E>        <BX>F---T---T---T---T---T---T---T---T---T---T---T---T---T---T---T---7<BC><L.33.1>
+<C> <E>OFFENCE <BX>!   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !<BC>  1-16<L.33.1>
+<C> <E>        <BX>K---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---3<BC><L.33.1>
+<C> <E>DEFENCE <BX>!   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !<BC>  17-32<L.33.1>
+<C> <E>        <BX>L---I---I---I---I---I---I---I---I---I---I---I---I---I---I---I---J<BC><L.30.1>
+<L.24.1>
+<C> <B><U>C: Credit & Payments<UC><E><L.30.1>
+<BX>F-------7 <L.18.1>
+           <C><BC>Turnfees: #3.50 for one, #14 for four, #32 for ten, #56 for twenty.    NCAA5-PI tc=23.7<BX><E><L.18.1>
+! #     ! <L.18.1>
+           <C><BC>Indicate any money sent for credits with this turn.  Cheques made payable to: SSI Ltd<BX><E><L.18.1>
+L-------J <L.18.1>
+<BC><L.9.1>
+<C> Give any change of address in this space and indicate if change is termtime or temporary.<E><L>
+<DU>
+
+--===============4117924667222968766==--

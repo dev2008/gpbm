@@ -1,0 +1,8 @@
+{
+"id": "dadaschool",
+"name": "Dada School",
+"description": "Dada School is a School Management Application.",
+"config_requirements": "$enable_custom_php_pages = 1, $enable_custom_button_functions = 1, $enable_uploads = 1",
+"version": "1.0",
+"author": "Eugenio Tacchini"
+}

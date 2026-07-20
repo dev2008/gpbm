@@ -14,20 +14,20 @@ CLIENT="GameplanPBM"
 EMAIL_SUBJECT_PREFIX="[${CLIENT} backup]"
 
 # Base paths (local)
-BASE="/home/sites/7a/9/917dc0194c/"
+BASE="/home/sites/7a/9/917dc0194c"
 SQL_DIR="${BASE}/sql"
 WEB_DIR="${BASE}/public_html"
 
 # Databases (each with own creds). Add more entries as needed.
 # Format per item: 'name=<db>|host=<host>|user=<user>|pass=<password>'
 DBS=(
-  'name=gameplan-3530313303f9|host=sdb-56.hosting.stackcp.net|user=	gameplan-3530313303f9|pass=_TvoN>HD8!42'
+  'name=gpbmuk-313333c5cd|host=shareddb-u.hosting.stackcp.net|user=gpbmuk-313333c5cd|pass=1I2m$JYh3_)Q'
 )
 
 # Remote rsync.net target (SSH keys already set up)
 REMOTE_USER="zh2342"
 REMOTE_HOST="zh2342.rsync.net"
-REMOTE_BASE="live/gameplan"           # remote base folder (relative to remote $HOME)
+REMOTE_BASE="live/gpbm"           # remote base folder (relative to remote $HOME)
 REMOTE_WEB="${REMOTE_BASE}/web"  # synced from WEB_DIR
 REMOTE_SQL="${REMOTE_BASE}/sql"  # synced from SQL_DIR
 

@@ -1,0 +1,12 @@
+@media (min-width: 768px) {
+	.main-menu-container {
+		display: none;
+	}
+	.td_left_menu{
+		width: 0px;
+	}
+	.site-overflow .td_left_menu {
+		min-width: 0px;
+	}
+	
+}

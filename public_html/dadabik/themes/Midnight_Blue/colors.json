@@ -1,0 +1,19 @@
+{
+  "left_menu_bgcolor": "#101828",
+  "left_menu_text_color": "#FFFFFF",
+
+  "standard_buttons_bgcolor": "#2563EB",
+  "standard_buttons_text_color": "#FFFFFF",
+
+  "custom_buttons_bgcolor": "#475467",
+  "custom_buttons_text_color": "#FFFFFF",
+
+  "danger_buttons_bgcolor": "#DC2626",
+
+  "results_grid_header_bgcolor": "#F8FAFC",
+  "top_bar_bgcolor": "#FFFFFF",
+
+  "edit_icon_color": "#2563EB",
+  "delete_icon_color": "#DC2626",
+  "details_icon_color": "#64748B"
+}

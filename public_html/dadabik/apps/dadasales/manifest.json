@@ -1,0 +1,8 @@
+{
+"id": "dadasales",
+"name": "Dada sales",
+"description": "Dada Sales is a simple sales management application. You can manage your customers, leads and contacts; you can register quotes and orders; you can see graph reports of your sales and much more.",
+"config_requirements": "$enable_advanced_sql_report = 1, $enable_custom_button_functions = 1",
+"version": "1.3",
+"author": "Eugenio Tacchini"
+}

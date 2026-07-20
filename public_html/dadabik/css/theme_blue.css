@@ -1,0 +1,78 @@
+body {
+  background-color: white;
+  color: #222; }
+
+.td_content {
+  background: #eee; }
+
+.fixed-header, .fixed-footer, .table_interface_container_tr_logo > td {
+  background: white; }
+
+.table_interface_container_tr_top_menu td {
+  background: #3b5998; }
+
+.table_interface_container_tr_logo > td {
+  border-color: #1e2e4f; }
+
+.table_interface_container,
+.table_interface_container_tr_logo > td,
+.table_interface_container_tr_top_menu > td {
+  border-bottom: 1px solid #1e2e4f; }
+
+.td_left_menu {
+  background-color: #2d4373; }
+
+.main-menu {
+  border: 1px solid #2d4373;
+  background-color: #2d4373; }
+  .main-menu a {
+    color: white;
+    background-color: #2d4373; }
+    .main-menu a:hover, .main-menu a:active, .main-menu a:focus {
+      color: white;
+      background-color: #2d4373; }
+  .main-menu .sub-menu a {
+    color: white;
+    background: #3b5998; }
+    .main-menu .sub-menu a:hover, .main-menu .sub-menu a:active, .main-menu .sub-menu a:focus {
+      color: white;
+     /*  background-color: #2d4373;  hack, deleted */
+     
+     }
+  .main-menu .is-label {
+    background-color: #2d4373; }
+  .main-menu .sub-menu a {
+    background: #3b5998; }
+  .main-menu .is-separator {
+    border-bottom: 1px solid white; }
+
+.btn-primary {
+  color: white;
+  background-color: #263961; }
+  .btn-primary:focus, .btn-primary:hover, .btn-primary:active {
+    color: white;
+    background-color: #1e2e4f; }
+
+
+/* hack added */
+button, input[type='button'], input[type='submit'] {
+	color: white;
+	background-color: #263961;
+}
+button:focus, button:hover, button:active, input[type='button']:focus, input[type='button']:hover, input[type='button']:active, input[type='submit']:focus, input[type='submit']:hover, input[type='submit']:active {
+	color: white;
+	background-color: #1e2e4f;
+}
+/* end hack */
+
+.btn-delete, .btn-danger {
+  color: white;
+  background-color: #d3323a; }
+  .btn-delete:focus, .btn-delete:hover, .btn-delete:active, .btn-danger:focus, .btn-danger:hover, .btn-danger:active {
+    color: white;
+    background-color: #ad252c; }
+
+.app-info {
+  border: 1px solid #ddd; }
+
+/*# sourceMappingURL=theme_blue.css.map */

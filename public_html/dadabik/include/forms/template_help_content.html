@@ -1,0 +1,71 @@
+<p>Below is an example of a custom, styled, template for displaying <b>book records</b> with fields like title, cover, author, publisher, year, and genre.</p>
+
+<button onclick="copy_code(this)" class="btn btn-secondary">Copy</button><br><br>
+
+<div style="color:black;background:white;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em; font-family:monospace;">
+ 
+    
+  
+<pre>
+&lt;div style=&quot;display: flex; align-items: flex-start; border: 1px solid #ccc; padding: 12px; margin-bottom: 12px; border-radius: 8px; background-color: #f9f9f9;&quot;&gt;
+    &lt;!-- Cover Image --&gt;
+    &lt;div style=&quot;flex: 0 0 100px; margin-right: 16px;&quot;&gt;
+    dadabik_field cover_book dadabik_field
+    &lt;/div&gt;
+
+    &lt;!-- Book Information --&gt;
+    &lt;div style=&quot;flex: 1;&quot;&gt;
+    &lt;div style=&quot;font-size: 1.2em; font-weight: bold; margin-bottom: 4px;&quot;&gt; dadabik_field title_book dadabik_field &lt;/div&gt;
+    &lt;div style=&quot;margin-bottom: 4px;&quot;&gt;&lt;strong&gt;Author:&lt;/strong&gt; dadabik_field author_book dadabik_field &lt;/div&gt;
+    &lt;div style=&quot;margin-bottom: 4px;&quot;&gt;
+        &lt;strong&gt;Publisher:&lt;/strong&gt; dadabik_field publisher_book dadabik_field &lt;br/&gt;
+        &lt;strong&gt;Year:&lt;/strong&gt; dadabik_field year_book dadabik_field
+    &lt;/div&gt;
+    &lt;div&gt;&lt;strong&gt;Genre:&lt;/strong&gt; dadabik_field genre_book dadabik_field &lt;/div&gt;
+
+    &lt;!-- Action Links --&gt;
+    &lt;div style=&quot;margin-top: 8px;&quot;&gt;
+        &lt;a href=&quot;dadabik_link details_link dadabik_link&quot; &gt;Details&lt;/a&gt;
+        
+        dadabik_hide dadabik_groups 2|3 dadabik_groups ( | &lt;a href=&quot;dadabik_link edit_link dadabik_link&quot;&gt;Edit&lt;/a&gt; | &lt;a onclick=&quot;if (!confirm('Confirm delete?')){ return false; }&quot; href=&quot;dadabik_link delete_link dadabik_link&quot;&gt;Delete&lt;/a&gt;) dadabik_hide
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+      
+</div>
+
+<bR>
+<h4>How It Works</h4>
+
+<ul>
+  <li><strong>Field values:</strong> To display a field from your database, wrap the field name between two <code>dadabik_field</code> tags. <br/>
+  Example: <code>dadabik_field title_book dadabik_field</code><br/>
+  ⚠️ There must be exactly one space before and after the field name.</li><br/>
+
+  <li><strong>Links:</strong> Use the following tags to generate action URLs:
+    <ul>
+      <li><code>dadabik_link details_link dadabik_link</code> – record details</li>
+      <li><code>dadabik_link edit_link dadabik_link</code> – edit</li>
+      <li><code>dadabik_link delete_link dadabik_link</code> – delete</li>
+    </ul>
+  </li><br/>
+
+  <li><strong>Permissions:</strong> These links do not respect user permissions automatically. If you want to hide links from specific user groups, wrap them in <code>dadabik_hide</code> and <code>dadabik_groups</code> tags. In this example, the EDIT and DELETE links are hidden for groups 2 and 3.<br/>
+  🛑 <strong>Important:</strong> The entire <code>dadabik_hide ... dadabik_hide</code> block must be on a single line (no line breaks).</li><br/>
+
+  <li><strong>Delete Confirmation:</strong> If you include a delete link, you must add a JavaScript confirmation yourself, like:<br/>
+  <code>onclick="if (!confirm('Confirm delete?')){ return false; }"</code></li><br/>
+
+  <li><strong>Styling:</strong> You can use any HTML to style the layout (e.g., <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, inline CSS) to create a custom layout that matches your application's design.</li><br/>
+
+  <li><strong>Do not use reserved keywords:</strong> Make sure that your data (field content) does <strong>not contain</strong> any of the following:
+    <ul>
+      <li><code>dadabik_field</code></li>
+      <li><code>dadabik_link</code></li>
+      <li><code>dadabik_hide</code></li>
+      <li><code>dadabik_groups</code></li>
+    </ul>
+    These are reserved and will break the template if found in field values.
+  </li>
+</ul>

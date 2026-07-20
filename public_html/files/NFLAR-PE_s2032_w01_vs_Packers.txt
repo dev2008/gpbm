@@ -1,0 +1,719 @@
+Danny McConnell <danny@pbmsports.com>	1 June 2024 at 11:09
+To: A@milnes7.com, A@gameplan.org.uk
+A@MILNES7.COM; A@GAMEPLAN.ORG.UK
+20291
+NFLAR-PE, Turn 1
+<STARTREP>
+<BK.Team Report><L>
+<P.70><B>GAMEPLAN (Advanced)   League NFLAR   Season 2032   Week 1   1/6/24<L.54.1>
+Philadelphia Eagles (Alan Milnes)      turn credits = 25.0<C><L.18.1>
+<Z>__________________________________________________________________________________________________________________________________<L.48.1>
+<C><B>OFFENCE<C><L.6.1>
+                               yards     yards     time<L.33.1>
+no name     downs   score     to down   to line    gone    fmtn  plays and weights        react<L.36.1>
+ 1 GOAL     12    -20 to 20   1 to 99   1 to  5   0 to 75  I     LO     RT                    R<L.35.1>
+ 2 V LONG   12    -20 to 20  20 to 99   1 to 99   0 to 59  Z     DR                           4<L.35.1>
+ 3 LONG     1234  -20 to 20  LY to 99   1 to 99   0 to 59  Z     DL +1                        4<L.35.1>
+ 4 OT       1234  -20 to 20   1 to 99   1 to 99  60 to 75  G     RT     RN     LL     RT      R<L.35.1>
+ 5 HALF FAR 1234  -20 to 20   1 to 99  21 to 99  28 to 29  Z     DL -4  SO -3                 4<L.35.1>
+ 6 LATE L FG1234   -2 to 5    1 to 99   1 to FG  58 to 59  I     RT     FO                    4<L.35.1>
+ 7 LATE L GL1234  -20 to 2    1 to 99   1 to SY  56 to 59  I     SO                           4<L.35.1>
+ 8 V LATE L 1234  -20 to 0    1 to 99  15 to 99  58 to 59  S     DL                           4<L.35.1>
+ 9 LATE L   1234  -20 to -2   1 to 99   1 to 99  56 to 59  S     OP     SL                    4<L.35.1>
+10 V LATE W 1234    1 to 20   1 to 99   1 to 99  58 to 59  I     RT +16                       4<L.35.1>
+11 LATE W   1234    1 to 20   1 to 99   1 to 99  56 to 59  I     RT     RT     RT     LO      S<L.35.1>
+12 SHORT    1234  -20 to 20   1 to SY   1 to 99   0 to 75  S     SL     QD                    S<L.35.1>
+13 RED ZONE 1234  -20 to 20   1 to 99   1 to 20   0 to 75  S     SL     QD                    R<L.35.1>
+14 PURPLE   1234  -20 to 20   1 to 99  90 to 99   0 to 59  S     SL +8                        4<L.35.1>
+15 DECOY    2     -20 to 20   1 to 99  38 to 65  11 to 31  S     DT     DL     QD     SI      S<L.35.1>
+16 DEFAULT  1234  -20 to 20   1 to 99   1 to 99   0 to 75  S     SL     DR     DL     EV      A<L.35.1>
+<B><L.24.1>
+DEFENCE<C><L.6.1>
+                               yards     yards     time<L.33.1>
+no name     downs   score     to down   to line    gone    fmtn  plays and weights        react<L.36.1>
+17 SCREWUP  1234  -20 to 20  11 to 99   1 to 99   0 to 75  A     OX +4                        4<L.35.1>
+18 HALF     1234  -20 to 20   1 to 99   6 to 95  28 to 29  XJGW  WC +1                        4<L.35.1>
+19 LATEW    1234    1 to 20   1 to 99   6 to 95  56 to 59  XJGW  WC                           4<L.35.1>
+20 FALLBACK 1234  -20 to 20   1 to 99   1 to 99   0 to 75  X     BZ +36 WS -3                 4<L.35.1>
+21 RUN 1    12    -20 to 20   1 to 99   6 to 95   0 to 59  I     SB     BZ     RD     WS      3<L.35.1>
+22 RUN 2    34    -20 to 20   1 to 99   6 to 95   0 to 59  I     SB     BZ     RD     WS      3<L.35.1>
+23 RUN 34   34    -20 to 20   1 to 99   6 to 95   0 to 59  AIOK  WC     BZ     WS     WC      A<L.35.1>
+24 PASSB 1  12    -20 to 20   1 to 99   6 to 95   0 to 59  SD    WC     BZ                    4<L.35.1>
+25 PASSB 2  34    -20 to 20   1 to 99   6 to 95   0 to 59  SD    WC     BZ                    4<L.35.1>
+26 PASSB 34 12    -20 to 20   1 to 99   6 to 95   0 to 59  SD    WC     BZ                    4<L.35.1>
+27 RUNH 1   34    -20 to 20   1 to 99   6 to 95   0 to 59  GTWU  SB     RD     SB     BZ      A<L.35.1>
+28 RUNH 2   12    -20 to 20   1 to 99   6 to 95   0 to 59  GTWU  SB     RD     SB     BZ      A<L.35.1>
+29 RUNH 34  34    -20 to 20   1 to 99   6 to 95   0 to 59  GTWU  SB     RD     SB     BZ      A<L.35.1>
+30 PASSC 1  12    -20 to 20   1 to 99   6 to 95   0 to 59  CZHL  SB     WC     BZ     WC      4<L.35.1>
+31 PASSC 2  34    -20 to 20   1 to 99   6 to 95   0 to 59  CZHL  SB     WC     BZ     WC      4<L.35.1>
+32 PASSC 34 12    -20 to 20   1 to 99   6 to 95   0 to 59  CZHL  SB     WC     BZ     WC      4<L.35.1>
+<L.24.1>
+Game Parameters:  NFG 28  LFG 33  SYO 1  LYO 11  SYD 1  LYD 11  HUT 56<L.42.1>
+Special Teams:   Kick KO  KickRet KR  Punt PN  PuntRet PR      Fourth Downs:   Late 4  Midfld 4  Near 4  Short A  TwoMins A<L.54.1>
+<B><U>Training & Keys<UC><C><L.48.1>
+Current Orders  Offence: DL SL  Defence: WS BZ  Keys: DO DO  Bonus Play: BZ WS  Bonus Cat: DBZ DBZ<L.48.1>
+Offence Run      RC RT RL LT RN DR DT CW DW SW EV QD<L.33.1>
+Training:         1  3  0  0  2  3  1  1  2  0  2  2<L.33.1>
+Keys:             0  1  1  1  3  2  0  1  1  2  1  0<L.48.1>
+Offence Pass     SM SL SI SO LL LO FO SC DL DO DS OP<L.33.1>
+Training:         0  5  1  1  1  2  1  0  4  0  0  2<L.33.1>
+Keys:             1  2  0  1  1  1  0  1  1  3  2  0<L.48.1>
+Dumpoff Passes   SP FP DP<L.33.1>
+Training:         1  0  3<L.33.1>
+Keys:             0  1  2<L.48.1>
+Defence          BZ WS SB KB IX OX GL TS WC<L.33.1>
+Training:         4  4  2  1  1  2  1  1  2<L.48.1>
+Special Teams    PN PR KO ON KR FG FB<L.33.1>
+Training:         2  2  2  2  2  2  2<L.48.1>
+<P>
+<BK.Roster><L>
+<B>GAMEPLAN   NFLAR   2032 Season, Week 1   Eagles   1/6/24<L.18.1>
+___________________________________________________________________________<L.54.1>
+<U>Current Roster<UC><C><L.12.1>
+<L.18.1>
+<ST.29.69.98><L.18.1>
+Pos Num Name<T>Age Val Strengths           Status<T>Pos Num Name<T>Age Val Strengths       Status<T><L.42.1>
+QB   11 Carson Wentz<T> 9  6  ORO OPSx2 OPLx2 OQB  -       <T>DRE  93 Jevon Kearse<T> 3  4  DRI DRO DBZx2    -       <L>
+BQ    7 Nate Sudfield<T> 7  -  -                    -<T>DRT  98 Mike Patterson<T> 3  4  DRI DRO DBZx2    -       <L>
+FB   29 Tony Hunt<T>16  -  -                    -<T>NT   -  -<T> -  -  -                -<L>
+HB   25 Lesean Mccoy<T> 9  -  -                    -<T>DLT  97 Darwin Walker<T> 6  3  DRI DRO DBZ      -       <L>
+RB   38 Thomas Tapeh<T> 1  -  -                    -<T>DLE  78 Brodrick Bunkley<T> 7  4  DRI DRO DBZx2    -       <L>
+TE1  89 Matt Schobel<T>15  -  -                    -<T>ROLB 58 Ike Reese<T>31  -  -                -<L>
+TE2  87 Brent Celek<T>23  -  -                    -<T>RILB -  -<T> -  -  -                -<L>
+RT   73 Isaac Seumalo<T> 4  3  ORI ORO OQB          -       <T>MLB  51 Matt McCoy<T> 8  4  DRI DRO DPS DBZ  -       <L>
+RG   71 Scott Young<T>10  4  ORI ORO OQBx2        Reduced <T>LILB -  -<T> -  -  -                -<L>
+C    67 Jamaal Jackson<T> 9  -  -                    -<T>LOLB 52 Jason Short<T> 1  -  -                -<L>
+LG   68 Patrick McCoy<T> 8  3  ORI ORO OQB          Reduced <T>RCB  24 K'Von Wallace<T> 6  -  -                -<L>
+LT   79 Todd Herremans<T> 4  3  ORI ORO OQB          -       <T>SS   37 Sean Cobsidine<T> 3  4  DRO DPS DPL DBZ  -       <L>
+WR1  86 Reggie Brown<T> 5  2  OPS OPL DKR          -       <T>FS   20 Brian Dawkins<T> 1  2  DPS DBZ          Reduced <L>
+WR2  83 Jalen Reagor<T> 6  3  OPS OPLx2 DPR DKR    -       <T>LCB  26 Lito Sheppard<T> 2  2  DPS DPL          -       <L>
+WR3  18 Donte' Stallworth<T> 2  3  OPS OPLx2 DPR DKR    -       <T>NCB  47 Lavert Hill<T> 7  -  -                -<L>
+WR4  84 Hank Baskett<T> 4  -  -                    -<T>PN    8 Dirk Johnson<T> 2  -  -                -<L>
+<T><T>KK    2 David Akers<T> 2  -  -                -<L.36.1>
+Defence Formation: 4-3 (MLB=51)   Roster Total: 59<L.45.1>
+Key to Status:- CFA=Conditional Free Agent, CW=Conditional Waiver, Red=Reduced, Loss-Cat is Step Loss, Gain+Cat is Step Gain<L.45.1>
+Strengths  ORI ORO OPS OPL OQB OPN OFG DRI DRO DPS DPL DBZ DPR DKR   PLAY HARD   Played Up: 0   <U>LPs: 32<UC><L.36.1>
+Squad:       2   3   5   7   3   0   0   5   6   3   2   9   2   3<L>
+Form:        3   2   0   0   3   0   0   0   0   1   0   2   0   0   Best: DBZ ORI DBZ  Worst: DPL DPL  Form gains: DBZ ORI<L.54.1>
+Average:    -1  -1  -1  +1  -1  -1  -1  -1  -1  -1  -2  +1  +1  +2<L>
+Relative:   -2  -2   0  +3  -3           0   0  -2  -4  +3        <L.54.1>
+<B><U>Bids & Actions<UC><C><L.45.1>
+Free Agent: No Bid<L.36.1>
+Action 1:   HD: OK<L.36.1>
+Action 5:   None<L.36.1>
+<L.18.1>
+<B><U>Runners & Receivers<UC><C><L.48.1>
+RC RI RT RL LT RO RN DR DE DT TR TW CW DW FW PW RW SW EV RV DV OR OT QR QD QS QK <L>
+29 25 29 25 29 25 25 25 29 25 25 38 25 25 29 25 38 25 18 18 18 38 29 11 11 11 11 <L.48.1>
+QL QI QO SM SL SI SO SP LL LI LO LP FL FI FO FP DC SC DL DI DO DP DS OP OS PO PL PI PA PS <L>
+86 83 86 83 18 83 86 83 87 87 87 87 29 29 29 29 29 29 18 18 18 83 83 83 83 86 18 86 83 18 <L.48.1>
+<P>
+<P.70><B><BK.1st Quarter><L>
+GAMEPLAN   NFLAR   2032 Season   1/6/24<L>
+<L>
+Week 1,  Philadelphia Eagles vs Green Bay Packers<L>
+________________________________________________________________________<L>
+<L>
+<ST.118><C><B>1st Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+ 0:00  PE                     KO KR    kickoff to 9, run back 34 yards<L>
+ 0:22  GB  57  1st and 10   A PW BZ    HB run for gain of 2 yards <L>
+ 0:44      55  2nd and 8    K RN BZ    misdirection, HB, breakout and pushed out of bounds for gain of 15 yards <L>
+ 1:13      40  1st and 10   A RT BZ    FB run for gain of 4 yards <L>
+ 1:36      36  2nd and 6    K RN WS    HB run for gain of 4 yards <L>
+ 2:01      32  3rd and 2    T QS WS    quarterback sneak, for gain of 4 yards <L>
+ 2:24      28  1st and 10   A PW WS    HB run for gain of 4 yards <L>
+ 2:48      24  2nd and 6    K LT BZ    FB run for gain of 3 yards <L>
+ 3:10      21  3rd and 3    B SO BZ    pass dropped, incomplete<L>
+ 3:30      21  4th and 3    F FG FB   <Z> field goal attempt of 38 yards, good<T>0-3 GB<C><L>
+ 3:53                         KO KR    kickoff to 14, run back 16 yards<L>
+ 4:15  PE  70  1st and 10   S SL MD    pass complete to WR, for gain of 12 yards <L>
+ 4:44      58  1st and 10   S SL ND    pass complete to WR, at gain of 9 yards, and breakout for gain of 48 yards <L>
+ 5:29       1  1st & Goal   I LO RD   <Z> pass complete to TE, for gain of 1 yard <L>
+                                       is touchdown Philadelphia Eagles, PAT good<T>7-3 PE<C><L>
+ 5:49                         KO KR    kickoff to 15, run back 19 yards<L>
+ 6:11  GB  66  1st and 10   A DO BZ    QB hurried, pass dropped, incomplete<L>
+ 6:31      66  2nd and 10   K LL BZ    blitz picked up, pass complete to TE, for gain of 15 yards <L>
+ 7:12      51  1st and 10   A PW BZ    lead blockers, HB, breakout and out of bounds for gain of 5 yards <L>
+ 7:32      46  2nd and 5    K LL BZ    pass dropped, incomplete<L>
+ 7:52      46  3rd and 5    B FI BZ    penalty against offence, for loss of 5 yards<L>
+ 8:14      51  3rd and 10   D FI WS    QB hurried, pass thrown away, incomplete<L>
+ 8:34      51  4th and 10   P PN PR    punt of over 51 yards, touched back to 20 <L>
+ 8:57  PE  80  1st and 10   S DR DD    lead blockers, HB, breakout for gain of 11 yards <L>
+ 9:26      69  1st and 10   S DL ND    pass dropped, incomplete<L>
+ 9:46      69  2nd and 10   S EV ND    WR fumbled for loss of 3 yards and recovered <L>
+10:07      72  3rd and 13   Z DL DD    pass complete to WR, for gain of 30 yards <L>
+10:52      42  1st and 10   S SL ND    pass dropped, incomplete<L>
+11:12      42  2nd and 10   S DT ZD    HB run for gain of 9 yards <L>
+11:40      33  3rd and 1    S SL FD    pass complete to WR, and forced out of bounds for gain of 12 yards <L>
+12:03      21  1st and 10   S DR ND    offside against defence, for penalty of 5 yards<L>
+12:25      16  1st and 5    S SL ES    pass complete to WR, for gain of 14 yards <L>
+12:55       2  1st & Goal   I LO FD   <Z> pass complete to TE, for gain of 2 yards <L>
+                                       is touchdown Philadelphia Eagles, PAT good<T>14-3 PE<C><L>
+13:15                         KO KR    kickoff to 6, run back 80 yards<L>
+13:37  GB  14  1st and 10   O SL BZ   <Z> blitz picked up, pass complete to WR, for gain of 14 yards <L>
+                                       is touchdown Green Bay Packers, conversion good<T>14-11 PE<C><L>
+14:08                         KO KR    kickoff to 8, run back 38 yards<L>
+14:28  PE  54  1st and 10   S DL DD    offside against defence, for penalty of 5 yards<L>
+14:48      49  1st and 5    S DL LD    pass dropped, incomplete<L>
+14:58      49  2nd and 5    S DL LD    no open receiver, QB sacked for loss of 7 yards <L>
+<L.8.1>
+<Z>Eagles: rushing 2 for 20 yds inside and 1 for -3 yds outside, passing 7 for 6 and 98 yds short, 4 for 1 and 30 yds long<L>
+<C>Packers: rushing 2 for 8 yds inside and 6 for 33 yds outside, passing 5 for 2 and 29 yds short, 1 for 0 and 0 yds long<L>
+<P>
+<BK.2nd Quarter><L>
+<B>2nd Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+15:00  PE  56  3rd and 12   Z DL ZD    pass tipped, intercepted at gain of 19 yards, and not run back<L>
+15:24  GB  63  1st and 10   A SO BZ    QB hurried, sacked for loss of 8 yards <L>
+15:54      71  2nd and 18   E SO WS    quarterback scramble, for gain of 8 yards <L>
+16:26      63  3rd and 10   D SC BZ    pass complete to RB, at loss of 3 yards, and run for gain of 1 yard <L>
+16:52      65  4th and 12   P PN PR    punt for 52 yards, run back 4 yards <L>
+17:16  PE  83  1st and 10   S EV DD    WR stuffed, for loss of 2 yards <L>
+17:42      85  2nd and 12   Z DL ES    QB hurried, pass thrown away, incomplete<L>
+18:02      85  3rd and 12   Z DL ZD    pass dropped, incomplete<L>
+18:22      85  4th and 12   P PN PR    punt for 41 yards, run back 5 yards <L>
+18:48  GB  51  1st and 10   A PW BZ    penalty against offence, for loss of 5 yards<L>
+19:10      56  1st and 15   A RT OX    FB run for gain of 4 yards <L>
+19:33      52  2nd and 11   E SC BZ    pass complete to RB, at loss of 4 yards, and run for gain of 5 yards <L>
+19:55      51  3rd and 10   D SO BZ    pass complete to WR, and forced out of bounds for gain of 9 yards <L>
+20:16      42  4th and 1    T QS BZ    quarterback sneak, for gain of 2 yards <L>
+20:38      40  1st and 10   A RT BZ    FB run for gain of 2 yards <L>
+21:00      38  2nd and 8    K LT WS    FB stuffed, for loss of 2 yards <L>
+21:28      40  3rd and 10   D DO BZ    QB hurried, pass thrown away, incomplete<L>
+21:48      40  4th and 10   P PC PR    punt for 35 yards, run back 50 yards <L>
+22:33  PE  45  1st and 10   S SL DD    pass checked off to WR and out of bounds for gain of 23 yards <L>
+23:06      22  1st and 10   S SL MD   <Z> pass checked off to WR for gain of 22 yards <L>
+                                       is touchdown Philadelphia Eagles, PAT good<T>21-11 PE<C><L>
+23:31                         KO KR    kickoff to 12, not returned<L>
+23:31  GB  88  1st and 10   A DO BZ    personal foul against defence, for 15 yards and first down<L>
+23:51      73  1st and 10   A DO BZ    pass dropped, incomplete<L>
+24:11      73  2nd and 10   K RN BZ    HB run for gain of 4 yards <L>
+24:35      69  3rd and 6    B LO BZ    pass complete to TE, and out of bounds for gain of 8 yards <L>
+24:59      61  1st and 10   A RT BZ    FB run for gain of 4 yards <L>
+25:25      57  2nd and 6    K SL BZ    pass interference against defence, for first down and 11 yard penalty<L>
+25:46      46  1st and 10   A DO BZ    QB hurried, sacked for loss of 7 yards <L>
+26:18      53  2nd and 17   E SO BZ    QB hurried, pass thrown away, incomplete<L>
+26:38      53  3rd and 17   D FI BZ    blitz not picked up, QB hurried, pass thrown away, incomplete<L>
+26:58      53  4th and 17   P PN PR    punt of 48 yards, downed on 5<L>
+27:21  PE  95  1st and 10   S SL ND    pass complete to WR, for gain of 13 yards <L>
+27:56      82  1st and 10   S DR ZD    HB run for gain of 9 yards <L>
+<B><L.54.1>
+Two Minute Warning (first half)<C><L.54.1>
+28:00  PE  73  2nd and 1    Z DL RD    pass complete to WR, for gain of 22 yards <L>
+28:23      51  1st and 10   Z SO RD    pass complete to WR, at gain of 5 yards, decked at gain of 8 yards, fumble recovered by defence<L>
+28:54  GB  57  1st and 10   A RT WC    FB run for gain of 6 yards <L>
+29:09      51  2nd and 4    K RN WC    HB run and out of bounds for gain of 13 yards <L>
+29:23      38  1st and 10   A SO WC    pass picked off, intercepted at gain of 5 yards, and run back 20 yards <L>
+29:35  PE  47  1st and 10   Z DL RD    QB hurried, pass thrown away, incomplete<L>
+29:42      47  2nd and 10   Z DL MD    QB hurried, sacked for loss of 8 yards <L>
+29:54      55  3rd and 18   Z DL ZD    pass batted away, incomplete<L>
+<L.8.1>
+<Z>Eagles: rushing 1 for 9 yds inside and 1 for -2 yds outside, passing 4 for 2 and 21 yds short, 7 for 3 and 67 yds long<L>
+<C>Packers: rushing 5 for 18 yds inside and 4 for 23 yds outside, passing 9 for 4 and 16 yds short, 3 for 0 and 0 yds long<L>
+<P>
+<BK.3rd Quarter><L>
+<B>3rd Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+30:00  GB                     KO KR    kickoff to 16, run back 10 yards<L>
+30:22  PE  74  1st and 10   S DL ZD   <Z> pass checked off to WR at gain of 19 yards, and breakout for gain of 55 yards <L>
+                                       is touchdown Philadelphia Eagles, PAT good<T>28-11 PE<C><L>
+31:07                         KO KR    kickoff to 11, run back 17 yards<L>
+31:27  GB  72  1st and 10   A DO BZ    QB hurried, pass thrown away, incomplete<L>
+31:47      72  2nd and 10   K RN BZ    HB run for gain of 4 yards <L>
+32:12      68  3rd and 6    B LO BZ    pass complete to TE, and out of bounds for gain of 7 yards <L>
+32:35      61  1st and 10   A RT BZ    FB run for gain of 3 yards <L>
+32:57      58  2nd and 7    K LL BZ    blitz picked up, pass complete to TE, for gain of 12 yards <L>
+33:36      46  1st and 10   A DO BZ    pass out of bounds, incomplete<L>
+33:56      46  2nd and 10   K RN BZ    HB run for gain of 4 yards <L>
+34:21      42  3rd and 6    B LO WS    pass complete to TE, at gain of 6 yards, and breakout for gain of 9 yards <L>
+34:52      27  1st and 10   A RT BZ    FB stuffed, fumbled for loss of 4 yards and not recovered <L>
+35:13  PE  69  1st and 10   S DL ND    no open receiver, QB sacked for loss of 6 yards <L>
+35:56      75  2nd and 16   Z DL PD    pass overthrown, incomplete <L>
+36:28      75  3rd and 16   Z DL DD    pass complete to WR, and out of bounds for gain of 23 yards <L>
+37:02      52  1st and 10   S EV ZD    WR run for gain of 9 yards <L>
+37:40      43  2nd and 1    S QD MD    quarterback draw, for gain of 1 yard <L>
+38:14      42  1st and 10   S SL ND    pass complete to WR, for gain of 12 yards <L>
+38:58      30  1st and 10   S SL ND    pass dropped, incomplete<L>
+39:30      30  2nd and 10   S DR DD    HB run for gain of 6 yards <L>
+40:06      24  3rd and 4    S DL LD   <Z> pass checked off to WR for gain of 24 yards <L>
+                                       is touchdown Philadelphia Eagles, PAT good<T>35-11 PE<C><L>
+40:51                         KO KR    kickoff to 10, run back 7 yards<L>
+41:12  GB  83  1st and 10   A RT BZ    run broken up, FB powers for gain of 1 yard <L>
+41:34      82  2nd and 9    K RN BZ    misdirection, HB, breakout for gain of 13 yards <L>
+42:11      69  1st and 10   A DO BZ    blitz picked up, pass complete to WR, and forced out of bounds for gain of 14 yards <L>
+42:35      55  1st and 10   A DO BZ    blitz picked up, pass complete to WR, and out of bounds for gain of 18 yards <L>
+43:02      37  1st and 10   A DO BZ    blitz picked up, pass complete to WR, and out of bounds for gain of 14 yards <L>
+43:28      23  1st and 10   A DO BZ    pass dropped, incomplete<L>
+43:48      23  2nd and 10   K SL BZ    QB hurried, sacked for loss of 9 yards <L>
+44:11      32  3rd and 19   D SC BZ    pass complete to RB, at loss of 3 yards, and run for gain of 4 yards <L>
+44:31      31  4th and 18   F FG FB   <Z> field goal attempt of 48 yards, good<T>35-14 PE<C><L>
+44:57                         KO KR    kickoff into endzone, touched back to 20<L>
+44:57  PE  80  1st and 10   S DL ZD    pass knocked down, intercepted at gain of 23 yards, and run back 6 yards <L>
+<L.8.1>
+<Z>Eagles: rushing 2 for 7 yds inside and 1 for 9 yds outside, passing 2 for 1 and 12 yds short, 6 for 3 and 121 yds long<L>
+<C>Packers: rushing 3 for 0 yds inside and 3 for 21 yds outside, passing 5 for 4 and 35 yds short, 6 for 3 and 46 yds long<L>
+<P>
+<BK.4th Quarter><L>
+<B>4th Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+45:00  GB  37  1st and 10   L FI BZ    blitz not picked up, QB hurried, pass dropped, incomplete<L>
+45:20      37  2nd and 10   L FI BZ    pass dropped, incomplete<L>
+45:40      37  3rd and 10   D DO BZ    pass complete to WR, for gain of 18 yards <L>
+46:25      19  1st and 10   O LO BZ    blitz picked up, pass complete to TE, and out of bounds for gain of 8 yards <L>
+46:47      11  2nd and 2    A PA WS   <Z> blitz picked up, pass complete to WR, for gain of 11 yards <L>
+                                       is touchdown Green Bay Packers, PAT good<T>35-21 PE<C><L>
+47:11                         KO KR    kickoff to 17, run back 21 yards<L>
+47:45  PE  62  1st and 10   S EV MD    WR run for loss of 2 yards <L>
+48:22      64  2nd and 12   Z DL PD    pass interference against defence, for first down and 21 yard penalty<L>
+48:56      43  1st and 10   S SL ZD    pass checked off to WR for gain of 26 yards <L>
+49:41      17  1st and 10   S SL ND   <Z> pass checked off to WR for gain of 17 yards <L>
+                                       is touchdown Philadelphia Eagles, PAT good<T>42-21 PE<C><L>
+50:26                         KO KR    kickoff to 14, not returned<L>
+50:26  GB  86  1st and 10   L SO BZ    QB hurried, pass thrown away, incomplete<L>
+50:46      86  2nd and 10   L DO BZ    QB hurried, no open receiver, QB sacked for loss of 8 yards <L>
+51:09      94  3rd and 18   A SW OX    HB stuffed, for loss of 1 yard <L>
+51:37      95  4th and 19   P PN PR    punt for 38 yards, run back 8 yards <L>
+52:03  PE  35  1st and 10   S SL MD    QB hurried, sacked for loss of 5 yards <L>
+52:43      40  2nd and 15   Z DL PD    pass dropped, incomplete<L>
+53:15      40  3rd and 15   Z DL LD    pass batted away, incomplete <L>
+53:47      40  4th and 15   P PN PR    punt of over 40 yards, touched back to 20 <L>
+54:22  GB  80  1st and 10   L SO BZ    QB hurried, sacked for loss of 7 yards <L>
+54:53      87  2nd and 17   L FI BZ    pass complete to RB, for gain of 8 yards <L>
+55:20      79  3rd and 9    D FI BZ    blitz not picked up, QB hurried, pass thrown away, incomplete<L>
+55:40      79  4th and 9    P PN PR    punt for 45 yards, run back 11 yards <L>
+56:04  PE  55  1st and 10   I RT MD    FB run for gain of 6 yards <L>
+56:44      49  2nd and 4    I RT LD    FB run for gain of 5 yards <L>
+57:21      44  1st and 10   I RT PD    FB run for gain of 6 yards <L>
+57:57      38  2nd and 4    I LO MD    pass dropped, incomplete<L>
+<B><L.54.1>
+Two Minute Warning (second half)<C><L.54.1>
+58:00  PE  38  3rd and 4    I RT MD    FB run for gain of 8 yards <L>
+58:15      30  1st and 10   I RT RD    FB run for gain of 5 yards <L>
+58:51      25  2nd and 5    I RT PD    FB run for gain of 4 yards <L>
+59:27      21  3rd and 1    I RT RD    FB run for gain of 3 yards <L>
+59:44      18  1st and 10              quarterback flop, downs the ball to run out the clock<L>
+<L.8.1>
+<Z>Eagles: rushing 7 for 37 yds inside and 1 for -2 yds outside, passing 4 for 0 and 0 yds short, 2 for 2 and 43 yds long<L>
+<C>Packers: rushing 1 for -1 yds outside, passing 7 for 2 and 16 yds short, 3 for 2 and 29 yds long<L>
+<P>
+<E><ST.66><L>
+<B><U>Philadelphia Eagles<UC><T><U>Green Bay Packers<UC><L.54.1>
+Alan Milnes<T>Darren Halford<L.54.1>
+1st 2nd 3rd 4th Final<T>1st 2nd 3rd 4th Final<T><L>
+14   7  14   7    42<T>11   0   3   7    21<T><L.54.1>
+<C>Time  1stDn 3rdDn 4thDn Short Long Sfty<T>Time  1stDn 3rdDn 4thDn Short Long Sfty<T><L>
+28:25   23   6/10   0/0   6/6 3/10   0<T>31:35   18   5/15   1/1   3/3 4/24   0<T><L.54.1>
+Att Comp Pct Yds AvgA AvgC Lng Int TD Pop Hrd Skd Yds<T>Att Comp Pct Yds AvgA AvgC Lng Int TD Pop Hrd Skd Yds<T><L>
+ 32  18 56.2 392 12.2 21.8 t74   2  6   1   2   4  26<T> 33  17 51.5 171  5.2 10.1  18   1  2   0  11   5  39<T><L.54.1>
+Att Yds AvgR Lng Fum Rec TD Stf Scr Yds<T>Att Yds AvgR Lng Fum Rec TD Stf Scr Yds<T><L>
+ 16  75  4.7  11   2   1  0   1   1   1<T> 24 106  4.4  15   1   0  0   4   3  14<T><L.54.1>
+FGA EPA CPA  Punt Yds AvgG AvgN Bk FC OB TB Dn Fm Ret In20<T>FGA EPA CPA  Punt Yds AvgG AvgN Bk FC OB TB Dn Fm Ret In20<T><L>
+0/0 6/6 0/0    2   81 40.5 28.0  0  0  0  1  0  0   1   0<T>2/2 1/1 1/1    6  269 44.8 29.3  0  0  0  1  1  0   4   2<T><L.54.1>
+Pens Yds  KR Yds  PR Yds  In Yds <T>Pens Yds  KR Yds  PR Yds  In Yds <T><L>
+  2   26   4  85   4  73   1  20<T>  5   41   5 157   1   5   1   6<T><L.54.1>
+RT  DR  DT  EV  QD  <T>RT  LT  RN  PW  SW  QR  QS  <L>
+7   3   1   4   1   <T>8   2   7   3   1   1   2   <L>
+37  26  9   2   1   <T>20  1   57  11  -1  8   6   <L.54.1>
+SL   SO  LO  DL   <T>SL  SO  LL  LO  FI  SC  DO   PA  <L>
+13/6 1/1 3/2 19/3 <T>2/1 8/1 3/2 4/4 6/1 3/3 12/4 1/1 <L>
+120  8   3   75   <T>14  9   27  38  8   0   64   11  <L.54.1>
+DP  <T><L>
+0/6 <T><L>
+186 <T><L.54.1>
+BZ  WS  OX  WC  <T>DD  ES  FD  LD  MD  ND  PD  RD  ZD  <L>
+53  8   2   3   <T>7   2   2   5   9   10  5   6   9   <L>
+168 44  3   24  <T>91  14  14  22  34  90  10  39  169 <L.54.1>
+<Z>Rushing:-   <C>Eagles, Mccoy 4-35, Stallworth 4-2, Wentz 1-1, Hunt 7-37<L>
+<Z>            <C>Packers, Dillon 11-67, Jacobs 10-25, Love 3-14<L>
+<L.9.1>
+<Z>Passing:-   <C>Eagles, Wentz 18-32-2-392-6<L>
+<Z>            <C>Packers, Love 17-33-1-171-2<L>
+<L.9.1>
+<Z>Receiving:- <C>Eagles, Stallworth 9-195, Celek 2-3-2, Reagor 6-186-4, Brown 1-8<L>
+<Z>            <C>Packers, Toure 1-9, Doubs 5-78-1, Musgrave 6-65, Jacobs 4-8, Watson 1-11-1<L>
+<L.9.1>
+<E><DU>
+<P.70><BK.League Report><L>
+<B>NFLAR  League Report  Gameplan Advanced Vn 2.17  Week 1 of 16  1/6/24<ST.66><C><L.45.1>
+<Z>Buffalo Bills (Alan Baylis)  7 0 0 0 (7)<T>Pittsburgh Steelers (Mike George)  7 14 7 7 (35)<C><L.31.1>
+FG 1/0, EP 1/1, CP 0/0, Punt 3, 3rd 3/9, 4th 0/2, 1st 13<T>FG 0/0, EP 5/5, CP 0/0, Punt 4, 3rd 12/21, 4th 3/3, 1st 25<L.31.1>
+Pass 13 for 21, 178 yds, Lg 30, 1 TD, 62%, In 0, Hrd 0, Skd 2<T>Pass 20 for 35, 221 yds, Lg 31, 3 TD, 57%, In 0, Hrd 4, Skd 1<L.31.1>
+Rush 25 for 53 yds, Lg 22, avg 2.1, Fm 2, QB 0 for 0 yds<T>Rush 44 for 165 yds, Lg 10, 2 TD, avg 3.7, Fm 0, QB 0 for 0 yds<L.31.1>
+KR 6 for 110 yds, PR 4 for 24 yds, FumR 0 for 0 yds<T>KR 0 for 0 yds, PR 2 for 10 yds, FumR 0 for 0 yds<L.31.1>
+Calls Fm I D, Run PW DW, Pass DP LO, Def RD FD<T>Calls Fm I J, Run RN CW, Pass SO LO, Def GL MD<L.40.1>
+<Z>New England Patriots (Paul Lancaster)  0 3 0 5 (8)<T>Cincinnati Bengals (Jamie Thurman) S  0 7 14 3 (24)<C><L.31.1>
+FG 2/2, EP 0/0, CP 0/0, Punt 6, 3rd 2/13, 4th 0/3, 1st 13<T>FG 1/1, EP 3/3, CP 0/0, Punt 7, 3rd 10/18, 4th 0/0, 1st 18<L.31.1>
+Pass 18 for 35, 162 yds, Lg 21, 51%, In 1, Hrd 7, Skd 5<T>Pass 23 for 42, 286 yds, Lg 29, 2 TD, 55%, In 0, Hrd 10, Skd 3<L.31.1>
+Rush 18 for 66 yds, Lg 14, avg 3.7, Fm 0, QB 0 for 0 yds<T>Rush 26 for 61 yds, Lg 7, 1 TD, avg 2.3, Fm 0, QB 1 for 7 yds<L.31.1>
+KR 5 for 83 yds, PR 7 for 61 yds, FumR 0 for 0 yds<T>KR 1 for 13 yds, PR 0 for 0 yds, IntR 1 for 9 yds<L.31.1>
+Calls Fm D A, Run CW DE, Pass SC DO, Def BZ MD<T>Calls Fm U C, Run RC RT, Pass OP LO, Def BZ WC<L.40.1>
+<Z>Miami Dolphins (Chris Mayell)  0 0 3 7 (10)<T>San Diego Chargers (Richard Ogg)  6 0 3 7 (16)<C><L.31.1>
+FG 1/1, EP 1/1, CP 0/0, Punt 7, 3rd 5/15, 4th 1/2, 1st 18<T>FG 3/3, EP 1/1, CP 0/0, Punt 4, 3rd 5/15, 4th 0/0, 1st 14<L.31.1>
+Pass 20 for 47, 237 yds, Lg 29, 1 TD, 43%, In 3, Hrd 4, Skd 2<T>Pass 17 for 29, 136 yds, Lg 26, 1 TD, 59%, In 1, Hrd 4, Skd 3<L.31.1>
+Rush 20 for 104 yds, Lg 12, avg 5.2, Fm 0, QB 1 for 9 yds<T>Rush 26 for 111 yds, Lg 20, avg 4.3, Fm 3, QB 8 for 45 yds<L.31.1>
+KR 1 for 6 yds, PR 2 for 11 yds, FumR 2 for 23 yds<T>KR 2 for 90 yds, PR 6 for 44 yds, IntR 1 for 8 yds<L.31.1>
+Calls Fm C P, Run DE SW, Pass SL LL, Def BZ FD<T>Calls Fm I D, Run SW QD, Pass QL SM, Def WC RD<L.40.1>
+<Z>New York Jets (Kevan Parrott)  0 3 7 7 (17)<T>Kansas City Chiefs (Danny Slavin)  7 17 7 17 (48)<C><L.31.1>
+FG 1/1, EP 2/2, CP 0/0, Punt 7, 3rd 7/17, 4th 2/2, 1st 21<T>FG 2/2, EP 6/6, CP 0/0, Punt 2, 3rd 1/5, 4th 0/0, 1st 22<L.31.1>
+Pass 20 for 38, 211 yds, Lg 31, 53%, In 1, Hrd 5, Skd 3<T>Pass 22 for 37, 454 yds, Lg t59, 4 TD, 59%, In 1, Hrd 7, Skd 1<L.31.1>
+Rush 37 for 125 yds, Lg t18, 2 TD, avg 3.4, Fm 1, QB 0 for 0 yds<T>Rush 9 for 2 yds, Lg 8, 1 TD, avg 0.2, Fm 0, QB 0 for 0 yds<L.31.1>
+KR 7 for 141 yds, PR 0 for 0 yds, FumR 0 for 0 yds<T>KR 0 for 0 yds, PR 5 for 54 yds, IntR 1 for 21 yds, 1 TD<L.31.1>
+Calls Fm I P, Run RT RL, Pass SO DL, Def MD PD<T>Calls Fm S D, Run EV RC, Pass DP SL, Def BZ ND<L.40.1>
+<Z>Tennessee Titans (Dave Flesfader)  0 17 21 0 (38)<T>Las Vegas Raiders (Will McConchie)  7 6 0 15 (28)<C><L.31.1>
+FG 2/1, EP 5/5, CP 0/0, Punt 2, 3rd 7/14, 4th 0/0, 1st 21<T>FG 0/0, EP 3/2, CP 1/1, Punt 5, 3rd 5/11, 4th 0/0, 1st 18<L.31.1>
+Pass 15 for 23, 242 yds, Lg t67, 5 TD, 65%, In 1, Hrd 1, Skd 2<T>Pass 13 for 29, 152 yds, Lg 27, 2 TD, 45%, In 2, Hrd 4, Skd 3<L.31.1>
+Rush 34 for 112 yds, Lg 10, avg 3.3, Fm 2, QB 4 for 8 yds<T>Rush 28 for 108 yds, Lg t11, 2 TD, avg 3.9, Fm 1, QB 4 for 31 yds<L.31.1>
+KR 5 for 143 yds, PR 5 for 33 yds, IntR 2 for 63 yds<T>KR 4 for 84 yds, PR 0 for 0 yds, IntR 1 for 23 yds<L.31.1>
+Calls Fm S I, Run DE CW, Pass DS SC, Def ND RD<T>Calls Fm H C, Run RO QR, Pass DP SL, Def FD MD<L.40.1>
+<Z>Jacksonville Jaguars (Alex Coombe)  14 3 7 0 (24)<T>Seattle Seahawks (Stuart Filmer)  7 3 10 0 (20)<C><L.31.1>
+FG 2/1, EP 3/3, CP 0/0, Punt 3, 3rd 6/12, 4th 0/1, 1st 17<T>FG 2/2, EP 2/2, CP 0/0, Punt 3, 3rd 7/14, 4th 0/1, 1st 25<L.31.1>
+Pass 17 for 26, 365 yds, Lg t80, 3 TD, 65%, In 0, Hrd 6, Skd 0<T>Pass 26 for 44, 296 yds, Lg 27, 2 TD, 59%, In 0, Hrd 7, Skd 5<L.31.1>
+Rush 26 for 75 yds, Lg 11, avg 2.9, Fm 1, QB 5 for 20 yds<T>Rush 24 for 76 yds, Lg 9, avg 3.2, Fm 2, QB 0 for 0 yds<L.31.1>
+KR 3 for 61 yds, PR 2 for 9 yds, FumR 1 for 6 yds<T>KR 2 for 50 yds, PR 3 for 20 yds, FumR 1 for 12 yds<L.31.1>
+Calls Fm S D, Run DW SW, Pass DL OP, Def RD DD<T>Calls Fm A I, Run RT DE, Pass QL DP, Def OV FS<L.40.1>
+<Z>Philadelphia Eagles (Alan Milnes)  14 7 14 7 (42)<T>Green Bay Packers (Darren Halford)  11 0 3 7 (21)<C><L.31.1>
+FG 0/0, EP 6/6, CP 0/0, Punt 2, 3rd 6/10, 4th 0/0, 1st 23<T>FG 2/2, EP 1/1, CP 1/1, Punt 6, 3rd 5/15, 4th 1/1, 1st 18<L.31.1>
+Pass 18 for 32, 392 yds, Lg t74, 6 TD, 56%, In 2, Hrd 2, Skd 4<T>Pass 17 for 33, 171 yds, Lg 18, 2 TD, 52%, In 1, Hrd 11, Skd 5<L.31.1>
+Rush 16 for 75 yds, Lg 11, avg 4.7, Fm 1, QB 1 for 1 yds<T>Rush 24 for 106 yds, Lg 15, avg 4.4, Fm 1, QB 3 for 14 yds<L.31.1>
+KR 4 for 85 yds, PR 4 for 73 yds, IntR 1 for 20 yds<T>KR 5 for 157 yds, PR 1 for 5 yds, IntR 1 for 6 yds<L.31.1>
+Calls Fm S Z, Run RT DR, Pass DP SL, Def BZ WS<T>Calls Fm A K, Run RN RT, Pass DO LO, Def ND MD<L.40.1>
+<Z>Arizona Cardinals (Harry Milner)  9 13 0 6 (28)<T>Chicago Bears (Dave Burton) S  3 7 7 6 (23)<C><L.31.1>
+FG 2/2, EP 3/2, CP 0/0, Punt 6, 3rd 4/13, 4th 1/1, 1st 18<T>FG 1/1, EP 2/2, CP 1/0, Punt 5, 3rd 9/18, 4th 0/2, 1st 21<L.31.1>
+Pass 18 for 27, 178 yds, Lg 30, 2 TD, 67%, In 1, Hrd 1, Skd 2<T>Pass 20 for 38, 176 yds, Lg 19, 2 TD, 53%, In 1, Hrd 5, Skd 2<L.31.1>
+Rush 30 for 77 yds, Lg 11, avg 2.6, Fm 1, QB 10 for 9 yds<T>Rush 34 for 220 yds, Lg 75, 1 TD, avg 6.5, Fm 2, QB 0 for 0 yds<L.31.1>
+KR 5 for 113 yds, PR 5 for 41 yds, FumR 1 for 56 yds, 1 TD<T>KR 3 for 48 yds, PR 1 for 1 yds, IntR 1 for 6 yds<L.31.1>
+Calls Fm S I, Run DR EV, Pass SO SM, Def BZ DD<T>Calls Fm A O, Run EV CW, Pass SO LO, Def RD PD<L.40.1>
+<Z>New York Giants (David Trice)  7 0 7 7 (21)<T>New Orleans Saints (Neil Arthurton)  0 10 3 7 (20)<C><L.31.1>
+FG 0/0, EP 3/3, CP 0/0, Punt 8, 3rd 9/19, 4th 1/1, 1st 19<T>FG 2/2, EP 2/2, CP 0/0, Punt 4, 3rd 6/13, 4th 0/0, 1st 18<L.31.1>
+Pass 12 for 24, 155 yds, Lg 26, 2 TD, 50%, In 0, Hrd 3, Skd 2<T>Pass 8 for 17, 82 yds, Lg 25, 1 TD, 47%, In 1, Hrd 2, Skd 2<L.31.1>
+Rush 39 for 103 yds, Lg 10, 1 TD, avg 2.6, Fm 0, QB 2 for 10 yds<T>Rush 41 for 187 yds, Lg 12, avg 4.6, Fm 2, QB 1 for 0 yds<L.31.1>
+KR 4 for 84 yds, PR 3 for 11 yds, FumR 0 for 0 yds<T>KR 3 for 60 yds, PR 7 for 85 yds, 1 TD, FumR 0 for 0 yds<L.31.1>
+Calls Fm I K, Run SW RC, Pass OP DP, Def PD ES<T>Calls Fm H C, Run DR DE, Pass DP LO, Def RD ND<L.40.1>
+<Z>Dallas Cowboys (Mick Hankin)  0 3 3 7 (13)<T>Los Angeles Rams (Mark Dawson)  14 0 0 7 (21)<C><L.31.1>
+FG 3/2, EP 1/1, CP 0/0, Punt 5, 3rd 13/23, 4th 0/1, 1st 23<T>FG 0/0, EP 3/3, CP 0/0, Punt 3, 3rd 2/6, 4th 0/0, 1st 21<L.31.1>
+Pass 23 for 41, 288 yds, Lg 26, 1 TD, 56%, In 0, Hrd 10, Skd 7<T>Pass 24 for 38, 225 yds, Lg 21, 1 TD, 63%, In 2, Hrd 2, Skd 1<L.31.1>
+Rush 35 for 120 yds, Lg 20, avg 3.4, Fm 0, QB 1 for 0 yds<T>Rush 11 for 50 yds, Lg 9, 2 TD, avg 4.5, Fm 1, QB 1 for 9 yds<L.31.1>
+KR 3 for 61 yds, PR 2 for 9 yds, DefR 2 for 25 yds<T>KR 2 for 95 yds, PR 4 for 30 yds, FumR 0 for 0 yds<L.31.1>
+Calls Fm C I, Run SW LT, Pass SL DP, Def PD LD<T>Calls Fm S D, Run DR EV, Pass SC FI, Def GL BZ<L.40.1>
+<Z>Minnesota Vikings (Gordon Milnes) S  7 3 0 10 6 (26 OT)<T>San Francisco 49ers (Robert Tooze)  2 8 10 0 0 (20 OT)<C><L.31.1>
+FG 2/2, EP 2/2, CP 0/0, Punt 4, 3rd 9/18, 4th 1/1, 1st 29<T>FG 1/1, EP 1/1, CP 1/1, Punt 7, 3rd 7/16, 4th 0/0, 1st 16<L.31.1>
+Pass 25 for 52, 488 yds, Lg 50, 3 TD, 48%, In 2, Hrd 8, Skd 6<T>Pass 14 for 33, 175 yds, Lg 33, 1 TD, 42%, In 2, Hrd 5, Skd 4<L.31.1>
+Rush 24 for 42 yds, Lg 12, avg 1.8, Fm 2, QB 3 for 5 yds<T>Rush 28 for 72 yds, Lg 8, 1 TD, avg 2.6, Fm 1, QB 0 for 0 yds<L.31.1>
+KR 0 for 0 yds, PR 2 for 14 yds, IntR 1 for 51 yds<T>KR 4 for 92 yds, PR 4 for 24 yds, IntR 2 for 89 yds<L.31.1>
+Calls Fm S P, Run DT RO, Pass DP SL, Def ZS IX<T>Calls Fm I L, Run RI RT, Pass DI DP, Def RD LD<L.40.1>
+<Z>Tampa Bay Buccs (Marcus Marsden)  10 7 7 9 (33)<T>Carolina Panthers (Kenny Purdy)  0 0 0 7 (7)<C><L.31.1>
+FG 2/2, EP 4/3, CP 0/0, Punt 4, 3rd 8/15, 4th 0/0, 1st 28<T>FG 0/0, EP 1/1, CP 0/0, Punt 6, 3rd 5/15, 4th 1/1, 1st 12<L.31.1>
+Pass 17 for 31, 339 yds, Lg 41, 3 TD, 55%, In 0, Hrd 8, Skd 4<T>Pass 11 for 23, 112 yds, Lg 22, 1 TD, 48%, In 0, Hrd 7, Skd 3<L.31.1>
+Rush 30 for 137 yds, Lg 14, 1 TD, avg 4.6, Fm 1, QB 2 for 4 yds<T>Rush 23 for 121 yds, Lg 35, avg 5.3, Fm 3, QB 1 for 4 yds<L.31.1>
+KR 1 for 41 yds, PR 0 for 0 yds, FumR 0 for 0 yds<T>KR 2 for 80 yds, PR 1 for 6 yds, FumR 0 for 0 yds<L.31.1>
+Calls Fm S G, Run DR RW, Pass DP DL, Def BZ ND<T>Calls Fm A C, Run RN DR, Pass DI OP, Def BZ MD<L.40.1>
+<E><P>
+<B><BK.Standings><L>
+NFLAR Week 1 Standings   2032 Season   NFL Format   GM: Danny McConnell<L>
+<ST.66><L.12.1>
+<Z>    <U>NFLAR Bowl Champions: San Diego Chargers (Richard Ogg)<UC><T><C>  <U>NFC Conference Champions: Arizona Cardinals (Harry Milner)<UC><L.36.1>
+<L.12.1>
+<ST.39.66.104><Z><U>AFC East<UC><T> W  L  T  FOR AGN Div SK<C><T><Z><U>NFC East<UC><T> W  L  T  FOR AGN Div SK<C><L.31.1>
+Miami Dolphins (Chris Mayell)<T> 0  1  0   10  16 0-0 L4<T>Philadelphia Eagles (Alan Milnes)<T> 1  0  0   42  21 0-0 W1<L.31.1>
+New England Patriots (Paul Lancaster)<T> 0  1  0    8  24 0-0 L2<T>Arizona Cardinals (Harry Milner)<T> 1  0  0   28  23 0-0 W1<L.31.1>
+Buffalo Bills (Alan Baylis)<T> 0  1  0    7  35 0-0 L1<T>New York Giants (David Trice)<T> 1  0  0   21  20 0-0 W2<L.31.1>
+New York Jets (Kevan Parrott)<T> 0  1  0   17  48 0-0 L1<T>Dallas Cowboys (Mick Hankin)<T> 0  1  0   13  21 0-0 L1<L.31.1>
+<T><T><L.18.1>
+<Z><U>AFC Central<UC><T> W  L  T  FOR AGN Div SK<C><T><Z><U>NFC Central<UC><T> W  L  T  FOR AGN Div SK<C><L.31.1>
+Pittsburgh Steelers (Mike George)<T> 1  0  0   35   7 0-0 W1<T>Tampa Bay Buccs (Marcus Marsden)<T> 1  0  0   33   7 0-0 W1<L.31.1>
+Cincinnati Bengals (Jamie Thurman)<T> 1  0  0   24   8 0-0 W1<T>Minnesota Vikings (Gordon Milnes)<T> 1  0  0   26  20 0-0 W3<L.31.1>
+Tennessee Titans (Dave Flesfader)<T> 1  0  0   38  28 0-0 W2<T>Chicago Bears (Dave Burton)<T> 0  1  0   23  28 0-0 L9<L.31.1>
+Jacksonville Jaguars (Alex Coombe)<T> 1  0  0   24  20 0-0 W1<T>Green Bay Packers (Darren Halford)<T> 0  1  0   21  42 0-0 L2<L.31.1>
+<T><T><L.18.1>
+<Z><U>AFC West<UC><T> W  L  T  FOR AGN Div SK<C><T><Z><U>NFC West<UC><T> W  L  T  FOR AGN Div SK<C><L.31.1>
+Kansas City Chiefs (Danny Slavin)<T> 1  0  0   48  17 0-0 W4<T>Los Angeles Rams (Mark Dawson)<T> 1  0  0   21  13 0-0 W3<L.31.1>
+San Diego Chargers (Richard Ogg)<T> 1  0  0   16  10 0-0 W4<T>New Orleans Saints (Neil Arthurton)<T> 0  1  0   20  21 0-0 L1<L.31.1>
+Seattle Seahawks (Stuart Filmer)<T> 0  1  0   20  24 0-0 L1<T>San Francisco 49ers (Robert Tooze)<T> 0  1  0   20  26 0-0 L1<L.31.1>
+Las Vegas Raiders (Will McConchie)<T> 0  1  0   28  38 0-0 L2<T>Carolina Panthers (Kenny Purdy)<T> 0  1  0    7  33 0-0 L4<L.31.1>
+<L.24.1>
+<ST.33.66.99><B>Week 2 Schedule<C><L.36.1>
+Dolphins at Bills<T>Bengals at Jaguars<T>Giants at Eagles<T>Bears at Buccs<L.31.1>
+Jets at Patriots<T>Seahawks at Chiefs<T>Cowboys at Cardinals<T>Panthers at Rams<L.31.1>
+Steelers at Titans<T>Raiders at Chargers<T>Packers at Vikings<T>49ers at Saints<L.31.1>
+<L.12.1>
+<B>DEADLINE:   Saturday 15th June<C><L.40.1>
+Address: Danny McConnell, 82 Scotts Lane, Bromley, Kent, BR2 0LX.  <L.31.1>
+Email: danny@pbmsports.com, Websites: www.pbmsports.com, www.softsim.co.uk & www.sidetracks.co.uk <L.31.1>
+Turnfees: #3.50 for one, #14 for four, #32 for ten, #56 for twenty.  Cheques made payable to: SSI Ltd<L.42.1>
+<ST.33.66.99><L.9.1>
+<B>FREE AGENT LIST<C><L.42.1>
+FA  posn   nominal min signed<T>FA  posn   nominal min signed<T>FA  posn   nominal min signed<T>FA  posn   nominal min signed<T><L.31.1>
+num     age value  bid by<T>num     age value  bid by<T>num     age value  bid by<T>num     age value  bid by<T><L.42.1>
+100  RB  8  2 ORI <SU> <SC> 20 <T>118  RB  5  3 ORI <SU> <SC> 30 <T>136  QB  3  2 OPS <SU> <SC> 20 <T>154  KK  5  1 OFG*<SU>2<SC> 16 <T><L.31.1>
+101  OL  7  4 OQB <SU> <SC> 40 <T>119  QB  3  4 OPS <SU> <SC> 40 <T>137  RB  2  3 ORI <SU> <SC> 30 <T>155  WR  2  2 OPL <SU> <SC> 20 <T><L.31.1>
+102  TE  3  1 OPS <SU> <SC> 10  --new--<T>120  LB  8  3 DRI <SU> <SC> 30 <T>138  RB  3  3 ORI <SU> <SC> 30 <T>156  --  -  - ---   --<T><L.31.1>
+103  KK  4  1 OFG*<SU>1<SC> 12 <T>121  RB  4  3 ORI <SU> <SC> 30 <T>139  PN  5  1 OPN*<SU>3<SC> 20 <T>157  --  -  - ---   --<T><L.31.1>
+104  RB  7  3 ORI <SU> <SC> 30 <T>122  KK  3  1 OFG*<SU>2<SC> 16 <T>140  PN  3  1 OPN*<SU>2<SC> 16 <T>158  OL  8  1 ORO <SU> <SC> 10 <T><L.31.1>
+105  PN  2  1 OPN*<SU>2<SC> 16 <T>123  DB  3  2 DPL <SU> <SC> 20 <T>141  DB  8  1 DPS <SU> <SC> 10 <T>159  KK  7  1 OFG*<SU>2<SC> 16 <T><L.31.1>
+106  PN  2  1 OPN*<SU>1<SC> 12 <T>124  QB  5  3 OPL <SU> <SC> 30 <T>142  TE  6  1 OPS <SU> <SC> -- Rams<T>160  PN  5  1 OPN <SU> <SC> 10 <T><L.31.1>
+107  KK  2  1 OFG*<SU>1<SC> 12 <T>125  DL  6  2 DBZ <SU> <SC> 20 <T>143  KK  7  1 OFG*<SU>1<SC> 12 <T>161  QB  2  4 OPS <SU> <SC> 40 <T><L.31.1>
+108  QB  8  3 OPS <SU> <SC> 30 <T>126  LB  3  3 DRI <SU> <SC> 30 <T>144  PN  2  1 OPN*<SU>2<SC> 16 <T>162  KK  2  1 OFG*<SU>2<SC> 16 <T><L.31.1>
+109  KK  2  1 OFG*<SU>1<SC> 12 <T>127  LB  3  3 DRI <SU> <SC> 30 <T>145  PN  8  1 OPN*<SU>2<SC> 16 <T>163  RB  4  1 DPR <SU> <SC> 10 <T><L.31.1>
+110  RB  3  3 ORI <SU> <SC> 30 <T>128  QB  6  3 OPS <SU> <SC> 30 <T>146  PN  5  1 OPN*<SU>2<SC> 16 <T>164  DB  9  1 DPS <SU> <SC> 10 <T><L.31.1>
+111  QB  5  3 OPS <SU> <SC> 30 <T>129  QB  1  2 OPS <SU> <SC> 20 <T>147  QB  2  4 OPS <SU> <SC> 40 <T>165  PN  4  1 OPN*<SU>1<SC> 12 <T><L.31.1>
+112  WR  4  1 DPR <SU> <SC> 10 <T>130  PN  3  1 OPN*<SU>2<SC> 16 <T>148  RB  1  1 OPS*<SU>1<SC> 12 <T>166  --  -  - ---   --<T><L.31.1>
+113  QB  3  4 OPS <SU> <SC> 40 <T>131  LB  1  2 DRO <SU> <SC> 20 <T>149  KK  5  1 OFG*<SU>2<SC> 16 <T>167  QB  2  3 OPS <SU> <SC> 30 <T><L.31.1>
+114  KK  2  1 OFG <SU> <SC> 10 <T>132  RB  4  2 ORI <SU> <SC> 20 <T>150  LB  1  2 DRO <SU> <SC> 20 <T>168  --  -  - ---   --<T><L.31.1>
+115  QB  7  4 OPS <SU> <SC> 40 <T>133  RB  3  1 ORO <SU> <SC> 10 <T>151  KK  9  1 OFG*<SU>1<SC> 12 <T>169  RB  4  2 ORI <SU> <SC> 20 <T><L.31.1>
+116  LB  5  3 DRI <SU> <SC> 30 <T>134  OL  5  4 OQB <SU> <SC> 40 <T>152  RB  1  2 ORI <SU> <SC> 20 <T><T><L.31.1>
+117  QB  2  6 OPS <SU> <SC> 60 <T>135  QB  4  2 OPS <SU> <SC> 20 <T>153  QB  6  4 OPS <SU> <SC> 40 <T><T><L.31.1>
+Available for free agent bids only        max bid allowed is min+10        * indicates additional special teams strengths<L.24.1>
+<L.12.1>
+Jets waive no 32, Kevan Barlow                              Titans coach OQB OL no 60, Daniel Brunskill C               <L.31.1>
+Packers change no 90 to 95, Devonte Wyatt                   Vikings coach OPL QB no 7, Tavaris Jackson BQ               <L.31.1>
+Rams sign FA 142 as 82, Joe Klopfenstein at TE2             Saints start no 13 at WR1 and 22 at WR3                     <L.31.1>
+<L.18.1>
+<Z>Last Turn <C> We had lots of hassles with the software which sends out reports. Apologies to those who had to chase them, and <L.31.1>
+for those who got multiple copies - it looks like the new system which we trialled last week is much smoother.<L.31.1>
+<L.12.1>
+<Z>Reminders <C> A couple of pleas - can everyone make sure orders are submitted on time (it's far from helpful when orders dribble<L.31.1>
+in an hour or so late) and also keep credits topped up (there are some who regularly drop to -1, and rely on results being sent out<L.31.1>
+and then forget). It's a minority who do this stuff, but it'll help me if you don't. Please.<L.31.1>
+<L.12.1>
+<Z>Next Few Months <C> Please don't be surprised if a few turns run late at some point over the next few months. Unfortunately my<L.31.1>
+father is unwell, so I'm spending time up and down some motorways, potentially at short notice. Please keep an eye on the latest<L.31.1>
+news of the website, as I will post there if things are delayed (and I am able to do so). However, assume games run on time......<L.31.1>
+<L.12.1>
+<Z>Processing and Late Turns <C> Please note that the deadline is 9am Saturday, UK time, but appreciate I may run games Saturday or<L.31.1>
+Sunday, and don't chase me up for "missing turns" until Monday. If I've got an issue which means turns delayed beyond that, you <L.31.1>
+should find an update on www.pbmsports.com in the Latest News section, so please check there first.<L.31.1>
+<L.12.1>
+<Z>Online Turnsheets <C> Please make sure when you input turns online you get the week/turn number correct (it's on your turnsheet).<L.31.1>
+If you get it wrong, there's a risk the turn gets missed. Please also avoid double submission of turns - if they're within minutes<L.31.1>
+the system will only take the latest set, but if they're spread out both may be input and you'll get charged 0.1 credit.<L.31.1>
+<L.12.1>
+<Z>Slack <C> There's an independent (i.e. I'm not on it) group on Slack of various players in various games (Gameplan, Raceplan, <L.31.1>
+Baseball, etc) covering things run here (and probably offering hints and advice, which may or may not be accurate). For more<L.31.1>
+information, go to gameplanpbm.slack.com, or for an invite contact Alan Milnes on alan@gameplan.org.uk<L.31.1>
+<L.12.1>
+<Z>Trial Startups <C> The offer of a free trial startup remains available throughout 2024. If you fancy picking up a new team, or <L.31.1>
+trying a different game, check out the options on www.pbmsports.com and drop me a line<L.31.1>
+<E><DU>
+<BK.Scouting Report><L>
+<P.70><L>
+<B>GAMEPLAN   NFLAR   Philadelphia Eagles   Season 2032, Week 2   1/6/24<L.18.1>
+___________________________________________________________________________<L.54.1>
+<U>Scouting Report<UC><C><L.36.1>
+<ST.12><L.18.1>
+<Z>Week 2,<T>Game:-  Philadelphia Eagles (1-0) Alan Milnes <L.36.1>
+<T>Versus  New York Giants (1-0) David Trice<C><L.18.1>
+<L.18.1>
+<ST.44><L.18.1>
+Pos Num Age NomVal  Name<T>Pos Num Age NomVal  Name<T><L.42.1>
+QB   10   4  5 OPS  Eli Manning<T>DRE  95   3  4 DBZ  Adrian Awasom<L>
+BQ    8  12  -  -   Tim Hasselbeck<T>DRT  93   8  2 DBZ  Marcus Green<L>
+FB   20   6  3 ORI  Jim Finn<T>NT   92   2  -  -   Michael Strahan<L>
+HB   21   2  4 ORI  Tiki Barber<T>DLT  96   5  2 DBZ  Barry Cofield<L>
+RB   27   6  1 OPS  Brandon Jacobs<T>DLE  98   7  3 DBZ  Fred Robbins<L>
+TE1  80   2  4 OPS  Jeremy Shockey<T>ROLB 59   1  -  -   Gerris Wilkinson<L>
+TE2  82   4  -  -   Visanthe Shiancoe<T>RILB 51   9  -  -   Carlos Emmons<L>
+RT   67   9  3 OQB  Kareem McKenzie<T>MLB  58   5  4 DRI  Antonio Pierce<L>
+RG   66   3  3 OQB  David Diehl<T>LILB  -   -  -  -  <L>
+C    65   6  3 OQB  Grey Ruegamer<T>LOLB 57   7  3 DRI  Chase Blackburn<L>
+LG   76   9  2 OQB  Chris Snee<T>RCB  25   4  5 DPL  R.W. McQuarters<L>
+LT   77   6  2 OQB  Luke Petitgout<T>SS   28   6  3 DPL  Gibril Wilson<L>
+WR1  81   9  2 OPL  Amani Toomer<T>FS   37  11  -  -   James Butler<L>
+WR2  17   1  2 OPL  Plaxico Burress<T>LCB  22   3  1 DPL  Sam Madison<L>
+WR3  85   7  1 OPL  David Tyree<T>NCB  23   3  1 DPS  Corey Webster<L>
+WR4  84   1  1 OPL  Tim Carter<T>PN   18   4  -  -   Jeff Feagles<L>
+<T>KK    2  10  -  -   Jay Feely<L.36.1>
+Defence Formation: 4-3 (MLB=58)   Roster Total: 68<L.45.1>
+Key to Status:- CFA=Conditional Free Agent, CW=Conditional Waiver, Red=Reduced, Loss-Cat is Step Loss, Gain+Cat is Step Gain<L.45.1>
+<L.18.1>
+<B><U>Stats Breakdown<UC><L.33.1>
+<ST.44.88><L.18.1>
+<Z>New York Giants, last game, offence<T>New York Giants, season, offence<T>Philadelphia Eagles, season, offence<C><L.45.1>
+<U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<L.36.1>
+Inside       -      4:16   13:29     -   <T>Inside       -      4:16   13:29     -   <T>Inside      1:1     7:37    4:35     -   <L.36.1>
+Outside     2:10     -     20:48     -   <T>Outside     2:10     -     20:48     -   <T>Outside      -       -       -      4:2  <L.36.1>
+<U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<L.36.1>
+Short       3/4:10     0/8:0      3/5:29 <T>Short       3/4:10     0/8:0      3/5:29 <T>Short       -          2/3:3     7/14:128<L.36.1>
+Long        -          -         3/12:52 <T>Long        -          -         3/12:52 <T>Long        -          -         3/19:75 <L.36.1>
+Dumpoff     1/0:23     -          2/0:41 <T>Dumpoff     1/0:23     -          2/0:41 <T>Dumpoff     -          -          6/0:186<L.36.1>
+<L.18.1>
+<Z>New York Giants, last game, defence<T>New York Giants, season, defence<T>Philadelphia Eagles, season, defence<C><L.45.1>
+<U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<L.36.1>
+Inside       -      4:31   21:96     -   <T>Inside       -      4:31   21:96     -   <T>Inside      2:6     8:20     -       -   <L.36.1>
+Outside     1:0     2:9    13:51     -   <T>Outside     1:0     2:9    13:51     -   <T>Outside     1:8     2:1    11:67     -   <L.36.1>
+<U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<L.36.1>
+Short       1/1:11     2/6:23     2/5:12 <T>Short       1/1:11     2/6:23     2/5:12 <T>Short       4/9:8      6/7:65    2/10:23 <L.36.1>
+Long        -          -          0/8:0  <T>Long        -          -          0/8:0  <T>Long        -          -         5/13:75 <L.36.1>
+Dumpoff     -          -          3/0:36 <T>Dumpoff     -          -          3/0:36 <T>Dumpoff     -          -          -      <L.36.1>
+<L.18.1>
+<ST.27><L.18.1>
+<B><U>Season Stats<UC><L.54.1>
+<Z>Offence<L.18.1>
+<C><L.8.1>
+<T> Total Yards  ------- Rushing (per game) -------  ----------------- Passing (per game) -----------------<L.18.1>
+Team<L.18.1>
+<T> (per game)   Att  Yds  AvR  Fm%  TD%  Lng  Rank  Att Com  Yds  AvA  AvC   Pct  In%  Sk%  TD%  Lng  Rank<L>
+Philadelphia Eagles<T> 441  ( 4)     16   75  4.7 12.5  0.0  11   (16)  32   18  392 12.2 21.8  56.2  6.2 11.1 18.7  74t  ( 3)<L.30.1>
+New York Giants<T> 243  (16)     39  103  2.6  5.1  2.6  10   (13)  24   12  155  6.5 12.9  50.0  0.0  7.7  8.3  26   (20)<L.30.1>
+<L.18.1>
+<T> Total   -- Kicks+Convs --  ------- Quarterback -------   ----- Punting ------  Penalties   Conversions<L.18.1>
+Team<L.18.1>
+<T> Points   EPA   CGA   FGA   Int  TD  Hrd  Skd  Run  Yds   Num  Yds  AvgG  AvgN   Num Yds   Third  Fourth<L>
+Philadelphia Eagles<T>   42     6/ 6  0/ 0  0/ 0    2   6    2    4    1    1    2    81  40.5  28.0    2   26    6/ 10   0/0<L.30.1>
+New York Giants<T>   21     3/ 3  0/ 0  0/ 0    0   2    3    2    2   10    8   281  35.1  22.0    5   36    9/ 19   1/1<L.30.1>
+<L>
+<Z>Defence<L.18.1>
+<C><L.18.1>
+<T> Total Yards  ------- Rushing (per game) -------  ---------------- Passing (per game) ------------------<L.18.1>
+Team<L.18.1>
+<T> (per game)   Att  Yds  AvR  Fm%  TD%  Lng  Rank  Att Com  Yds  AvA  AvC   Pct  In%  Sk%  TD%  Lng  Rank<L>
+Philadelphia Eagles<T> 238  ( 7)     24  106  4.4  4.2  0.0  15   (14)  33   17  171  5.2 10.1  51.5  3.0 13.2  6.1  18   ( 7)<L.30.1>
+New York Giants<T> 257  (10)     41  187  4.6  4.9  0.0  12   (23)  17    8   82  4.8 10.2  47.1  5.9 10.5  5.9  25   ( 1)<L.30.1>
+<L.18.1>
+<T>  ---- Fumbles ---   -- Interceptions -   -- Punt Returns -   -- Kick Returns -   --- Sacks --  Safe<L.18.1>
+Team<L.18.1>
+<T>  Num Ret  Yds  TD   Num Ret   Yds   TD   Num Yds   Avg  TD   Num Yds   Avg  TD   Hrd  Skd Yds  ties<L>
+Philadelphia Eagles<T>   1    0    0   0    1    1    20    0    4   73  18.2   0    4   85  21.2   0   11    5   39    0<L.30.1>
+New York Giants<T>   2    0    0   0    1    0     0    0    3   11   3.7   0    4   84  21.0   0    2    2   12    0<L.30.1>
+<L>
+<P>
+<BK.Scouting Report - Game Summary><P.70><B><L>
+GAMEPLAN    Game Summary    NFLAR    1/6/24<L.12.1>
+________________________________________________________________________<L.45.1>
+<Z>Week 1, New York Giants<C> at New Orleans Saints<ST.39.61.79.122><L.54.1>
+<Z><U>1st Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+<Z>NG   0:00  NG 42  Kick Return 32 yds<T>6 plays for 18 yds<T>FI pass 11 yds<T>punt of 24 yards<L.33.1>
+<C>NS   3:07  NS 40  Punt Return 24 yds<T>6 plays for 15 yds<T>FI pass 11 yds<T>punt of 42 yards<L.33.1>
+<Z>NG   5:52  NG  9  Punt Return 6 yds<T>3 plays for 3 yds<T>RC run 5 yds<T>punt of 35 yards<L.33.1>
+<C>NS   7:28  <Z>NG 41  <C>Punt Return 6 yds<T>2 plays for 5 yds<T>DR run 5 yds<T><Z>fumbled<L.33.1>
+NG   8:17  NG 41  Fumble<T>11 plays for 59 yds<T>DP pass 15 yds<T>RC run 4 yds for TD, PAT good<T>7-0 NG<L.33.1>
+<C>NS  12:41  NS 17  Kickoff<T>6 plays for 35 yds<T>SO pass 9 yds<T>end of quarter<L.33.1>
+<L.8.1>
+<Z>Giants: rushing 5 for 17 yds inside and 7 for 12 yds outside, passing 5 for 2 and 24 yds short, 4 for 1 and 15 yds long<L>
+<C>Saints: rushing 5 for 23 yds inside and 3 for 9 yds outside, passing 3 for 3 and 23 yds short, 3 for 0 and 0 yds long<L>
+<L.21.1>
+<Z><U>2nd Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+NS  15:00  <Z>NG 48  <C>Start Quarter<T>9 plays for 48 yds<T>DE run 12 yds<T>DP pass 8 yds for TD, PAT good<T>7-7 <L.33.1>
+<Z>NG  18:38  NG 12  Kick Return 6 yds<T>8 plays for 33 yds<T>OP pass 14 yds<T>punt of 55 yards<L.33.1>
+<C>NS  22:35  NS 20  Touchback<T>11 plays for 60 yds<T>DR run 11 yds<T>37 yd field goal attempt, good<T>7-10 NS<L.33.1>
+<Z>NG  27:20  NG 29  Kick Return 22 yds<T>7 plays for 13 yds<T>SW run 9 yds<T>punt of 39 yards<L.33.1>
+<C>NS  29:09  NS 22  Punt Return 3 yds<T>3 plays for 12 yds<T>DR run 6 yds<T><Z>fumbled<L.33.1>
+NG  29:56  <C>NS 35  <Z>Fumble<T>1 play for loss<T>-<T>time expired<L.33.1>
+<L.8.1>
+Giants: rushing 3 for 3 yds inside and 5 for 16 yds outside, passing 2 for 2 and 7 yds short, 4 for 1 and 14 yds long<L>
+<C>Saints: rushing 12 for 72 yds inside and 5 for 27 yds outside, passing 4 for 1 and 3 yds short, 1 for 1 and 8 yds long<L>
+<L.21.1>
+<Z><U>3rd Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+NS  30:00  NS 43  Kick Return 28 yds<T>7 plays for 27 yds<T>DW run 6 yds<T><Z>intercepted<L.33.1>
+NG  33:00  NG 20  Interception<T>4 plays for loss<T>-<T>punt of 28 yards<L.33.1>
+<C>NS  34:59  <Z>NG 39  <C>Punt Return 5 yds<T>7 plays for 35 yds<T>LO pass 12 yds<T>21 yd field goal attempt, good<T>7-13 NS<L.33.1>
+<Z>NG  38:14  NG 39  Kick Return 24 yds<T>9 plays for 61 yds<T>OP pass 22 yds<T>OP pass 22 yds for TD, PAT good<T>14-13 NG<L.33.1>
+<C>NS  42:28  NS 31  Kick Return 11 yds<T>5 plays for 23 yds<T>DR run 11 yds<T>punt of 40 yards<L.33.1>
+<L.8.1>
+<Z>Giants: rushing 3 for 14 yds inside and 4 for 10 yds outside, passing 2 for 1 and 0 yds short, 2 for 2 and 38 yds long<L>
+<C>Saints: rushing 5 for 28 yds inside and 8 for 24 yds outside, passing 4 for 2 and 23 yds short, 1 for 0 and 0 yds long<L>
+<L.21.1>
+<Z><U>4th Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+<Z>NG  45:00  NG  6  Start Quarter<T>3 plays for loss<T>-<T>punt of 33 yards<L.33.1>
+<C>NS  47:17  <Z>NG 36  <C>Punt Return<T><T>-<T>return 36 yds for TD, PAT good<T>14-20 NS<L.33.1>
+<Z>NG  47:17  NG 13  Kickoff<T>11 plays for 87 yds<T>DP pass 26 yds<T>FP pass 23 yds for TD, PAT good<T>21-20 NG<L.33.1>
+<C>NS  52:06  NS 32  Kick Return 21 yds<T>3 plays for 8 yds<T>DR run 4 yds<T>punt of 29 yards<L.33.1>
+<Z>NG  53:57  NG 35  Punt Return 4 yds<T>3 plays for 6 yds<T>SW run 8 yds<T>punt of 25 yards<L.33.1>
+<C>NS  56:27  NS 42  Punt Return 8 yds<T>3 plays for loss<T>-<T>punt of 31 yards<L.33.1>
+<Z>NG  58:19  NG 39  Punt Return 1 yds<T>6 plays for 6 yds<T>SW run 9 yds<T>punt of 42 yards<L.33.1>
+<C>NS  59:50  NS 16  Punt Return 3 yds<T>1 play for 25 yds<T>DP pass 25 yds<T>time expired<L.33.1>
+<L.8.1>
+<Z>Giants: rushing 6 for 11 yds inside and 6 for 20 yds outside, passing 8 for 2 and 31 yds short, 2 for 1 and 26 yds long<L>
+<C>Saints: rushing 3 for 4 yds inside, passing 1 for 0 and 0 yds short, 3 for 1 and 25 yds long<L>
+<E><DU>
+<BK.Turnsheet><P.70><B><L>
+<C> <B>GAMEPLAN   VERSION 2.17 ADVANCED   1/6/24   TURNSHEET   <X>NFLAR-PE<L.54.1>
+<C> <B>Philadelphia Eagles (Alan Milnes)<Z><C>     Sn 2032 Wk 2 vs Giants     <Z>Deadline: Saturday 15th June<C><L.24.1>
+ <B>___________________________________________________________________________<L.48.1>
+<C> <Z>In all cases fill in only those boxes you wish to change from your last game. If you don't want to change it, don't fill it in. <L.48.1>
+<C> Address: Danny McConnell, 82 Scotts Lane, Bromley, Kent, BR2 0LX.  <L.60.1>
+ <B><U>G: Game Parameters<UC><L.6.1>
+<ST.73><L.6.1>
+<C><T>Field goal ranges are yards to the goal line.<E><L.30.1>
+<C> <E> NFG    LFG    SYO    LYO    SYD    LYD    HUT<L.6.1>
+<T><C>Short yardages must be values 1 to 5.<E><L.18.1>
+<BX>F----7 F----7 F----7 F----7 F----7 F----7 F----7 <L.18.1>
+<T><C><BC>Long yardages must be values 6 to 19.<BX><E><L.18.1>
+!    ! !    ! !    ! !    ! !    ! !    ! !    ! <L.18.1>
+<T><C>Hurry up is time gone (0 to 59 minutes).<E><L.18.1>
+L----J L----J L----J L----J L----J L----J L----J <L.18.1>
+<BC><ST.43.98><L.30.1>
+<C> <B><U>A: Gameplan Changes<UC><L.36.1>
+<E><BX>F----T--------T------T-------T-------T-------T-------7F------T----T----T----T----T----7<L.36.1>
+! No !  Name  ! Down ! Score !<BC> YdsDn <BX>!<BC> YdsLn <BX>!<BC> TimeG <BX>!!<BC>  Fm  <BX>! A  ! B  ! C  ! D  ! Rn !<L.36.1>
+K----+--------+------+---T---+---T---+---T---+---T---3K------+----+----+----+----+----3<L.36.1>
+!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+L----I--------I------I---I---I---I---I---I---I---I---JL------I----I----I----I----I----J<L.36.1>
+<BC><C> Write "clear" in a box if you want to remove that play call from your gameplan. <L.30.1>
+<ST.46.99><L.30.1>
+ <B><U>P: Special Teams<UC><T><U>H: Fourth Downs<UC><L.42.1>
+<C> <E>KICK  RETURN  PUNT  RETURN     LATE  MIDFLD  NEAR  SHORT  TWOMIN    <L.24.1>
+<BX>F----7 F----7 F----7 F----7    F----7 F----7 F----7 F----7 F----7 <L.18.1>
+<L.18.1>
+!    ! !    ! !    ! !    ! <BC>   <BX>!    ! !    ! !    ! !    ! !    ! <L.18.1>
+<L.18.1>
+L----J L----J L----J L----J    L----J L----J L----J L----J L----J <L.18.1>
+<BC><L.9.1>
+<C> Special Teams strategies are KO or KS, KR or KV, PN or PC, PR, PV or PB.<L.30.1>
+ Fourth Downs are A=All, G=Goaline, L=Late, M=Midfield, N=None, S=Short, T=TwoMins, or 1 to 9 (yards).<L.60.1>
+ <B><U>T: Team Training & Game Bonuses<UC><L.6.1>
+<ST.101><L.30.1>
+<C> <E>OFFENCE       DEFENCE       KEY PLAYS     BONUS PLAYS   BONUS CATS<L.6.1>
+<T><C>Not used in warmup games.<E><L.18.1>
+<BX>F----T----7   F----T----7   F----T----7   F----T----7   F-----T-----7 <L.18.1>
+<T><C><BC>Training and keys do not<E><L.18.1>
+<BX>!    !    !   !    !    !   !    !    !   !    !    !   !     !     ! <L.18.1>
+<T><C>accumulate in pre-season.<E><L.18.1>
+L----I----J   L----I----J   L----I----J   L----I----J   L-----I-----J <L.18.1>
+<BC><L.30.1>
+<C> <B><U>S: Sort Gameplan<UC><E><L.30.1>
+<C> <E>        <BX>F---T---T---T---T---T---T---T---T---T---T---T---T---T---T---T---7<BC><L.33.1>
+<C> <E>OFFENCE <BX>!   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !<BC>  1-16<L.33.1>
+<C> <E>        <BX>K---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---3<BC><L.33.1>
+<C> <E>DEFENCE <BX>!   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !<BC>  17-32<L.33.1>
+<C> <E>        <BX>L---I---I---I---I---I---I---I---I---I---I---I---I---I---I---I---J<BC><L.30.1>
+<L.24.1>
+<ST.68.102><L.1.1>
+<C> <B><U>X: Special Action<UC><T><U>X: Select Starter<UC><T><U>X: Free Agent<UC><L>
+<ST.34><L.6.1>
+<C> <E>ACTION   SHIRT    NAME                         SHIRT   POSITION        FANUM   BID LPs<L.1.1>
+<T><C>(only if new player or rename)<E><L.23.1>
+<BX>F----7   F----7   F----------------------7     F----7   F------7       F----7   F----7 <L.18.1>
+<L.18.1>
+!    ! <BC>  <BX>!    ! <BC>  <BX>!                      ! <BC>    <BX>!    ! <BC>  <BX>!      ! <BC>      <BX>!    ! <BC>  <BX>!    ! <L.18.1>
+<L.18.1>
+L----J   L----J   L----------------------J     L----J   L------J       L----J   L----J <L.18.1>
+<BC><L.9.1>
+<L.30.1>
+<C> <B><U>C: Credit & Payments<UC><E><L.30.1>
+<BX>F-------7 <L.18.1>
+           <C><BC>Turnfees: #3.50 for one, #14 for four, #32 for ten, #56 for twenty.    NFLAR-PE tc=25.0<BX><E><L.18.1>
+! #     ! <L.18.1>
+           <C><BC>Indicate any money sent for credits with this turn.  Cheques made payable to: SSI Ltd<BX><E><L.18.1>
+L-------J <L.18.1>
+<BC><L.9.1>
+<C> Give any change of address in this space and indicate if change is termtime or temporary.<E><L>
+<DU>

@@ -1,0 +1,12 @@
+Installation instructions:
+
+- Open dadabik_wrapper.php with a text editor and set $secret_key, $dadabik_session_name and $site_path
+
+- Upload the dadabik_wrapper folder to the /wp-content/plugins/ wordpress directory
+
+- Activate the plugin from Wordpress ("Plugins" menu)
+
+- You can now add a DaDaBIK application to any of your Wordpress pages, you just need to add this piece of code to the content of the page:
+[dadabik_wrapper url=url of your DaDaBIK application]
+For example, if your Wordpress installation is at www.yoursite.com and your dadabik application at www.yoursite.com/myfronted you should add this piece of code:
+[dadabik_wrapper url=http://www.yoursite.com/myfronted]
