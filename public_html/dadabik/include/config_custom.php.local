@@ -63,7 +63,7 @@ $enable_delete_all_feature = 0;
 $number_failed_login_before_blocking = 5;
 $enable_forgotten_password = 1;
 $enable_email_confirmation = 1;
-$enable_users_self_registration = 1;
+$enable_users_self_registration = 0;
 
 //Permissions management
 $enable_multiple_groups_permissions = 0;
