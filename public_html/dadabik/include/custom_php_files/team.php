@@ -247,7 +247,17 @@ if ($_cp_latest_season_id) {
     $_cp_games = $_cp_stmt->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($_cp_games as $g) {
-        $_cp_is_home = ((int)$g['home_franchise_id'] === $_cp_franchise_id);
+        // Explicit (int) cast on BOTH sides, not just the left -- $_cp_franchise_id was
+        // properly cast to int back where it's first set, but bindParam() binds by
+        // reference with a default type of PDO::PARAM_STR, and it's bound repeatedly to
+        // several queries earlier in this file. Confirmed via direct runtime diagnostic
+        // (not just reasoning about it) that this silently turns $_cp_franchise_id back
+        // into a string by the time this comparison runs -- 'X' === X is false in PHP
+        // regardless of the actual values, which is exactly why every game was showing as
+        // a road game (the comparison never matched, home or not) and some weeks showed a
+        // team as its own opponent (falling back to home_label on the specific weeks this
+        // franchise actually was the home team).
+        $_cp_is_home = ((int)$g['home_franchise_id'] === (int)$_cp_franchise_id);
         $venue = $g['neutral_site'] ? 'Neutral' : ($_cp_is_home ? 'Home' : 'Road');
         $my_score = $_cp_is_home ? $g['home_score'] : $g['away_score'];
         $opp_score = $_cp_is_home ? $g['away_score'] : $g['home_score'];

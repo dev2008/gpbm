@@ -45,7 +45,7 @@ echo "<div class='w3-panel w3-theme-d5 w3-text-white w3-round-xxlarge'>";
 // TODO: set this to team.php's actual id_static_page once it's registered in Dadabik --
 // same "Dadabik routes by query parameter, not path" reasoning as build_league_link() below.
 // Using 0 as an obviously-wrong placeholder rather than guessing a real-looking number.
-define('TEAM_PAGE_STATIC_ID', 0);
+define('TEAM_PAGE_STATIC_ID', 4);
 
 $_cp_league = (isset($_GET['league']) && $_GET['league'] === 'NCAA5') ? 'NCAA5' : 'NFLAR';
 

@@ -1,0 +1,816 @@
+Game Report from Ab Initio Games NCAA5-PI, Turn 0 
+Contact photo
+From Danny McConnell on 2026-06-18 10:18
+Details Headers
+alan@gameplan.org.uk
+0
+NCAA5-PI, Turn 0
+<STARTREP>
+<BK.Team Report><L>
+<P.70><B>GAMEPLAN (Advanced)   League NCAA5   Season 2039   Pre-Season   18/6/26<L.54.1>
+Pittsburgh Panthers (Alan Milnes)      turn credits = 6.5<C><L.18.1>
+<Z>__________________________________________________________________________________________________________________________________<L.48.1>
+<C><B>OFFENCE<C><L.6.1>
+                               yards     yards     time<L.33.1>
+no name     downs   score     to down   to line    gone    fmtn  plays and weights        react<L.36.1>
+ 1 START1   1234  -20 to 20   1 to 99   1 to 99   0 to  2  W     QR     QK     QD     QS      S<L.35.1>
+ 2 START2   1234  -20 to 20   1 to 99   1 to 99  30 to 32  W     QR     QD     QK     QS      S<L.35.1>
+ 3 SHORT    1234  -20 to 20   1 to 99   1 to 99   0 to 59  W     LL     DL     OS     QR      A<L.35.1>
+ 4 GL LATE L1234  -20 to 20   1 to 99   1 to SY  HT to 59  S     SL                           4<L.35.1>
+ 5 VLATE LFG1234   -2 to 0    1 to 99   1 to 20  58 to 59  W     QR                           4<L.35.1>
+ 6 V LATE L 1234  -20 to 20   1 to 99   1 to 99  58 to 59  S     OP     DL                    4<L.35.1>
+ 7 LATE L NR1234   -6 to 0    1 to 99   1 to 30  HT to 59  S     SL                           4<L.35.1>
+ 8 LATE L FR1234  -20 to 20   1 to 99   1 to 99  HT to 59  S     DL     OP                    4<L.35.1>
+ 9 GOAL     1234  -20 to 20   1 to 99   1 to SY   0 to 59  S     SL                           4<L.35.1>
+10 HT HUP   1234  -20 to 20   1 to 99   1 to 99  28 to 29  S     SL                           4<L.35.1>
+11 V LATE W 1234  -20 to 20   1 to 99   1 to 99  58 to 59  W     QR                           4<L.35.1>
+12 LATE W   1234  -20 to 20  20 to 99   1 to 99  55 to 59  W     QR                           4<L.35.1>
+13 RED ZONE 1234  -20 to 20   1 to 99   1 to 20   0 to 59  T     LL     QR     PS     QK      A<L.35.1>
+14 GRN ZONE 1234  -20 to 20   1 to 99  90 to 99   0 to 59  I     DL     RT     DL     SW      A<L.35.1>
+15 STANDARD 1234  -20 to 20   1 to 99  42 to 68  18 to 59  O     DL     CW     DL     PS      4<L.35.1>
+16 FALLBACK 1234  -20 to 20   1 to 99   1 to 99   0 to 59  S     OP     EV     OP     SL      A<L.35.1>
+<B><L.24.1>
+DEFENCE<C><L.6.1>
+                               yards     yards     time<L.33.1>
+no name     downs   score     to down   to line    gone    fmtn  plays and weights        react<L.36.1>
+17 ARMY 1   1234  -20 to 20   5 to 99   1 to 99   0 to 75  W     OX     IX     LJ             S<L.35.1>
+18 GTECH 1  1234  -20 to 20   1 to 99   1 to 99   0 to 75  I     GL     IX     RD             4<L.35.1>
+19 GTECH 2  1234  -20 to 20   1 to 99   1 to 99   0 to 75  I     GL     RD     ND             4<L.35.1>
+20 GTECH 3  2     -20 to 20   1 to 99   1 to 10   0 to 75  I     GL     FD     FS             4<L.35.1>
+21 GTECH 4  34    -20 to 20   1 to 99   1 to 99   0 to 75  W     MD +4  LD     PD             4<L.35.1>
+22 GTECH 5  3     -20 to 20   1 to 99   1 to 99   0 to 75  W     IX     GL     RD             4<L.35.1>
+23 GTECH 6  3     -20 to 20   1 to 99   1 to 99   0 to 75  S     RD     ND     WS             4<L.35.1>
+24 GTECH 7  124   -20 to 20   1 to 99   1 to 99   0 to 75  S     MD     IX     ZS             4<L.35.1>
+25 GTECH 8  1     -20 to 20   1 to 99   1 to 99   0 to 75  D     RD     WS     ND             4<L.35.1>
+26 GTECH 9  2     -20 to 20   1 to 99   1 to 99   0 to 75  D     ZS     WC     ND             4<L.35.1>
+27 GTECH 10 34    -20 to 20   1 to 99   1 to 99   0 to 75  JZO   LJ -7  MD +4  RD +4          4<L.35.1>
+28 GTECH 11 1234  -20 to 20   1 to 99   1 to 99   0 to 75  JZO   RD +4  WC -3  LD -1          4<L.35.1>
+29 GTECH 12 1     -20 to -7   1 to 99   1 to 99  30 to 59  DIJWS SB     BZ     RD             4<L.35.1>
+30 GTECH 13 2     -20 to -7   1 to 99   1 to 99  30 to 59  DIJWS SB +8  RD     BZ             4<L.35.1>
+31 GTECH 14 34    -20 to -14  1 to 99   1 to 99  45 to 59  X     SB     WC     KB             4<L.35.1>
+32 FALLBACK 1234  -20 to 20   1 to 99   1 to 99   0 to 75  X     RD     MD -3  PD     FD      4<L.35.1>
+<L.24.1>
+Game Parameters:  NFG 28  LFG 33  SYO 2  LYO 11  SYD 2  LYD 11  HUT 52<L.42.1>
+Special Teams:   Kick KO  KickRet KR  Punt PN  PuntRet PR      Fourth Downs:   Late A  Midfld A  Near A  Short A  TwoMins A<L.54.1>
+<B><U>Training & Keys<UC><C><L.48.1>
+Current Orders  Offence: OP PS  Defence: GL GL  Keys: RN RI  Bonus Play: OP SL  Bonus Cat: OPS OPL<L.48.1>
+Offence Run      RL RO RN CW PW OR QR QD QS QK<L.33.1>
+Training:         0  0  0  0  0  0  2  2  1  2<L.33.1>
+Keys:             1  1  1  2  1  2  1  1  0  0<L.48.1>
+Offence Pass     SL SO LL LO DL OP OS<L.33.1>
+Training:         2  1  0  0  2  2  1<L.33.1>
+Keys:             1  1  1  2  1  2  0<L.48.1>
+Dumpoff Passes   DP<L.33.1>
+Training:         2<L.33.1>
+Keys:             1<L.48.1>
+Defence          IX OX MD RD WC ZS ZD<L.33.1>
+Training:         1  1  1  2  2  1  1<L.48.1>
+Special Teams    PN PR KO KR FG FB<L.33.1>
+Training:         1  1  1  1  1  2<L.48.1>
+<P>
+<BK.Roster><L>
+<B>GAMEPLAN   NCAA5   2039 Season, Week 0   Pittsburgh   18/6/26<L.18.1>
+___________________________________________________________________________<L.54.1>
+<U>Current Roster<UC><C><L.12.1>
+<L.18.1>
+<ST.29.69.98><L.18.1>
+Pos Num Name<T>Age Val Strengths           Status<T>Pos Num Name<T>Age Val Strengths       Status<T><L.42.1>
+QB   14 Ty Dieffenbach<T> 1  3  ORO OPS OPL          -       <T>DRE  40 James Folston<T> 2  3  DRI DRO DBZ      -       <L>
+BQ    4 Max Browne<T> 1  -  -                    -<T>DRT  92 Burt Grossman<T> 1  -  -                -<L>
+FB   35 George Aston<T> 4  -  -                    -<T>NT   53 Zach Crothers<T> 3  3  DRI DRO DBZ      -       <L>
+HB   22 Israel Abanikanda<T> 4  -  -                    -<T>DLT  91 Patrick Jones II<T> 3  -  -                -<L>
+RB   37 Qadree Ollison<T> 4  -  -                    -<T>DLE  98 Kirk Christodoulou<T> 4  3  DRI DRO DBZ      -       <L>
+TE1  43 Cole Mitchell<T> 1  -  -                    -<T>ROLB 36 Chase Pine<T> 2  -  -                -<L>
+TE2  44 Jason Collier<T> 1  -  -                    -<T>RILB 52 Darrin Smith<T> 2  -  -                -<L>
+RT   56 Lyndon Cooper<T> 1  3  ORI ORO OQB          -       <T>MLB  -  -<T> -  -  -                -<L>
+RG   68 Blake Zubovic<T> 4  3  ORI ORO OQB          -       <T>LILB 54 Dylan Bennett<T> 2  -  -                -<L>
+C    66 Kurt Gouveia<T> 3  3  ORI ORO OQB          -       <T>LOLB 32 Sirvocea Dennis<T> 2  -  -                -<L>
+LG   57 Greyson Riffe<T> 2  2  ORI OQB              -       <T>RCB  26 Judson Tallandier<T> 4  -  -                -<L>
+LT   61 Ryan Jacoby<T> 2  3  ORI ORO OQB          -       <T>SS   48 Matthew Amofa<T> 2  2  DPS DPL          -       <L>
+WR1  84 Cam Sapp<T> 3  2  OPS OPL DPR          -       <T>FS   28 Noah Biglow<T> 2  -  -                -<L>
+WR2  83 Darian Street<T> 2  2  OPS OPL DKR          -       <T>LCB   2 Maurice Ffrench<T> 2  -  -                -<L>
+WR3  20 Myles Austin<T> 3  -  -                    -<T>NCB  45 Steve Israel<T> 4  2  DPS DPL          -       <L>
+WR4  81 Daejon Reynolds<T> 3  -  -                    -<T>PN    7 Guy Collura<T> 3  -  -                -<L>
+<T><T>KK   -  -<T> -  -  -                -<L.36.1>
+Defence Formation: 3-4 (NT=53)   Roster Total: 36<L.45.1>
+Key to Status:- CFA=Conditional Free Agent, CW=Conditional Waiver, Red=Reduced, Loss-Cat is Step Loss, Gain+Cat is Step Gain<L.45.1>
+Strengths  ORI ORO OPS OPL OQB OPN OFG DRI DRO DPS DPL DBZ DPR DKR   Played Up: 0   <U>LPs: 2<UC><L.36.1>
+Squad:       5   5   3   3   5   0   0   3   3   2   2   3   1   1<L>
+Form:        0   0   0   0   0   0   0   0   0   0   0   0   0   0   Best: DPL DKR DPL  Worst: DPS DPS  Form gains: none<L.54.1>
+Average:    +2  +1  +1  +1  +2   0   0  -1  -1   0   0   0  +1   0<L>
+Relative:   +1  +1  +1  +1  +2           0  -1   0   0   0        <L.54.1>
+<B><U>Bids & Actions<UC><C><L.45.1>
+Free Agent: No Bid<L.36.1>
+Action 1:   None<L.36.1>
+Action 2:   None<L.36.1>
+Action 3:   None<L.36.1>
+Action 4:   None<L.36.1>
+Action 5:   None<L.36.1>
+<L.18.1>
+<B><U>Runners & Receivers<UC><C><L.48.1>
+RC RI RT RL LT RO RN DR DE DT TR TW CW DW FW PW RW SW EV RV DV OR OT QR QD QS QK <L>
+35 22 37 22 35 37 22 37 35 22 37 22 37 22 35 37 22 37 83 84 83 22 35 14 14 14 14 <L.48.1>
+QL QI QO SM SL SI SO SP LL LI LO LP FL FI FO FP DC SC DL DI DO DP DS OP OS PO PL PI PA PS <L>
+84 84 84 84 83 83 84 84 43 44 43 44 35 35 35 37 35 22 83 83 83 84 83 84 84 84 83 84 20 83 <L.48.1>
+<P>
+<P.70><B><BK.1st Quarter><L>
+GAMEPLAN   NCAA5   2039 Season   18/6/26<L>
+<L>
+Week 0,  Air Force Falcons vs Pittsburgh Panthers<L>
+________________________________________________________________________<L>
+<L>
+<ST.118><C><B>1st Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+ 0:00  PI                     KO KR    kickoff to 16, run back 37 yards<L>
+ 0:21  AI  47  1st and 10   W DR OX   <Z> misdirection, HB, breakout for gain of 47 yards <L>
+                                       is touchdown Air Force Falcons, PAT good<T>7-0 AI<C><L>
+ 1:05                         KO KR    kickoff to 12, not returned<L>
+ 1:05  PI  88  1st and 10   W QR RD    quarterback run, for gain of 2 yards <L>
+ 1:27      86  2nd and 8    W QK PD    quarterback bootleg, for gain of 2 yards <L>
+ 1:49      84  3rd and 6    W QD RD    quarterback stuffed, for loss of 1 yard <L>
+ 2:22      85  4th and 7    P PN PR    punt for 28 yards, run back 8 yards <L>
+ 2:45  AI  35  1st and 10   W DR IX    HB run for loss of 2 yards <L>
+ 3:13      37  2nd and 12   O DR RD    HB run for loss of 1 yard <L>
+ 3:46      38  3rd and 13   O DS LJ    pass dumped off to TE at gain of 5 yards, and run for gain of 10 yards <L>
+ 4:12      23  1st and 10   W OP LJ    pass dumped off to RB at gain of 1 yard, and run for gain of 6 yards <L>
+ 4:37      16  2nd and 3    W LL MD    pass dumped off to RB for gain of 11 yards <L>
+ 5:06       5  1st & Goal   W RC OX   <Z> misdirection, FB, breakout for gain of 5 yards <L>
+                                       is touchdown Air Force Falcons, PAT good<T>14-0 AI<C><L>
+ 5:27                         KO KR    kickoff to 19, run back 25 yards<L>
+ 5:48  PI  56  1st and 10   W LL RD    pass dropped, incomplete<L>
+ 6:08      56  2nd and 10   W DL PD    pass out of bounds, incomplete<L>
+ 6:28      56  3rd and 10   W OS PD    pass option screen to RB at loss of 4 yards, and run for gain of 6 yards <L>
+ 6:48      54  4th and 8    P PN PR    punt for 34 yards, run back 2 yards <L>
+ 7:10  AI  78  1st and 10   W LL IX    QB hurried, pass out of bounds, incomplete<L>
+ 7:30      78  2nd and 10   W OR LJ    HB run for gain of 2 yards <L>
+ 7:52      76  3rd and 8    W DR OX    HB run for gain of 14 yards <L>
+ 8:18      62  1st and 10   W DR IX    HB stuffed, for no gain <L>
+ 8:40      62  2nd and 10   W OP LJ    delay of game against offence, for loss of 5 yards<L>
+ 9:01      67  2nd and 15   O PW LD    HB run for gain of 6 yards <L>
+ 9:29      61  3rd and 9    W DR OX    HB run for gain of 15 yards <L>
+10:07      46  1st and 10   W LL IX    QB hurried, pass underthrown, incomplete <L>
+10:27      46  2nd and 10   W OR LJ    pitchout to HB, breakout and out of bounds for gain of 6 yards <L>
+10:49      40  3rd and 4    W OT MD    quarterback scramble, for gain of 3 yards <L>
+11:11      37  4th and 1    W RC MD    misdirection, FB, breakout for gain of 4 yards <L>
+11:36      33  1st and 10   W DR OX    HB run and out of bounds for gain of 12 yards <L>
+12:00      21  1st and 10   W DR IX    HB stuffed, for loss of 3 yards <L>
+12:33      24  2nd and 13   O LL LD    offside against defence, for penalty of 5 yards<L>
+12:54      19  2nd and 8    W OP LJ   <Z> pass complete to WR, for gain of 19 yards <L>
+                                       is touchdown Air Force Falcons, PAT good<T>21-0 AI<C><L>
+13:23                         KO KR    kickoff to 19, run back 42 yards<L>
+13:44  PI  39  1st and 10   W QR RD    quarterback run, for gain of 2 yards <L>
+14:06      37  2nd and 8    W LL PD    pass complete to TE, for gain of 15 yards <L>
+14:50      22  1st and 10   W LL KB    pass overthrown, intercepted at gain of 10 yards, and run back 22 yards <L>
+<L.8.1>
+<Z>Falcons: rushing 10 for 91 yds inside and 4 for 17 yds outside, passing 3 for 3 and 33 yds short, 3 for 1 and 19 yds long<L>
+<C>Panthers: rushing 1 for -1 yds inside and 3 for 6 yds outside, passing 3 for 2 and 17 yds short, 2 for 0 and 0 yds long<L>
+<P>
+<BK.2nd Quarter><L>
+<B>2nd Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+15:00  AI  66  1st and 10   W LL OX    pass complete to TE, and out of bounds for gain of 11 yards <L>
+15:37      55  1st and 10   W LL IX    pass interference against offence, for loss of 10 yards<L>
+16:10      65  1st and 20   W OR LJ    pitchout to HB, breakout and out of bounds for gain of 6 yards <L>
+16:44      59  2nd and 14   O DR WC    HB run for gain of 8 yards <L>
+17:20      51  3rd and 6    W DS OX    QB sacked, fumbled for loss of 7 yards and recovered <L>
+18:02      58  4th and 13   P PN PR    punt for 46 yards, run back 5 yards <L>
+18:40  PI  83  1st and 10   W DL LD    pass complete to WR, for gain of 29 yards <L>
+19:25      54  1st and 10   W OS RD    pass dropped, incomplete<L>
+19:45      54  2nd and 10   W QR PD    quarterback run, for gain of 4 yards <L>
+20:10      50  3rd and 6    W LL RD    pass complete to TE, and out of bounds for gain of 15 yards <L>
+20:33      35  1st and 10   W LL RD    pass dropped, incomplete<L>
+20:53      35  2nd and 10   W DL PD    incidental face mask against offence, for loss of 5 yards<L>
+21:14      40  2nd and 15   W OS PD    pass dropped, incomplete<L>
+21:34      40  3rd and 15   W QR PD    quarterback run, and pushed out of bounds for gain of 3 yards <L>
+21:54      37  4th and 12   W LL PD    pass complete to TE, for gain of 14 yards <L>
+22:28      23  1st and 10   W LL OX    QB hurried, pass dropped, incomplete<L>
+22:48      23  2nd and 10   W DL PD    QB hurried, sacked for loss of 8 yards <L>
+23:17      31  3rd and 18   W OS PD    pass dropped, incomplete<L>
+23:37      31  4th and 18   W QR PD    quarterback run, for gain of 5 yards <L>
+24:02  AI  74  1st and 10   W DR IX    HB stuffed, for loss of 2 yards <L>
+24:45      76  2nd and 12   O DR LD    lead blockers, HB, breakout for gain of 8 yards <L>
+25:24      68  3rd and 4    W FL MD    pass picked off, intercepted at gain of 3 yards, and not run back<L>
+26:04  PI  35  1st and 10   W LL RD    pass complete to TE, for gain of 15 yards <L>
+26:39      20  1st and 10   W LL LD    pass dropped, incomplete<L>
+26:59      20  2nd and 10   W DL PD    pass thrown wide, intercepted in endzone and run back 62 yards <L>
+27:22  AI  46  1st and 10   W OP LJ    pass interference against defence, for first down and 11 yard penalty<L>
+27:56      35  1st and 10   W LL OX   <Z> pass complete to TE, at gain of 13 yards, and breakout for gain of 22 yards <L>
+                                       is touchdown Air Force Falcons, PAT good<T>28-0 AI<C><L>
+<B><L.54.1>
+Two Minute Warning (first half)<C><L.54.1>
+28:00  AI                     KO KR    kickoff to 17, run back 25 yards<L>
+28:08  PI  58  1st and 10   W OS RD    QB hurried, sacked for loss of 6 yards <L>
+28:16      64  2nd and 16   W QR PD    quarterback run, and out of bounds for gain of 3 yards <L>
+28:23      61  3rd and 13   W LL PD    pass dropped, incomplete<L>
+28:30      61  4th and 13   W DL PD    pass complete to WR, for gain of 25 yards <L>
+28:39      36  1st and 10   W OS RD    pass option screen to RB at loss of 3 yards, and run for gain of 5 yards <L>
+28:46      34  2nd and 8    W QR PD    quarterback run, for gain of 2 yards <L>
+28:53      32  3rd and 6    W LL RD    pass dropped, incomplete<L>
+29:00      32  4th and 6    W DL IX    QB hurried, pass dropped, incomplete<L>
+29:07  AI  68  1st and 10   W FL IX    pass complete to RB, at gain of 1 yard, and run for gain of 13 yards <L>
+29:23      54  1st and 10   W DR LJ    HB run for gain of 3 yards <L>
+29:32      51  2nd and 7    W OR OX    quarterback stuffed, for loss of 3 yards <L>
+29:54      54  3rd and 10   W DS IX    QB hurried, pass batted away, incomplete<L>
+<L.8.1>
+<Z>Falcons: rushing 4 for 17 yds inside and 2 for 3 yds outside, passing 4 for 3 and 60 yds short, 2 for 0 and 0 yds long<L>
+<C>Panthers: rushing 5 for 17 yds outside, passing 8 for 4 and 46 yds short, 10 for 2 and 54 yds long<L>
+<P>
+<BK.3rd Quarter><L>
+<B>3rd Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+30:00  AI                     KO KR    kickoff to 15, run back 15 yards<L>
+30:20  PI  70  1st and 10   W QR RD    quarterback run, and out of bounds for gain of 2 yards <L>
+30:40      68  2nd and 8    W QD PD    quarterback draw, for gain of 5 yards <L>
+31:04      63  3rd and 3    W QK IX    quarterback bootleg, for gain of 4 yards <L>
+31:29      59  1st and 10   W QS RD    quarterback sneak, for gain of 2 yards <L>
+31:51      57  2nd and 8    W QR PD    quarterback run, for gain of 3 yards <L>
+32:13      54  3rd and 5    W QD RD    quarterback draw, for no gain <L>
+32:35      54  4th and 5    P PN PR    punt for 36 yards, run back 5 yards <L>
+33:00  AI  77  1st and 10   W DR LJ    HB run for gain of 1 yard <L>
+33:34      76  2nd and 9    W FL OX    pass interference against defence, for first down and 5 yard penalty<L>
+34:07      71  1st and 10   W FL IX    pass complete to RB, at gain of 2 yards, and breakout for gain of 20 yards <L>
+34:52      49  1st and 10   W OP LJ    pass complete to WR, for gain of 14 yards <L>
+35:35      35  1st and 10   W FL OX    QB sacked, fumbled for loss of 7 yards and not recovered <L>
+36:11  PI  58  1st and 10   W OS RD    pass complete to WR, for gain of 18 yards <L>
+36:53      40  1st and 10   W OS RD    pass dropped, incomplete<L>
+37:13      40  2nd and 10   W QR PD    quarterback run, and out of bounds for gain of 3 yards <L>
+37:33      37  3rd and 7    W LL RD    pass complete to TE, for gain of 13 yards <L>
+38:06      24  1st and 10   W LL KB    QB hurried, pass dumped off to RB for gain of 9 yards <L>
+38:33      15  2nd and 1    W DL OX   <Z> pass complete to WR, for gain of 15 yards <L>
+                                       is touchdown Pittsburgh Panthers, PAT good<T>28-7 AI<C><L>
+39:01                         KO KR    kickoff to 17, run back 24 yards<L>
+39:33  AI  59  1st and 10   W OP IX    delay of game against offence, for loss of 5 yards<L>
+40:07      64  1st and 15   W DR LJ    HB run for gain of 3 yards <L>
+40:41      61  2nd and 12   W OR OX    HB run for loss of 2 yards <L>
+41:25      63  3rd and 14   O DS MD    pass dropped, incomplete<L>
+41:57      63  4th and 14   P PN PR    punt for 43 yards, run back 1 yards <L>
+42:37  PI  79  1st and 10   W OS RD    pass batted away, incomplete <L>
+42:57      79  2nd and 10   W QR PD    quarterback stuffed, for loss of 3 yards <L>
+43:31      82  3rd and 13   W LL PD    QB sacked, fumbled for loss of 4 yards and not recovered <L>
+43:55  AI  14  1st and 10   W FL IX    false start against offence, for loss of 5 yards<L>
+44:28      19  1st and 15   W OP LJ    pass dumped off to RB at gain of 1 yard, and run for gain of 7 yards <L>
+44:49      11  2nd and 7    W OP OX    pass dropped, incomplete<L>
+<L.8.1>
+<Z>Falcons: rushing 2 for 4 yds inside and 1 for -2 yds outside, passing 2 for 2 and 30 yds short, 4 for 1 and 14 yds long<L>
+<C>Panthers: rushing 3 for 7 yds inside and 5 for 9 yds outside, passing 3 for 2 and 22 yds short, 4 for 2 and 33 yds long<L>
+<P>
+<BK.4th Quarter><L>
+<B>4th Quarter<L.54.1>
+<Z> time side fld down/yards   off  def   result<T> score<C><L.54.1>
+45:00  AI  11  3rd and 7    W LO IX   <Z> pass complete to TE, at gain of 3 yards, and breakout for gain of 8 yards <L>
+                                       is touchdown Air Force Falcons, PAT good<T>35-7 AI<C><L>
+45:36                         KO KR    kickoff to 9, run back 12 yards<L>
+45:57  PI  79  1st and 10   W DL RD    QB hurried, pass dumped off to RB for gain of 8 yards <L>
+46:24      71  2nd and 2    W OS LD    pass deflected, intercepted at gain of 10 yards, and run back 6 yards <L>
+46:46  AI  33  1st and 10   W FL LJ    pass complete to RB, for gain of 5 yards <L>
+47:24      28  2nd and 5    W FL OX    pass dropped, incomplete<L>
+47:56      28  3rd and 5    W OT IX    HB run for loss of 1 yard <L>
+48:40      29  4th and 6    P PN PR    punt of over 29 yards, touched back to 20 <L>
+49:15  PI  80  1st and 10   W QR RD    quarterback stuffed, and out of bounds for loss of 3 yards <L>
+49:37      83  2nd and 13   W LL PD    QB hurried, pass thrown away, incomplete<L>
+49:57      83  3rd and 13   W DL PD    pass dropped, incomplete<L>
+50:17      83  4th and 13   P PN PR    punt for 39 yards, run back 4 yards <L>
+50:46  AI  52  1st and 10   W FL LJ    pass dropped, incomplete<L>
+51:18      52  2nd and 10   W OR OX    quarterback stuffed, and forced out of bounds for loss of 4 yards <L>
+51:53      56  3rd and 14   O PW RD    HB run for gain of 4 yards <L>
+52:30      52  4th and 10   P PN PR    punt for 38 yards, run back 1 yards <L>
+53:08  PI                              <Z>Ty Dieffenbach benched, and replaced by Max Browne<C><L>
+           85  1st and 10   W OS RD    pass underthrown, incomplete <L>
+53:28      85  2nd and 10   W QR PD    quarterback run, and out of bounds for gain of 7 yards <L>
+53:52      78  3rd and 3    W LL IX    pass dropped, incomplete<L>
+54:12      78  4th and 3    P PN PR    punt for 34 yards, run back 7 yards <L>
+54:42  AI  49  1st and 10   W OP IX    QB hurried, intercepted at gain of 10 yards, and run back 3 yards <L>
+55:15  PI  58  1st and 10   W DL RD    pass complete to WR, and pushed out of bounds for gain of 24 yards <L>
+55:41      34  1st and 10   W OS RD    pass underthrown, incomplete <L>
+56:01      34  2nd and 10   W QR PD    quarterback run, and out of bounds for gain of 2 yards <L>
+56:21      32  3rd and 8    W LL PD    pass dropped, incomplete<L>
+56:41      32  4th and 8    F FG FB   <Z> field goal attempt of 49 yards, good<T>35-10 AI<C><L>
+57:01                         KO KR    kickoff to 19, not returned<L>
+57:01  AI  81  1st and 10   W FL LJ    pass complete to RB, at gain of 2 yards, and breakout for gain of 20 yards <L>
+57:46      59  1st and 10   W OR OX    HB run and out of bounds for loss of 3 yards <L>
+<B><L.54.1>
+Two Minute Warning (second half)<C><L.54.1>
+58:00  AI  62  2nd and 13   W OR IX    pitchout to HB, breakout and forced out of bounds for gain of 12 yards <L>
+58:09      50  3rd and 1    W FL MD    pass interference against defence, for first down and 5 yard penalty<L>
+58:17      45  1st and 10   W FL LJ    pass complete to RB, at gain of 3 yards, and breakout for gain of 19 yards <L>
+58:34      23  1st and 10   W FL OX    pass complete to RB, at gain of 1 yard, and run for gain of 4 yards <L>
+58:42      18  2nd and 5    W FL IX    pass complete to RB, at gain of 1 yard, and run for gain of 4 yards <L>
+58:51      13  1st and 10   W FL LJ    pass complete to RB, at no gain, and breakout for gain of 7 yards <L>
+58:58       6  2nd and 3    W OP SB    delay of game against offence, for loss of 5 yards<L>
+59:05      11  2nd and 8    W FL OX   <Z> quarterback scramble, for gain of 11 yards <L>
+                                       is touchdown Air Force Falcons, PAT bad<T>41-10 AI<C><L>
+59:15                         KO KR    kickoff to 12, run back 27 yards<L>
+59:24  PI  61  1st and 10   D DL WC    pass complete to WR, at gain of 23 yards, nailed at gain of 22 yards, fumble recovered by offence<L>
+59:38      39  1st and 10   D DL WC    pass checked off to WR for gain of 31 yards <L>
+59:57       8  1st & Goal   D DI WC    pass batted away, incomplete<L>
+<L.8.1>
+<Z>Falcons: rushing 6 for 19 yds outside, passing 10 for 7 and 77 yds short, 1 for 0 and 0 yds long<L>
+<C>Panthers: rushing 3 for 6 yds outside, passing 3 for 1 and 8 yds short, 9 for 3 and 77 yds long<L>
+<P>
+<E><ST.66><L>
+<B><U>Air Force Falcons<UC><T><U>Pittsburgh Panthers<UC><L.54.1>
+Greg Salmon<T>Alan Milnes<L.54.1>
+1st 2nd 3rd 4th Final<T>1st 2nd 3rd 4th Final<T><L>
+21   7   0  13    41<T> 0   0   7   3    10<T><L.54.1>
+<C>Time  1stDn 3rdDn 4thDn Short Long Sfty<T>Time  1stDn 3rdDn 4thDn Short Long Sfty<T><L>
+34:06   22   5/12   1/1   3/3 1/14   0<T>25:54   13   3/14   2/4   1/2 2/11   0<T><L.54.1>
+Att Comp Pct Yds AvgA AvgC Lng Int TD Pop Hrd Skd Yds<T>Att Comp Pct Yds AvgA AvgC Lng Int TD Pop Hrd Skd Yds<T><L>
+ 26  17 65.4 233  9.0 13.7 t35   2  3   0   5   2  14<T> 39  16 41.0 257  6.6 16.1  31   3  1   1   5   3  18<T><L.54.1>
+Att Yds AvgR Lng Fum Rec TD Stf Scr Yds<T>Att Yds AvgR Lng Fum Rec TD Stf Scr Yds<T><L>
+ 29 149  5.1 t47   2   1  3   5   4   7<T> 20  44  2.2   7   2   1  0   3  20  44<T><L.54.1>
+FGA EPA CPA  Punt Yds AvgG AvgN Bk FC OB TB Dn Fm Ret In20<T>FGA EPA CPA  Punt Yds AvgG AvgN Bk FC OB TB Dn Fm Ret In20<T><L>
+0/0 5/6 0/0    4  156 39.0 32.2  0  0  0  1  0  0   3   2<T>1/1 1/1 0/0    5  171 34.2 29.0  0  0  0  0  0  0   5   0<T><L.54.1>
+Pens Yds  KR Yds  PR Yds  In Yds <T>Pens Yds  KR Yds  PR Yds  In Yds <T><L>
+  5   30   2  61   5  26   3  90<T>  5   31   6 146   3   7   1   3<T><L.54.1>
+RC  DR  PW  OR  OT  QR  <T>QR  QD  QS  QK  <L>
+2   14  2   7   0   4   <T>14  3   1   2   <L>
+9   103 10  20  0   7   <T>32  4   2   6   <L.54.1>
+LL  LO  FL   DS  OP  <T>LL   DL   DI  OS   <L>
+5/2 1/1 13/8 4/0 6/2 <T>17/5 12/5 1/0 12/1 <L>
+46  11  102  0   33  <T>72   115  0   18   <L.54.1>
+LP  FP  <T>FP  DC  DP  <L>
+0/1 0/3 <T>0/2 0/2 0/1 <L>
+15  26  <T>17  4   31  <L.54.1>
+KB  IX  OX  LD  PD  RD  WC  <T>SB  IX  OX  LJ  LD  MD  RD  WC  <L>
+2   3   2   3   27  23  3   <T>1   17  18  18  3   6   2   1   <L>
+19  4   15  39  108 93  53  <T>0   66  129 140 14  21  3   8   <L.54.1>
+<Z>Rushing:-   <C>Falcons, Gershitz 25-126-1, Davis 2-9-1, Harridge 2-14-1<L>
+<Z>            <C>Panthers, Dieffenbach 18-35, Browne 2-9<L>
+<L.9.1>
+<Z>Passing:-   <C>Falcons, Harridge 17-26-2-233-3<L>
+<Z>            <C>Panthers, Dieffenbach 13-31-3-180-1, Browne 3-8-0-77<L>
+<L.9.1>
+<Z>Receiving:- <C>Falcons, Jolly 2-26-1, Gershitz 3-26, Palmer 2-46-1, Poland 2-33-1, Davis 8-102, Blew 0-0<L>
+<Z>            <C>Panthers, Mitchell 5-72, Street 5-115-1, Aston 2-4, Sapp 2-49, Ollison 2-17<L>
+<L.9.1>
+<E><DU>
+<P.70><BK.League Report><L>
+<B>NCAA5  League Report  Gameplan Advanced Vn 2.17  Pre Season  18/6/26<ST.66><C><L.45.1>
+<Z>New Mexico Lobos (Martyn Williams)  7 0 7 14 (28)<T>Georgia Tech Yellow Jackets (Dave Flesfader)  17 0 3 7 (27)<C><L.31.1>
+FG 0/0, EP 4/4, CP 0/0, Punt 5, 3rd 7/13, 4th 1/1, 1st 26<T>FG 3/2, EP 3/3, CP 0/0, Punt 3, 3rd 4/11, 4th 0/0, 1st 18<L.31.1>
+Pass 10 for 15, 126 yds, Lg 21, 3 TD, 67%, In 1, Hrd 0, Skd 0<T>Pass 15 for 22, 253 yds, Lg t85, 3 TD, 68%, In 2, Hrd 0, Skd 3<L.31.1>
+Rush 58 for 294 yds, Lg 31, 1 TD, avg 5.1, Fm 1, QB 6 for 20 yds<T>Rush 28 for 128 yds, Lg 17, avg 4.6, Fm 0, QB 7 for 41 yds<L.31.1>
+KR 4 for 60 yds, PR 2 for 9 yds, FumR 0 for 0 yds<T>KR 3 for 60 yds, PR 3 for 11 yds, FumR 0 for 0 yds<L.31.1>
+Calls Fm A I, Run DW RL, Pass PA QL, Def RD WC<T>Calls Fm S I, Run RL QD, Pass DS DP, Def RD OX<L.40.1>
+<Z>Air Force Falcons (Greg Salmon)  21 7 0 13 (41)<T>Pittsburgh Panthers (Alan Milnes) QB  0 0 7 3 (10)<C><L.31.1>
+FG 0/0, EP 6/5, CP 0/0, Punt 4, 3rd 5/12, 4th 1/1, 1st 22<T>FG 1/1, EP 1/1, CP 0/0, Punt 5, 3rd 3/14, 4th 2/4, 1st 13<L.31.1>
+Pass 17 for 26, 233 yds, Lg t35, 3 TD, 65%, In 2, Hrd 5, Skd 2<T>Pass 16 for 39, 257 yds, Lg 31, 1 TD, 41%, In 3, Hrd 5, Skd 3<L.31.1>
+Rush 29 for 149 yds, Lg t47, 3 TD, avg 5.1, Fm 1, QB 4 for 7 yds<T>Rush 20 for 44 yds, Lg 7, avg 2.2, Fm 1, QB 20 for 44 yds<L.31.1>
+KR 2 for 61 yds, PR 5 for 26 yds, IntR 3 for 90 yds<T>KR 6 for 146 yds, PR 3 for 7 yds, IntR 1 for 3 yds<L.31.1>
+Calls Fm W O, Run DR OR, Pass FL LL, Def PD RD<T>Calls Fm W P, Run QR QK, Pass DL LL, Def OX LJ<L.40.1>
+<Z>Army Black Knights (Dominic Williams)  7 7 6 7 (27)<T>Maryland Terrapins (Patrick Lee)  7 14 13 6 (40)<C><L.31.1>
+FG 0/0, EP 4/3, CP 0/0, Punt 4, 3rd 6/12, 4th 1/2, 1st 19<T>FG 0/0, EP 6/4, CP 0/0, Punt 2, 3rd 9/13, 4th 0/1, 1st 31<L.31.1>
+Pass 15 for 22, 146 yds, Lg 20, 1 TD, 68%, In 1, Hrd 0, Skd 1<T>Pass 22 for 32, 411 yds, Lg t75, 4 TD, 69%, In 1, Hrd 1, Skd 2<L.31.1>
+Rush 35 for 260 yds, Lg t81, 3 TD, avg 7.4, Fm 0, QB 3 for 3 yds<T>Rush 38 for 165 yds, Lg 16, 2 TD, avg 4.3, Fm 0, QB 5 for 27 yds<L.31.1>
+KR 5 for 110 yds, PR 2 for 6 yds, FumR 0 for 0 yds<T>KR 2 for 29 yds, PR 3 for 10 yds, IntR 1 for 18 yds<L.31.1>
+Calls Fm W T, Run CW OR, Pass LO OP, Def GL ZD<T>Calls Fm I J, Run DW OR, Pass OP LO, Def OX IX<L.40.1>
+<Z>Wake Forest Demon Deacons (Andy Starkey)  13 6 14 7 (40)<T>Texas Longhorns (Graham Beaton)  7 7 0 16 (30)<C><L.31.1>
+FG 1/0, EP 6/4, CP 0/0, Punt 3, 3rd 6/10, 4th 0/0, 1st 30<T>FG 0/0, EP 2/2, CP 2/2, Punt 7, 3rd 5/15, 4th 1/1, 1st 17<L.31.1>
+Pass 20 for 29, 228 yds, Lg 30, 1 TD, 69%, In 1, Hrd 2, Skd 2<T>Pass 20 for 30, 245 yds, Lg 32, 2 TD, 67%, In 1, Hrd 1, Skd 2<L.31.1>
+Rush 39 for 175 yds, Lg 14, 5 TD, avg 4.5, Fm 0, QB 4 for 27 yds<T>Rush 30 for 66 yds, Lg 10, 1 TD, avg 2.2, Fm 0, QB 5 for 11 yds<L.31.1>
+KR 4 for 143 yds, PR 5 for 49 yds, IntR 1 for 8 yds<T>KR 6 for 117 yds, 1 TD, PR 1 for 6 yds, IntR 1 for 21 yds<L.31.1>
+Calls Fm A D, Run PW RI, Pass SC SO, Def RD GL<T>Calls Fm I A, Run SW OT, Pass LP PS, Def PD RD<L.40.1>
+<Z>Iowa State Cyclones (David Trice)  0 6 0 14 (20)<T>Ohio State Buckeyes (Gordon Milnes)  10 21 7 0 (38)<C><L.31.1>
+FG 0/0, EP 2/2, CP 1/0, Punt 4, 3rd 3/9, 4th 1/2, 1st 26<T>FG 1/1, EP 5/5, CP 0/0, Punt 1, 3rd 4/10, 4th 2/3, 1st 21<L.31.1>
+Pass 24 for 38, 362 yds, Lg 45, 2 TD, 63%, In 1, Hrd 1, Skd 1<T>Pass 21 for 31, 457 yds, Lg t62, 4 TD, 68%, In 2, Hrd 0, Skd 3<L.31.1>
+Rush 22 for 125 yds, Lg 18, 1 TD, avg 5.7, Fm 2, QB 4 for 34 yds<T>Rush 25 for 81 yds, Lg 27, 1 TD, avg 3.2, Fm 1, QB 12 for 30 yds<L.31.1>
+KR 4 for 65 yds, PR 0 for 0 yds, DefR 3 for 51 yds<T>KR 3 for 142 yds, PR 2 for 6 yds, FumR 1 for 12 yds<L.31.1>
+Calls Fm S D, Run DT QD, Pass SO DS, Def MD ZD<T>Calls Fm S F, Run EV QR, Pass DP DL, Def LD ZD<L.40.1>
+<Z>Notre Dame Fighting Irish (Darren Halford)  0 17 0 0 (17)<T>Navy Midshipmen (Ray Gillham)  3 8 9 17 (37)<C><L.31.1>
+FG 3/1, EP 2/2, CP 0/0, Punt 5, 3rd 3/13, 4th 0/2, 1st 12<T>FG 4/3, EP 3/2, CP 1/1, Punt 2, 3rd 7/15, 4th 1/1, 1st 24<L.31.1>
+Pass 8 for 12, 61 yds, Lg t16, 1 TD, 67%, In 1, Hrd 1, Skd 1<T>Pass 16 for 23, 270 yds, Lg 33, 2 TD, 70%, In 0, Hrd 3, Skd 0<L.31.1>
+Rush 41 for 195 yds, Lg 40, 1 TD, avg 4.8, Fm 0, QB 5 for 24 yds<T>Rush 40 for 126 yds, Lg 11, 2 TD, avg 3.1, Fm 2, QB 14 for 47 yds<L.31.1>
+KR 5 for 120 yds, PR 2 for 18 yds, FumR 1 for 15 yds<T>KR 2 for 70 yds, PR 5 for 28 yds, IntR 1 for 38 yds<L.31.1>
+Calls Fm W J, Run RN OR, Pass OP FP, Def RD BZ<T>Calls Fm I D, Run QD OR, Pass DS OP, Def OX ND<L.40.1>
+<E><P>
+<B><BK.Standings><L>
+NCAA5 Week 0 Standings   2039 Season   NCAA Format   GM: Danny McConnell<L>
+<ST.46.66.111><L.12.1>
+<L.31.1>
+<ST.60>Week 1 Schedule<C><L.36.1>
+Navy Midshipmen at Ohio State Buckeyes<T>New Mexico Lobos at Pittsburgh Panthers<L.31.1>
+Air Force Falcons at Georgia Tech Yellow Jackets<T>Texas Longhorns at Army Black Knights<L.31.1>
+Notre Dame Fighting Irish at Iowa State Cyclones<T>Maryland Terrapins at Wake Forest Demon Deacons<L.31.1>
+<L.12.1>
+<B>DEADLINE:   Thursday 2nd July<C><L.40.1>
+Address: Danny McConnell, 82 Scotts Lane, Bromley, Kent, BR2 0LX.  <L.31.1>
+Email: danny@pbmsports.com, Websites: www.pbmsports.com, www.softsim.co.uk & www.sidetracks.co.uk <L.31.1>
+Turnfees: #3.50 for one, #14 for four, #32 for ten, #56 for twenty.  Cheques made payable to: SSI Ltd<L.42.1>
+Wake Forest coach ORI OL no 61, Arby Jones RT               New Mexico coach DRI LB no 53, Ray Linnmaker ROLB           <L.31.1>
+Notre Dame coach ORO OL no 57, Tom Thayer C                 Army coach DPL DB no 20, Dhyan Tarver RCB                   <L.31.1>
+Air Force coach DPL DB no 45, Alex Renshaw SS               Texas coach OQB OL no 75, Lionel Garr RT                    <L.31.1>
+Navy coach DRO DL no 35, Matt McBride DRE                   Iowa State coach DRI DL no 91, Tim TeBrink DRE              <L.31.1>
+Maryland coach ORO OL no 66, Garrick Clig RG                Ohio State coach OQB OL no 71, Shane Olivea RT              <L.31.1>
+<L.18.1>
+<Z>Online Turnsheets <C> There seems to be a bit of confusion about which turnsheets to use online during the playoffs. I'm not<L.31.1>
+really sure why, but if it's a Draft Turn, use the link called Draftsheet; if it's Mini Camp, use the link called Minicamp, and if<L.31.1>
+it's Training Camp, use the one called (drumroll), TrainingCamp. If you get a message saying wrong turnsheet, read this again!!!<L.31.1>
+<L.12.1>
+<Z>Gameplan Draft <C> I've added a hints and tips page on the draft to www.pbmsports.com (you can find it via the Gameplan page). <L.31.1>
+I'd think most players will know this stuff, but it may help newer players, and there is a table of fixing costs & waiver values.<L.31.1>
+<L.12.1>
+<Z>Online Turnsheets <C> Please make sure when you input turns online you get the week/turn number correct (it's on your turnsheet).<L.31.1>
+If you get it wrong, there's a risk the turn gets missed. Please also avoid double submission of turns - if they're within minutes<L.31.1>
+the system will only take the latest set, but if they're spread out both may be input and you'll get charged 0.1 credit.<L.31.1>
+<L.12.1>
+<Z>Slack <C> There's an independent (i.e. I'm not on it) group on Slack of various players in various games (Gameplan, Raceplan,<L.31.1>
+Baseball, etc) covering things run here (and probably offering hints and advice, which may or may not be accurate). For more<L.31.1>
+information, go to gameplanpbm.slack.com, or for an invite contact Alan Milnes on alan@gameplan.org.uk<L.31.1>
+<L.12.1>
+<Z>Trial Startups <C> The offer of a free trial startup remains available throughout 2026. If you fancy picking up a new team, or<L.31.1>
+trying a different game, check out the options on www.pbmsports.com and drop me a line<L.31.1>
+<E><DU>
+<P.70><BK.Roundup><L>
+<B>NCAA5  LEAGUE ROUNDUP    2039 season    18/6/26<L>
+<C><ST.44.88><L.18.1>
+<U><Z>Wake Forest Demon Deacons<UC> (Andy Starkey)<T><U>Pittsburgh Panthers<UC> (Alan Milnes)<T><U>New Mexico Lobos<UC> (Martyn Williams)<C><L.42.1>
+Pos Num Age NomVal  Name<T>Pos Num Age NomVal  Name<T>Pos Num Age NomVal  Name<T><L.42.1>
+QB   11   1  3 OPS  James MacPherson<T>QB   14   1  3 OPS  Ty Dieffenbach<T>QB   13   2  3 OPS  Linton Green<L.30.1>
+BQ   10   3  -  -   Zac Taylor<T>BQ    4   1  -  -   Max Browne<T>BQ    4   2  -  -   Rusty Andrews<L.30.1>
+FB   49   1  -  -   Damon McWhite<T>FB   35   4  -  -   George Aston<T>FB   37   1  2 ORI  Merl Cherrington<L.30.1>
+HB    5   4  1 ORI  Fred Staton<T>HB   22   4  -  -   Israel Abanikanda<T>HB   28   1  2 ORI  Jack Lane<L.30.1>
+RB   28   3  2 ORI  Chris Barclay<T>RB   37   4  -  -   Qadree Ollison<T>RB   22   1  -  -   Marcellus Davis<L.30.1>
+TE1  86   2  2 OPS  Josh Warren<T>TE1  43   1  -  -   Cole Mitchell<T>TE1  82   3  3 OPS  Manley Woods<L.30.1>
+TE2  89   1  -  -   Ray Thomas<T>TE2  44   1  -  -   Jason Collier<T>TE2  83   2  1 ORO  Marc Wilson<L.30.1>
+RT   61   4  3 OQB  Arby Jones<T>RT   56   1  3 OQB  Lyndon Cooper<T>RT   74   4  3 OQB  Von Claythorne<L.30.1>
+RG   64   3  3 OQB  Chad Rebar<T>RG   68   4  3 OQB  Blake Zubovic<T>RG   67   3  3 OQB  Brad Sullivan<L.30.1>
+C    77   1  -  -   Tyson Clabo<T>C    66   3  3 OQB  Kurt Gouveia<T>C    68   2  2 OQB  David Levstik<L.30.1>
+LG   67   3  3 OQB  Kreg Rotthoff<T>LG   57   2  2 OQB  Greyson Riffe<T>LG   69   2  -  -   Steve Slater<L.30.1>
+LT   78   4  -  -   Mark Moroz<T>LT   61   2  3 OQB  Ryan Jacoby<T>LT   66   1  -  -   Mark Moores<L.30.1>
+WR1  13   1  2 OPL  Anthony Young<T>WR1  84   3  2 OPL  Cam Sapp<T>WR1  19   1  1 OPL  Golden Sanchez<L.30.1>
+WR2  35   2  -  -   Scott Marino<T>WR2  83   2  2 OPL  Darian Street<T>WR2  20   4  -  -   Katana Atkinson<L.30.1>
+WR3  88   3  -  -   Cassiel Smith<T>WR3  20   3  -  -   Myles Austin<T>WR3  81   3  -  -   Carl Winston<L.30.1>
+WR4  80   4  -  -   Jason Anderson<T>WR4  81   3  -  -   Daejon Reynolds<T>WR4   -   -  -  -  <L.30.1>
+DRE  92   1  3 DBZ  Montique Sharpe<T>DRE  40   2  3 DBZ  James Folston<T>DRE  60   3  3 DBZ  Ned Gorman<L.30.1>
+DRT  91   2  -  -   John Finklea<T>DRT  92   1  -  -   Burt Grossman<T>DRT  75   3  2 DBZ  Willie Barry<L.30.1>
+NT   79   3  2 DBZ  Jamil Smith<T>NT   53   3  3 DBZ  Zach Crothers<T>NT   76   4  3 DBZ  Barry Jackson<L.30.1>
+DLT  93   3  -  -   Calvin Pace<T>DLT  91   3  -  -   Patrick Jones II<T>DLT   -   -  -  -  <L.30.1>
+DLE  85   2  2 DBZ  Jerome Nicols<T>DLE  98   4  3 DBZ  Kirk Christodoulou<T>DLE  96   4  3 DBZ  Dennis Atkins<L.30.1>
+ROLB 42   2  2 DRI  Jamaal Argrow<T>ROLB 36   2  -  -   Chase Pine<T>ROLB 53   2  3 DRI  Ray Linnmaker<L.30.1>
+RILB 50   4  2 DRI  Mike Hamlar<T>RILB 52   2  -  -   Darrin Smith<T>RILB 55   3  3 DRI  David Folk<L.30.1>
+MLB  52   4  -  -   Recorian Stukes<T>MLB   -   -  -  -  <T>MLB  56   4  -  -   Jesse Becton<L.30.1>
+LILB 53   3  -  -   Jamie Scott<T>LILB 54   2  -  -   Dylan Bennett<T>LILB 59   4  -  -   Joe Delanio<L.30.1>
+LOLB 54   3  -  -   Kellen Brantley<T>LOLB 32   2  -  -   Sirvocea Dennis<T>LOLB  -   -  -  -  <L.30.1>
+RCB   3   2  2 DPL  Marcus McGruder<T>RCB  26   4  -  -   Judson Tallandier<T>RCB  44   2  2 DPL  Crawford Sterling<L.30.1>
+SS   22   4  3 DPL  Josh Gattis<T>SS   48   2  2 DPL  Matthew Amofa<T>SS   40   3  2 DPL  Ricardo Evans<L.30.1>
+FS   26   4  2 DPL  Elliot Ivey<T>FS   28   2  -  -   Noah Biglow<T>FS   21   3  -  -   Will Martin<L.30.1>
+LCB   7   4  -  -   Riley Swanson<T>LCB   2   2  -  -   Maurice Ffrench<T>LCB  25   4  -  -   Calvin Carr<L.30.1>
+NCB  43   3  -  -   Drew Dayton<T>NCB  45   4  2 DPL  Steve Israel<T>NCB   -   -  -  -  <L.30.1>
+PN   37   2  -  -   Matt Wisnosky<T>PN    7   3  -  -   Guy Collura<T>PN    7   1  -  -   Tony Rossean<L.30.1>
+KK   36   1  -  -   Matt Lopatka [37]<T>KK    -   -  -  -   [34]<T>KK    8   4  -  -   David Margolis [41]<L.30.1>
+<L.24.1>
+<U><Z>Notre Dame Fighting Irish<UC> (Darren Halford)<T><U>Army Black Knights<UC> (Dominic Williams)<T><U>Air Force Falcons<UC> (Greg Salmon)<C><L.42.1>
+Pos Num Age NomVal  Name<T>Pos Num Age NomVal  Name<T>Pos Num Age NomVal  Name<T><L.42.1>
+QB   16   4  3 OPS  Joe Montana<T>QB    5   2  3 OPS  Reggie Nevels<T>QB   11   1  3 OPS  Chance Harridge<L.30.1>
+BQ   10   1  -  -   Blair Kiel<T>BQ   15   2  -  -   Wesley Willard<T>BQ    4   1  -  -   Brad Booth<L.30.1>
+FB    5   2  1 ORI  Rodney Culver<T>FB   83   1  2 ORI  Chris Montagliani<T>FB   18   1  -  -   Mark Carlson<L.30.1>
+HB   31   1  -  -   Mark Green<T>HB   25   3  2 ORI  La'berrick Williams<T>HB   46   4  3 ORI  Tim Gershitz<L.30.1>
+RB   20   1  -  -   Allen Pinkett<T>RB   28   2  3 ORI  Tyson Roy<T>RB    2   2  3 ORI  Rich Davis<L.30.1>
+TE1  89   1  -  -   Mark Bavaro<T>TE1   1   3  -  -   William Smith<T>TE1  98   4  2 OPS  Todd Jolly<L.30.1>
+TE2  82   2  -  -   Derek Brown<T>TE2  85   4  3 OPS  Doug Horaist<T>TE2   9   3  1 OPL  Leotis Palmer<L.30.1>
+RT   61   3  3 OQB  Tim Grunhard<T>RT   66   4  3 OQB  Brad Waudby<T>RT   60   2  -  -   Cory Crossetti<L.30.1>
+RG   66   3  3 OQB  Andy Heck<T>RG   67   3  3 OQB  Pete Bier<T>RG   61   4  3 OQB  Blane Neufeld<L.30.1>
+C    57   3  3 OQB  Tom Thayer<T>C    51   1  -  -   Justin Troy<T>C    97   4  -  -   Joey Ashcroft<L.30.1>
+LG   72   2  2 OQB  David Huffman<T>LG   57   1  -  -   Andy Dytrych<T>LG   62   3  -  -   Vance Shaffer<L.30.1>
+LT   68   4  -  -   Justin Hall<T>LT   62   2  -  -   Mark Conliffe<T>LT   79   4  -  -   Scott Diehl<L.30.1>
+WR1  25   4  2 OPL  Raghib Ismael<T>WR1   2   1  -  -   Lamar Mason<T>WR1   3   4  1 OPL  Bryan Blew<L.30.1>
+WR2  81   4  2 OPL  Tim Brown<T>WR2  11   4  -  -   Blaine Cooper<T>WR2  80   3  1 OPL  Rickey Amezaga<L.30.1>
+WR3  80   3  2 OPL  Joe Howard<T>WR3  17   1  -  -   Jacob Murphy<T>WR3  83   1  2 OPL  J.P. Waller<L.30.1>
+WR4   -   -  -  -  <T>WR4  18   1  -  -   William White<T>WR4  85   1  2 OPL  Dennis Poland<L.30.1>
+DRE  79   1  3 DBZ  Bob Golic<T>DRE  78   2  2 DBZ  Ryan Johnson<T>DRE  38   2  3 DBZ  Brandon Bernadoni<L.30.1>
+DRT  50   4  -  -   Chris Zorich<T>DRT  50   1  1 DBZ  Trey Landry<T>DRT  77   4  -  -   Brett Waller<L.30.1>
+NT   90   2  3 DBZ  Mike Golic<T>NT   97   3  3 DBZ  Gary Johnson<T>NT   91   4  3 DBZ  Eric Thompson<L.30.1>
+DLT  77   3  -  -   Eric Dorsey<T>DLT  95   4  -  -   Reggie Koon<T>DLT  90   4  -  -   Charles Bueker<L.30.1>
+DLE   -   -  -  -  <T>DLE  56   1  -  -   Mike Clark<T>DLE  96   2  3 DBZ  Brandon Conyers<L.30.1>
+ROLB 42   4  3 DRI  Mike Stonebreaker<T>ROLB  3   4  3 DRI  Mikel Resnick<T>ROLB 42   2  2 DRI  Monty Coleman<L.30.1>
+RILB  7   3  2 DRI  Andre Jones<T>RILB 16   2  2 DRI  Greg Washington<T>RILB 43   3  2 DRI  Joe Cianciolo<L.30.1>
+MLB  58   1  3 DRI  Cedric Figaro<T>MLB  40   1  2 DRI  Brian Hill<T>MLB  48   4  -  -   John Rudzinski<L.30.1>
+LILB 52   1  -  -   Frank Stams<T>LILB 43   2  3 DRI  Ather Brown<T>LILB 44   4  -  -   Trevor Hightower<L.30.1>
+LOLB  -   -  -  -  <T>LOLB  4   1  -  -   Ryan Kent<T>LOLB 54   3  -  -   Justin Kasmarcak<L.30.1>
+RCB  26   1  3 DPL  Gregg Davis<T>RCB  20   1  2 DPL  Dhyan Tarver<T>RCB  21   2  3 DPL  Joel Buelow<L.30.1>
+SS    1   4  -  -   Todd Lyght<T>SS   29   1  -  -   Ray Stith<T>SS   45   1  2 DPL  Alex Renshaw<L.30.1>
+FS   22   3  -  -   Dave Duerson<T>FS   34   3  -  -   Rob Davis<T>FS   31   2  -  -   Chase Waterhouse<L.30.1>
+LCB  43   1  -  -   Dave Waymer<T>LCB  21   1  -  -   Lucius Weaver<T>LCB   1   2  -  -   Paul Mayo<L.30.1>
+NCB   -   -  -  -  <T>NCB   9   4  -  -   Reuben Houston<T>NCB  32   1  -  -   Felix Cole<L.30.1>
+PN    3   2  -  -   Craig Hentrich<T>PN   22   3  -  -   Anthony Zurisko<T>PN   81   3  -  -   Robert Barkers<L.30.1>
+KK    4   2  1 OFG  John Carney [39]<T>KK   27   4  1 OFG  Alex Bradford [38]<T>KK   93   4  -  -   Michael Greenaway [39]<L.30.1>
+<L.24.1>
+<P>
+<L>
+<L.54.1>
+<U><Z>Texas Longhorns<UC> (Graham Beaton)<T><U>Navy Midshipmen<UC> (Ray Gillham)<T><U>Georgia Tech Yellow Jackets<UC> (Dave Flesfader)<C><L.42.1>
+Pos Num Age NomVal  Name<T>Pos Num Age NomVal  Name<T>Pos Num Age NomVal  Name<T><L.42.1>
+QB    5   2  2 OPS  Chance Mock<T>QB   11   3  3 OPS  Craig Candeto<T>QB   10   2  3 OPS  Haynes King<L.30.1>
+BQ   10   1  -  -   Vince Young<T>BQ    1   3  -  -   Jason Months<T>BQ    -   -  -  -  <L.30.1>
+FB   32   1  -  -   Cedric Benson<T>FB   38   1  -  -   Michael Brimmage<T>FB   26   3  2 ORI  Trelain Maddox<L.30.1>
+HB   26   2  1 OQB  Ivan Williams<T>HB   42   4  -  -   Bronston Carroll<T>HB   11   1  -  -   Jamal Haynes<L.30.1>
+RB   33   2  -  -   Slevin Young<T>RB   32   3  -  -   Kyle Eckel<T>RB   22   1  3 ORI  Justice Haynes<L.30.1>
+TE1  84   4  2 ORO  Brock Edwards<T>TE1  83   1  3 OPS  Mike Yokitis<T>TE1  89   2  2 ORO  Chaz Blue<L.30.1>
+TE2  80   4  3 OPS  Bo Scaife<T>TE2  29   2  -  -   Marco Nelson<T>TE2  85   2  -  -   A.J. Reyzed<L.30.1>
+RT   75   2  2 OQB  Lionel Garr<T>RT   61   2  2 OQB  Tyson Stahl<T>RT   78   3  3 OQB  Ethan Mackenny<L.30.1>
+RG   61   2  -  -   Tillman Holloway<T>RG   69   2  -  -   Nate Chase<T>RG   74   2  -  -   Tyler Gibson<L.30.1>
+C    52   2  -  -   Jason Glynn<T>C    65   3  3 OQB  Dennis Ray Phillips<T>C    52   4  2 OQB  Harrison Moore<L.30.1>
+LG   51   4  -  -   Mike Garcia<T>LG   70   1  -  -   Tucker Bennett<T>LG   67   1  -  -   Joe Fusile<L.30.1>
+LT   73   3  -  -   Jonathan Scott<T>LT   66   1  -  -   Josh Goodin<T>LT   69   2  3 OQB  Josh Petty<L.30.1>
+WR1   4   3  2 OPL  Roy Williams<T>WR1  33   4  1 OPL  Aaron Weedo<T>WR1   1   1  -  -   Lex Flamme<L.30.1>
+WR2   1   1  2 OPL  Sloan Thomas<T>WR2  84   4  1 OPL  Dan Gibbon<T>WR2   3   4  2 OPL  Eric Rivers<L.30.1>
+WR3  82   1  2 OPL  B.J. Johnson<T>WR3  89   1  2 OPL  Corey Dryden<T>WR3  82   3  -  -   Jonathon Smith<L.30.1>
+WR4  22   1  2 OPL  Ares Tsirtsis<T>WR4  85   2  -  -   Theo Williams<T>WR4  13   1  1 OPS  Isaiah Fuhrmann<L.30.1>
+DRE  43   2  3 DBZ  Kalen Thornton<T>DRE  35   2  3 DBZ  Matt McBride<T>DRE  92   4  1 DRO  Ronald Triplette<L.30.1>
+DRT  95   2  -  -   Marcus Tubbs<T>DRT  90   4  -  -   Dan Wendolowski<T>DRT  24   1  3 DBZ  Noah Carter<L.30.1>
+NT   71   3  3 DBZ  Rodrique Wright<T>NT   72   4  3 DBZ  Eric Frey<T>NT   32   4  3 DBZ  Sylvain Yondjouen<L.30.1>
+DLT  31   3  -  -   O.J. McClintock<T>DLT  93   2  -  -   Jeff Vanak<T>DLT  55   4  -  -   Horace Lockett<L.30.1>
+DLE  65   3  3 DBZ  Stevie Lee<T>DLE  59   3  3 DBZ  Kevin Schwind<T>DLE  88   1  -  -   A.J. Hoffler<L.30.1>
+ROLB 57   3  2 DRI  Chris Perez<T>ROLB 40   4  3 DRI  Ryan McCabe<T>ROLB 44   3  1 DRI  Kyle Efford<L.30.1>
+RILB 30   4  3 DRI  Braden Johnson<T>RILB 47   2  3 DRI  Evan Beard<T>RILB 58   1  -  -   Recardo Wimbush<L.30.1>
+MLB  50   3  -  -   Jerry Contreras<T>MLB  49   1  -  -   Jeremy Chase<T>MLB   7   2  -  -   Trenilyas Tatum<L.30.1>
+LILB 45   4  2 DRI  Reed Boyd<T>LILB 48   1  -  -   Reggie Sealey<T>LILB 43   1  -  -   Ather Brown<L.30.1>
+LOLB 11   1  -  -   Derrick Johnson<T>LOLB 52   2  -  -   Jacob Biles<T>LOLB 57   2  3 DRI  Clay Speed<L.30.1>
+RCB  28   3  2 DPL  Monti Collier<T>RCB  41   4  3 DPL  Corey Colistra<T>RCB  29   4  -  -   Marvious Hester<L.30.1>
+SS   27   1  -  -   Michael Huff<T>SS    5   2  3 DPL  Lord Cole<T>SS    5   4  3 DPL  Clayton Powell-Lee<L.30.1>
+FS    9   4  -  -   Dakarai Pearson<T>FS   16   1  3 DPL  Shalimar Brazier<T>FS   27   3  2 DPL  Jeremy Muyres<L.30.1>
+LCB   3   2  -  -   Nathan Vasher<T>LCB   9   2  -  -   Roman Rodriguez<T>LCB   4   1  -  -   Ahmari Harvey<L.30.1>
+NCB  39   4  -  -   Karim Meijer<T>NCB  25   2  -  -   E.J. Black<T>NCB  36   1  -  -   Travares Tillman<L.30.1>
+PN   47   4  -  -   Justin Smith<T>PN   82   4  -  -   John Skaggs<T>PN   47   3  -  -   Marshall Nicols<L.30.1>
+KK    8   1  -  -   Dusty Mangum [36]<T>KK   97   4  -  -   Eric Shuey [39]<T>KK   33   4  -  -   Aidan Birr [37]<L.30.1>
+<L.24.1>
+<U><Z>Iowa State Cyclones<UC> (David Trice)<T><U>Maryland Terrapins<UC> (Patrick Lee)<T><U>Ohio State Buckeyes<UC> (Gordon Milnes)<C><L.42.1>
+Pos Num Age NomVal  Name<T>Pos Num Age NomVal  Name<T>Pos Num Age NomVal  Name<T><L.42.1>
+QB   15   2  3 OPS  Senaca Wallace<T>QB    7   1  3 OPS  Scott McBrien<T>QB   16   2  3 OPS  Craig Krenzel<L.30.1>
+BQ    1   1  -  -   Bret Meyer<T>BQ   11   3  -  -   Orlando Evans<T>BQ   15   3  -  -   Scott McMullen<L.30.1>
+FB   45   3  2 ORI  Joe Woodley<T>FB   44   3  -  -   Bernie Fiddler<T>FB   39   3  2 ORI  Jamar Martin<L.30.1>
+HB    4   2  3 ORI  Michael Wagner<T>HB    1   2  -  -   Bruce Perry<T>HB   28   2  -  -   Jonathan Wells<L.30.1>
+RB   29   1  3 ORI  Matt Grosserode<T>RB    8   2  -  -   Mario Merrills<T>RB   30   2  -  -   Lydell Ross<L.30.1>
+TE1  93   2  3 OPS  Kyle Knock<T>TE1  82   4  -  -   Jeff Dugan<T>TE1  89   1  -  -   Darnell Sanders<L.30.1>
+TE2  85   2  -  -   Kenny Segin<T>TE2  87   2  -  -   Ryan Flynn<T>TE2  88   3  -  -   Ben Hartsock<L.30.1>
+RT   65   2  -  -   Bob Montgomery<T>RT   78   4  3 OQB  Matt Crawford<T>RT   71   3  2 OQB  Shane Olivea<L.30.1>
+RG   68   3  -  -   Zach Butler<T>RG   66   2  3 OQB  Garrick Clig<T>RG   78   4  2 OQB  Bryce Bishop<L.30.1>
+C    53   4  2 OQB  Carl Stubbs<T>C    72   2  3 OQB  Kyle Schmitt<T>C    68   1  3 OQB  LeCharles Bentley<L.30.1>
+LG   78   1  -  -   Collin Menard<T>LG   73   1  3 OQB  Lamar Bryant<T>LG   63   2  -  -   Adrien Clarke<L.30.1>
+LT   71   1  -  -   Casey Shelton<T>LT   74   1  -  -   C.J. Brooks<T>LT   77   3  -  -   Tyson Walter<L.30.1>
+WR1  83   1  2 OPL  Jamaul Montgomery<T>WR1   4   3  -  -   Latrez Harrison<T>WR1  12   4  2 OPL  Michael Jenkins<L.30.1>
+WR2  13   2  -  -   David Banks-Bursey<T>WR2  18   2  -  -   Maurice Shanks<T>WR2   4   3  1 OPL  Chris Vance<L.30.1>
+WR3  82   4  2 OPL  Lane Danielson<T>WR3  34   3  -  -   Steve Suter<T>WR3   9   1  2 OPL  Ricky Bryant<L.30.1>
+WR4  80   1  -  -   Lance Young<T>WR4  27   1  -  -   Jo/Jo Walker<T>WR4   3   1  -  -   Bam Childress<L.30.1>
+DRE  91   1  2 DBZ  Tim TeBrink<T>DRE  93   1  -  -   Davian Bryan<T>DRE  93   2  2 DBZ  Will Smith<L.30.1>
+DRT  92   1  -  -   Jordan Carstens<T>DRT  99   3  2 DBZ  Landon Jones<T>DRT  95   3  -  -   David Thompson<L.30.1>
+NT   89   1  -  -   Rashad Rasberry<T>NT   57   1  -  -   Randy Starks<T>NT   54   3  2 DBZ  Tim Anderson<L.30.1>
+DLT  55   1  -  -   Beau Coleman<T>DLT  54   3  -  -   Scott Smith<T>DLT  98   2  -  -   Mike Collins<L.30.1>
+DLE  99   4  2 DBZ  Tyson Smith<T>DLE  97   4  2 DBZ  Tosin Abari<T>DLE  56   4  -  -   Darrion Scott<L.30.1>
+ROLB 41   3  2 DRI  Jeremy Lloyd<T>ROLB 50   2  2 DRI  Jermain Lemons<T>ROLB 58   3  2 DRI  Courtland Bullard<L.30.1>
+RILB 47   1  3 DRI  Chris Whitaker<T>RILB 19   1  3 DRI  D'Qwell Jackson<T>RILB 46   1  3 DRI  Fred Pagac<L.30.1>
+MLB   7   3  3 DRI  Matt Word<T>MLB  45   4  3 DRI  Shawne Merriman<T>MLB  35   2  -  -   Matt Wilhem<L.30.1>
+LILB 42   1  -  -   Joe Smith<T>LILB 36   4  -  -   David Holloway<T>LILB 44   4  -  -   Robert Reynolds<L.30.1>
+LOLB 49   3  2 DRO  Joe Woodley<T>LOLB 51   4  2 DRI  Andrew Henley<T>LOLB 10   1  -  -   Joe Cooper<L.30.1>
+RCB  11   2  3 DPL  Ellis Hobbs III<T>RCB  37   1  -  -   Jamal Chance<T>RCB   7   4  3 DPL  Derek Ross<L.30.1>
+SS   18   4  -  -   Marc Timmons<T>SS   30   3  3 DPL  Curome Cox<T>SS    2   2  3 DPL  Mike Doss<L.30.1>
+FS   21   2  -  -   Atif Austin<T>FS    2   3  3 DPL  Chris Kelley<T>FS    6   1  -  -   Cie Grant<L.30.1>
+LCB  10   2  -  -   Johnny Smith III<T>LCB  14   1  -  -   Matt Brant<T>LCB  26   1  -  -   Will Alllen<L.30.1>
+NCB   6   4  2 DPL  JaMaine Billups<T>NCB  23   3  3 DPL  Andrew Smith Jr<T>NCB  25   2  3 DPL  Donnie Nickey<L.30.1>
+PN   24   3  -  -   Troy Blankenship<T>PN   35   4  -  -   Adam Podlesh<T>PN   18   4  1 OPN  Andy Groom<L.30.1>
+KK   14   2  -  -   Tony Yelk [39]<T>KK   12   2  -  -   Daniel Ennis [38]<T>KK   23   1  -  -   Josh Huston [36]<L.30.1>
+<L.24.1>
+<E><DU>
+<BK.Schedule><P.70><B><L>
+GAMEPLAN    NCAA5    2039 Season    LEAGUE SCHEDULE    18/6/26<L>
+<ST.66><L.18.1>
+Week 1<T>Week 7<L.54.1>
+<C>Navy Midshipmen at Ohio State Buckeyes<T>Navy Midshipmen at Maryland Terrapins<L>
+Air Force Falcons at Georgia Tech Yellow Jackets<T>Wake Forest Demon Deacons at Army Black Knights<L>
+Notre Dame Fighting Irish at Iowa State Cyclones<T>New Mexico Lobos at Texas Longhorns<L>
+New Mexico Lobos at Pittsburgh Panthers<T>Pittsburgh Panthers at Iowa State Cyclones<L>
+Texas Longhorns at Army Black Knights<T>Air Force Falcons at Notre Dame Fighting Irish<L>
+Maryland Terrapins at Wake Forest Demon Deacons<T>Georgia Tech Yellow Jackets at Ohio State Buckeyes<L>
+<L>
+<B>Week 2<T>Week 8<L.54.1>
+<C>Georgia Tech Yellow Jackets at Navy Midshipmen<T>Army Black Knights at Navy Midshipmen<L>
+Ohio State Buckeyes at Notre Dame Fighting Irish<T>Maryland Terrapins at New Mexico Lobos<L>
+Pittsburgh Panthers at Air Force Falcons<T>Iowa State Cyclones at Wake Forest Demon Deacons<L>
+Iowa State Cyclones at Texas Longhorns<T>Texas Longhorns at Air Force Falcons<L>
+Wake Forest Demon Deacons at New Mexico Lobos<T>Ohio State Buckeyes at Pittsburgh Panthers<L>
+Army Black Knights at Maryland Terrapins<T>Notre Dame Fighting Irish at Georgia Tech Yellow Jackets<L>
+<L>
+<B>Week 3<T>Week 9<L.54.1>
+<C>Navy Midshipmen at Notre Dame Fighting Irish<T>Navy Midshipmen at New Mexico Lobos<L>
+Georgia Tech Yellow Jackets at Pittsburgh Panthers<T>Army Black Knights at Iowa State Cyclones<L>
+Texas Longhorns at Ohio State Buckeyes<T>Air Force Falcons at Maryland Terrapins<L>
+Air Force Falcons at Wake Forest Demon Deacons<T>Wake Forest Demon Deacons at Ohio State Buckeyes<L>
+Maryland Terrapins at Iowa State Cyclones<T>Georgia Tech Yellow Jackets at Texas Longhorns<L>
+New Mexico Lobos at Army Black Knights<T>Pittsburgh Panthers at Notre Dame Fighting Irish<L>
+<L>
+<B>Week 4<T>Week 10<L.54.1>
+<C>Pittsburgh Panthers at Navy Midshipmen<T>Iowa State Cyclones at Navy Midshipmen<L>
+Notre Dame Fighting Irish at Texas Longhorns<T>New Mexico Lobos at Air Force Falcons<L>
+Wake Forest Demon Deacons at Georgia Tech Yellow Jackets<T>Ohio State Buckeyes at Army Black Knights<L>
+Ohio State Buckeyes at Maryland Terrapins<T>Maryland Terrapins at Georgia Tech Yellow Jackets<L>
+Army Black Knights at Air Force Falcons<T>Notre Dame Fighting Irish at Wake Forest Demon Deacons<L>
+Iowa State Cyclones at New Mexico Lobos<T>Texas Longhorns at Pittsburgh Panthers<L>
+<L>
+<B>Week 5<T>Week 11<L.54.1>
+<C>Navy Midshipmen at Texas Longhorns<T>Navy Midshipmen at Air Force Falcons<L>
+Pittsburgh Panthers at Wake Forest Demon Deacons<T>Iowa State Cyclones at Ohio State Buckeyes<L>
+Maryland Terrapins at Notre Dame Fighting Irish<T>Georgia Tech Yellow Jackets at New Mexico Lobos<L>
+Georgia Tech Yellow Jackets at Army Black Knights<T>Army Black Knights at Notre Dame Fighting Irish<L>
+New Mexico Lobos at Ohio State Buckeyes<T>Pittsburgh Panthers at Maryland Terrapins<L>
+Air Force Falcons at Iowa State Cyclones<T>Wake Forest Demon Deacons at Texas Longhorns<L>
+<L>
+<B>Week 6<L.54.1>
+<C>Wake Forest Demon Deacons at Navy Midshipmen<L>
+Texas Longhorns at Maryland Terrapins<L>
+Army Black Knights at Pittsburgh Panthers<L>
+Notre Dame Fighting Irish at New Mexico Lobos<L>
+Iowa State Cyclones at Georgia Tech Yellow Jackets<L>
+Ohio State Buckeyes at Air Force Falcons<L>
+<L>
+<E><DU>
+<BK.Scouting Report><L>
+<P.70><L>
+<B>GAMEPLAN   NCAA5   Pittsburgh Panthers   Season 2039, Week 1   18/6/26<L.18.1>
+___________________________________________________________________________<L.54.1>
+<U>Scouting Report<UC><C><L.36.1>
+<ST.12><L.18.1>
+<Z>Week 1,<T>Game:-  Pittsburgh Panthers (0-0) Alan Milnes <L.36.1>
+<T>Versus  New Mexico Lobos (0-0) Martyn Williams<C><L.18.1>
+<L.18.1>
+<ST.44><L.18.1>
+Pos Num Age NomVal  Name<T>Pos Num Age NomVal  Name<T><L.42.1>
+QB   13   2  3 OPS  Linton Green<T>DRE  60   3  3 DBZ  Ned Gorman<L>
+BQ    4   2  -  -   Rusty Andrews<T>DRT  75   3  2 DBZ  Willie Barry<L>
+FB   37   1  2 ORI  Merl Cherrington<T>NT   76   4  3 DBZ  Barry Jackson<L>
+HB   28   1  2 ORI  Jack Lane<T>DLT   -   -  -  -  <L>
+RB   22   1  -  -   Marcellus Davis<T>DLE  96   4  3 DBZ  Dennis Atkins<L>
+TE1  82   3  3 OPS  Manley Woods<T>ROLB 53   2  3 DRI  Ray Linnmaker<L>
+TE2  83   2  1 ORO  Marc Wilson<T>RILB 55   3  3 DRI  David Folk<L>
+RT   74   4  3 OQB  Von Claythorne<T>MLB  56   4  -  -   Jesse Becton<L>
+RG   67   3  3 OQB  Brad Sullivan<T>LILB 59   4  -  -   Joe Delanio<L>
+C    68   2  2 OQB  David Levstik<T>LOLB  -   -  -  -  <L>
+LG   69   2  -  -   Steve Slater<T>RCB  44   2  2 DPL  Crawford Sterling<L>
+LT   66   1  -  -   Mark Moores<T>SS   40   3  2 DPL  Ricardo Evans<L>
+WR1  19   1  1 OPL  Golden Sanchez<T>FS   21   3  -  -   Will Martin<L>
+WR2  20   4  -  -   Katana Atkinson<T>LCB  25   4  -  -   Calvin Carr<L>
+WR3  81   3  -  -   Carl Winston<T>NCB   -   -  -  -  <L>
+WR4   -   -  -  -  <T>PN    7   1  -  -   Tony Rossean<L>
+<T>KK    8   4  -  -   David Margolis<L.36.1>
+Defence Formation: 3-4 (NT=76)   Roster Total: 41<L.45.1>
+Key to Status:- CFA=Conditional Free Agent, CW=Conditional Waiver, Red=Reduced, Loss-Cat is Step Loss, Gain+Cat is Step Gain<L.45.1>
+<L.18.1>
+<B><U>Stats Breakdown<UC><L.33.1>
+<ST.44.88><L.18.1>
+<Z>New Mexico Lobos, last game, offence<T>New Mexico Lobos, season, offence<T>Pittsburgh Panthers, season, offence<C><L.45.1>
+<U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<L.36.1>
+Inside      1-1    17:69   12:60     -   <T>Inside     14:86  139:449 104:289    -   <T>Inside    114:266    -       -       -   <L.36.1>
+Outside     5:21     -     23:145    -   <T>Outside    29:170    -    210:1030    -   <T>Outside    55:188    -     20:297    -   <L.36.1>
+<U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<L.36.1>
+Short       -          1/2:18     2/6:23 <T>Short       -        46/74:545  32/65:469<T>Short       -         5/20:43   53/115:924<L.36.1>
+Long        -          -         3/10:44 <T>Long        -          -        50/140:1093<T>Long        -          -        86/234:2178<L.36.1>
+Dumpoff     1/0:15     1/0:3      2/0:23 <T>Dumpoff    16/0:108    5/0:33    17/0:243<T>Dumpoff     4/0:35     3/0:28    35/0:871<L.36.1>
+<L.18.1>
+<Z>New Mexico Lobos, last game, defence<T>New Mexico Lobos, season, defence<T>Pittsburgh Panthers, season, defence<C><L.45.1>
+<U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<T><U>Rushing <UC>    QB      FB      HB      WRs<L.36.1>
+Inside      5:32    1:7    12:56     -   <T>Inside     37:149  40:102  77:530    -   <T>Inside     42:292  54:228 103:427    -   <L.36.1>
+Outside     2:9      -      6:11    2:13 <T>Outside    52:73    5:15  106:557  12:47 <T>Outside    51:166   6:32  143:467  17:104<L.36.1>
+<U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<T><U>Passing<UC>      RBs        TEs        WRs<L.36.1>
+Short       2/3:8      5/8:55     1/7:8  <T>Short     20/26:236  31/54:460  30/79:526<T>Short     20/30:161  42/88:573  49/87:742<L.36.1>
+Long        -          -          3/7:120<T>Long        -          -        43/137:970<T>Long        -          -        52/160:1232<L.36.1>
+Dumpoff     1/0:4      -          3/0:58 <T>Dumpoff    16/0:165    5/0:61    36/0:576<T>Dumpoff    20/0:122    2/0:31    34/0:496<L.36.1>
+<L.18.1>
+<P>
+<BK.Scouting Report - Game Summary><P.70><B><L>
+GAMEPLAN    Game Summary    NCAA5    18/6/26<L.12.1>
+________________________________________________________________________<L.45.1>
+<Z>Week 0, New Mexico Lobos<C> at Georgia Tech Yellow Jackets<ST.39.61.79.122><L.54.1>
+<Z><U>1st Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+<Z>NM   0:00  NM 31  Kick Return 23 yds<T>6 plays for 17 yds<T>RT run 6 yds<T>punt of 25 yards<L.33.1>
+<C>GT   3:11  GT 32  Punt Return 5 yds<T>10 plays for 68 yds<T>DP pass 22 yds<T>DP pass 22 yds for TD, PAT good<T>0-7 GT<L.33.1>
+<Z>NM   7:34  NM  9  Kickoff<T>11 plays for 91 yds<T>DW run 24 yds<T>RL run 8 yds for TD, PAT good<T>7-7 <L.33.1>
+<C>GT  12:25  GT 15  Kickoff<T>1 play for 85 yds<T>DS pass 85 yds<T>DS pass 85 yds for TD, PAT good<T>7-14 GT<L.33.1>
+<Z>NM  13:10  NM  9  Kickoff<T>1 play for no gain<T>-<T><C>intercepted<L.33.1>
+GT  13:31  <Z>NM 20  <C>Interception<T>3 plays for 9 yds<T>QL pass 8 yds<T>28 yd field goal attempt, good<T>7-17 GT<L.33.1>
+<L.8.1>
+<Z>Lobos: rushing 11 for 65 yds inside and 5 for 24 yds outside, passing 3 for 1 and 19 yds long<L>
+<C>Yellow Jackets: rushing 5 for 21 yds inside and 2 for 8 yds outside, passing 5 for 3 and 31 yds short, 1 for 2 and 107 yds long<L>
+<L.21.1>
+<Z><U>2nd Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+<Z>NM  15:00  NM 23  Start Quarter<T>7 plays for 48 yds<T>PA pass 21 yds<T>punt of 14 yards<L.33.1>
+<C>GT  18:15  GT 15  Punt Downed<T>6 plays for 33 yds<T>QK run 13 yds<T>punt of 44 yards<L.33.1>
+<Z>NM  21:30  NM 13  Punt Return 5 yds<T>7 plays for 21 yds<T>DW run 9 yds<T>punt of 37 yards<L.33.1>
+<C>GT  24:54  GT 30  Punt Return 1 yds<T>5 plays for 18 yds<T>CW run 13 yds<T><Z>intercepted<L.33.1>
+NM  26:51  NM 32  Interception<T>6 plays for 21 yds<T>PW run 6 yds<T>punt of 34 yards<L.33.1>
+<C>GT  28:42  GT 13  Punt Downed<T>3 plays for 8 yds<T>FP pass 4 yds<T>punt of 46 yards<L.33.1>
+<Z>NM  29:50  NM 33  Fair Catch<T>1 play for 5 yds<T>PW run 5 yds<T>time expired<L.33.1>
+<L.8.1>
+Lobos: rushing 9 for 28 yds inside and 9 for 43 yds outside, passing 2 for 1 and 3 yds short, 1 for 1 and 21 yds long<L>
+<C>Yellow Jackets: rushing 3 for 28 yds inside and 3 for 16 yds outside, passing 5 for 2 and 4 yds short, 2 for 1 and 13 yds long<L>
+<L.21.1>
+<Z><U>3rd Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+GT  30:00  GT 31  Kick Return 16 yds<T>6 plays for 22 yds<T>RV run 17 yds<T><Z>intercepted<L.33.1>
+NM  33:07  NM 27  Interception<T>1 play for no gain<T>-<T><C>fumbled<L.33.1>
+GT  33:34  <Z>NM 29  <C>Fumble<T>3 plays for 4 yds<T>QD run 11 yds<T>42 yd field goal attempt, bad<L.33.1>
+<Z>NM  34:58  NM 32  Failed FGA<T>4 plays for 15 yds<T>QR run 14 yds<T>punt of 25 yards<L.33.1>
+<C>GT  37:16  GT 33  Punt Return 5 yds<T>6 plays for 54 yds<T>DP pass 25 yds<T>30 yd field goal attempt, good<T>7-20 GT<L.33.1>
+<Z>NM  40:36  NM 37  Kick Return 17 yds<T>10 plays for 63 yds<T>PA pass 21 yds<T>PA pass 2 yds for TD, PAT good<T>14-20 GT<L.33.1>
+<L.8.1>
+Lobos: rushing 5 for 20 yds inside and 5 for 22 yds outside, passing 2 for 1 and 15 yds short, 4 for 2 and 23 yds long<L>
+<C>Yellow Jackets: rushing 6 for 29 yds inside and 5 for 9 yds outside, passing 4 for 2 and 47 yds long<L>
+<L.21.1>
+<Z><U>4th Quarter<UC><L.42.1>
+<U>Off<UC>  <U>Time<UC>  <U>From<UC>   <U>Start After<UC><T><U>Drive<UC><T><U>Longest<UC><T><U>Result<UC><T><U>Score<UC><C><L.42.1>
+GT  45:00  GT 36  Start Quarter<T>9 plays for 64 yds<T>LL pass 12 yds<T>LO pass 8 yds for TD, PAT good<T>14-27 GT<L.33.1>
+<Z>NM  50:39  NM 31  Kick Return 14 yds<T>9 plays for 69 yds<T>LI pass 18 yds<T>LI pass 18 yds for TD, PAT good<T>21-27 GT<L.33.1>
+<C>GT  55:13  GT 25  Kick Return 16 yds<T>3 plays for loss<T>-<T>punt of 50 yards<L.33.1>
+<Z>NM  58:14  NM 32  Punt Return 4 yds<T>10 plays for 68 yds<T>RN run 31 yds<T>SP pass 4 yds for TD, PAT good<T>28-27 NM<L.33.1>
+<L.8.1>
+Lobos: rushing 5 for 15 yds inside and 9 for 77 yds outside, passing 4 for 4 and 45 yds short, 2 for 0 and 0 yds long<L>
+<C>Yellow Jackets: rushing 4 for 17 yds inside, passing 8 for 5 and 51 yds short<L>
+<E><DU>
+<BK.Turnsheet><P.70><B><L>
+<C> <B>GAMEPLAN   VERSION 2.17 ADVANCED   18/6/26   TURNSHEET   <X>NCAA5-PI<L.54.1>
+<C> <B>Pittsburgh Panthers (Alan Milnes)<Z><C>     Sn 2039 Wk 1 vs New Mexico     <Z>Deadline: Thursday 2nd July<C><L.24.1>
+ <B>___________________________________________________________________________<L.48.1>
+<C> <Z>In all cases fill in only those boxes you wish to change from your last game. If you don't want to change it, don't fill it in. <L.48.1>
+<C> Address: Danny McConnell, 82 Scotts Lane, Bromley, Kent, BR2 0LX.  <L.60.1>
+ <B><U>G: Game Parameters<UC><L.6.1>
+<ST.73><L.6.1>
+<C><T>Field goal ranges are yards to the goal line.<E><L.30.1>
+<C> <E> NFG    LFG    SYO    LYO    SYD    LYD    HUT<L.6.1>
+<T><C>Short yardages must be values 1 to 5.<E><L.18.1>
+<BX>F----7 F----7 F----7 F----7 F----7 F----7 F----7 <L.18.1>
+<T><C><BC>Long yardages must be values 6 to 19.<BX><E><L.18.1>
+!    ! !    ! !    ! !    ! !    ! !    ! !    ! <L.18.1>
+<T><C>Hurry up is time gone (0 to 59 minutes).<E><L.18.1>
+L----J L----J L----J L----J L----J L----J L----J <L.18.1>
+<BC><ST.43.98><L.30.1>
+<C> <B><U>A: Gameplan Changes<UC><L.36.1>
+<E><BX>F----T--------T------T-------T-------T-------T-------7F------T----T----T----T----T----7<L.36.1>
+! No !  Name  ! Down ! Score !<BC> YdsDn <BX>!<BC> YdsLn <BX>!<BC> TimeG <BX>!!<BC>  Fm  <BX>! A  ! B  ! C  ! D  ! Rn !<L.36.1>
+K----+--------+------+---T---+---T---+---T---+---T---3K------+----+----+----+----+----3<L.36.1>
+!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+K----+--------+------+---+---+---+---+---+---+---+---3K------+----+----+----+----+----3<L.36.1>
+<BC><BX>!    !        !      !   !   !   !   !   !   !   !   !!      !    !    !    !    !    !<L.36.1>
+L----I--------I------I---I---I---I---I---I---I---I---JL------I----I----I----I----I----J<L.36.1>
+<BC><C> Write "clear" in a box if you want to remove that play call from your gameplan. <L.30.1>
+<ST.46.99><L.30.1>
+ <B><U>P: Special Teams<UC><T><U>H: Fourth Downs<UC><L.42.1>
+<C> <E>KICK  RETURN  PUNT  RETURN     LATE  MIDFLD  NEAR  SHORT  TWOMIN    <L.24.1>
+<BX>F----7 F----7 F----7 F----7    F----7 F----7 F----7 F----7 F----7 <L.18.1>
+<L.18.1>
+!    ! !    ! !    ! !    ! <BC>   <BX>!    ! !    ! !    ! !    ! !    ! <L.18.1>
+<L.18.1>
+L----J L----J L----J L----J    L----J L----J L----J L----J L----J <L.18.1>
+<BC><L.9.1>
+<C> Special Teams strategies are KO or KS, KR or KV, PN or PC, PR, PV or PB.<L.30.1>
+ Fourth Downs are A=All, G=Goaline, L=Late, M=Midfield, N=None, S=Short, T=TwoMins, or 1 to 9 (yards).<L.60.1>
+ <B><U>T: Team Training & Game Bonuses<UC><L.6.1>
+<ST.101><L.30.1>
+<C> <E>OFFENCE       DEFENCE       KEY PLAYS     BONUS PLAYS   BONUS CATS<L.6.1>
+<T><C>Not used in warmup games.<E><L.18.1>
+<BX>F----T----7   F----T----7   F----T----7   F----T----7   F-----T-----7 <L.18.1>
+<T><C><BC>Training and keys do not<E><L.18.1>
+<BX>!    !    !   !    !    !   !    !    !   !    !    !   !     !     ! <L.18.1>
+<T><C>accumulate in pre-season.<E><L.18.1>
+L----I----J   L----I----J   L----I----J   L----I----J   L-----I-----J <L.18.1>
+<BC><L.30.1>
+<C> <B><U>S: Sort Gameplan<UC><E><L.30.1>
+<C> <E>        <BX>F---T---T---T---T---T---T---T---T---T---T---T---T---T---T---T---7<BC><L.33.1>
+<C> <E>OFFENCE <BX>!   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !<BC>  1-16<L.33.1>
+<C> <E>        <BX>K---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---3<BC><L.33.1>
+<C> <E>DEFENCE <BX>!   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !   !<BC>  17-32<L.33.1>
+<C> <E>        <BX>L---I---I---I---I---I---I---I---I---I---I---I---I---I---I---I---J<BC><L.30.1>
+<L.24.1>
+<ST.68.102><L.1.1>
+<C> <B><U>X: Special Action<UC><T><U>X: Select Starter<UC><L>
+<ST.34><L.6.1>
+<C> <E>ACTION   SHIRT    NAME                         SHIRT   POSITION<L.1.1>
+<T><C>(only if new player or rename)<E><L.23.1>
+<BX>F----7   F----7   F----------------------7     F----7   F------7 <L.18.1>
+<L.18.1>
+!    ! <BC>  <BX>!    ! <BC>  <BX>!                      ! <BC>    <BX>!    ! <BC>  <BX>!      ! <L.18.1>
+<L.18.1>
+L----J   L----J   L----------------------J     L----J   L------J <L.18.1>
+<BC><L.9.1>
+<L.30.1>
+<C> <B><U>C: Credit & Payments<UC><E><L.30.1>
+<BX>F-------7 <L.18.1>
+           <C><BC>Turnfees: #3.50 for one, #14 for four, #32 for ten, #56 for twenty.    NCAA5-PI tc=6.5<BX><E><L.18.1>
+! #     ! <L.18.1>
+           <C><BC>Indicate any money sent for credits with this turn.  Cheques made payable to: SSI Ltd<BX><E><L.18.1>
+L-------J <L.18.1>
+<BC><L.9.1>
+<C> Give any change of address in this space and indicate if change is termtime or temporary.<E><L>
+<DU>
+
