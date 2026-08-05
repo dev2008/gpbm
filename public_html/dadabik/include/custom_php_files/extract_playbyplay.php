@@ -174,19 +174,19 @@ $_cp_team_code_stmt = $conn->prepare("SELECT team_name FROM team_codes WHERE cod
 
 $_cp_play_upsert = $conn->prepare(
     "INSERT INTO plays (game_id, quarter, play_seq, time_gone_seconds, offense_franchise_id,
-         field_side, field_position, down, yards_to_go, off_call, def_call, result_text,
+         field_side, field_position, down, yards_to_go, formation, off_call, def_call, result_text,
          yards_gained, is_touchdown, is_fumble, is_turnover, is_penalty, is_penalty_offense,
          is_penalty_defense, is_sack, is_hurry, is_blitz_pickup, is_blitz_no_pickup, is_safety,
          is_incomplete, is_first_down, score_after, source_upload_id)
      VALUES (:game_id, :quarter, :play_seq, :time_gone_seconds, :offense_franchise_id,
-         :field_side, :field_position, :down, :yards_to_go, :off_call, :def_call, :result_text,
+         :field_side, :field_position, :down, :yards_to_go, :formation, :off_call, :def_call, :result_text,
          :yards_gained, :is_touchdown, :is_fumble, :is_turnover, :is_penalty, :is_penalty_offense,
          :is_penalty_defense, :is_sack, :is_hurry, :is_blitz_pickup, :is_blitz_no_pickup, :is_safety,
          :is_incomplete, :is_first_down, :score_after, :upload_id)
      ON DUPLICATE KEY UPDATE
          time_gone_seconds = VALUES(time_gone_seconds), offense_franchise_id = VALUES(offense_franchise_id),
          field_side = VALUES(field_side), field_position = VALUES(field_position), down = VALUES(down),
-         yards_to_go = VALUES(yards_to_go), off_call = VALUES(off_call), def_call = VALUES(def_call),
+         yards_to_go = VALUES(yards_to_go), formation = VALUES(formation), off_call = VALUES(off_call), def_call = VALUES(def_call),
          result_text = VALUES(result_text), yards_gained = VALUES(yards_gained),
          is_touchdown = VALUES(is_touchdown), is_fumble = VALUES(is_fumble), is_turnover = VALUES(is_turnover),
          is_penalty = VALUES(is_penalty), is_penalty_offense = VALUES(is_penalty_offense),
@@ -225,6 +225,15 @@ foreach ($_cp_all_plays as $play) {
 
     $flags = apply_play_text_patterns($play['result_text'], $_cp_patterns);
 
+    // An incomplete pass genuinely gains 0 yards -- that's a known fact, not an absence of
+    // information, so NULL is the wrong representation here even though no "at/for gain/loss
+    // of N yards" phrase appears in the text to extract a number from. Reuses the already-
+    // computed is_incomplete flag (the same single source of truth play_text_patterns
+    // already provides) rather than re-checking the text separately here.
+    if ($flags['sets_incomplete'] && $play['yards_gained'] === null) {
+        $play['yards_gained'] = 0;
+    }
+
     // is_first_down: computed directly, not pattern-matched -- see file header. Left false
     // for goal-line plays (yards_to_go is null there; "first down" doesn't apply the same
     // way when the object of the play is reaching the endzone, which is_touchdown already
@@ -237,7 +246,8 @@ foreach ($_cp_all_plays as $play) {
         ':time_gone_seconds' => $play['time_gone_seconds'], ':offense_franchise_id' => $offense_id,
         ':field_side' => $play['side'] !== '' ? $play['side'] : null,
         ':field_position' => $play['field_position'], ':down' => $play['down'],
-        ':yards_to_go' => $play['yards_to_go'], ':off_call' => $play['off_call'], ':def_call' => $play['def_call'],
+        ':yards_to_go' => $play['yards_to_go'], ':formation' => $play['formation'],
+        ':off_call' => $play['off_call'], ':def_call' => $play['def_call'],
         ':result_text' => $play['result_text'], ':yards_gained' => $play['yards_gained'],
         ':is_touchdown' => $flags['sets_touchdown'], ':is_fumble' => $flags['sets_fumble'],
         ':is_turnover' => $flags['sets_turnover'], ':is_penalty' => ($flags['sets_penalty_offense'] || $flags['sets_penalty_defense']) ? 1 : 0,
@@ -328,6 +338,7 @@ function parse_quarter_plays($block_text, $quarter_num) {
             'field_position' => $field_position,
             'down' => $down,
             'yards_to_go' => $yards_to_go,
+            'formation' => $form,
             'off_call' => $off_call,
             'def_call' => $g[7],
             'result_text' => $result_text,
@@ -382,14 +393,27 @@ function clean_result_and_score($raw_result) {
 function extract_yards_gained($cleaned_result, $raw_result) {
     // Match against the raw (pre-cleaned) text so <Z>/<T>/<L> markers don't interfere with
     // "at"/"for" positioning, though the phrase content itself is unaffected by cleaning.
-    preg_match_all('/(at|for) (gain|loss) of ([\w-]+) yards?/i', $raw_result, $matches, PREG_SET_ORDER);
+    // "no gain" (e.g. "HB run for no gain", "pass dumped off to RB at no gain, and run for
+    // gain of 3 yards") is a genuinely different phrasing from "gain/loss of N yards" -- no
+    // "of"/"yards" at all -- confirmed directly against real text, not assumed. Missing this
+    // branch entirely meant a play with only "for no gain" mentioned returned NULL (no match
+    // found at all) rather than the known value 0, and a compound play with both an "at no
+    // gain" position marker and a later "for gain of N" increment silently dropped the first
+    // segment, only getting the right final total by coincidence in the one case checked.
+    preg_match_all('/(at|for) (?:(gain|loss) of ([\w-]+) yards?|(no) gain)/i', $raw_result, $matches, PREG_SET_ORDER);
     if (empty($matches)) {
         return null;
     }
     $total = null;
     foreach ($matches as $m) {
-        $num = strtolower($m[3]) === 'no' ? 0 : (int)$m[3];
-        $val = (strtolower($m[2]) === 'loss') ? -$num : $num;
+        if (!empty($m[4])) {
+            // The "no gain" branch matched -- unambiguously 0, regardless of gain/loss
+            // wording (there is none here).
+            $val = 0;
+        } else {
+            $num = strtolower($m[3]) === 'no' ? 0 : (int)$m[3];
+            $val = (strtolower($m[2]) === 'loss') ? -$num : $num;
+        }
         if (strtolower($m[1]) === 'at') {
             $total = $val;
         } else {

@@ -100,14 +100,15 @@ if (!$_cp_upload_id) {
 // -------------------- Confirm identification --------------------
 $_cp_upload = ddb_api::get_record_details('raw_uploads', 'upload_id', $_cp_upload_id);
 
-if (!$_cp_upload['league_id'] || !$_cp_upload['week_id']) {
-    echo "<p><em>This upload has no league/week identified yet. Check its <code>parse_status</code>/<code>parse_notes</code>.</em></p>";
+if (!$_cp_upload['league_id'] || !$_cp_upload['week_id'] || !$_cp_upload['season_id']) {
+    echo "<p><em>This upload has no league/week/season identified yet. Check its <code>parse_status</code>/<code>parse_notes</code>.</em></p>";
     echo "</div>";
     return;
 }
 
 $_cp_league_id = $_cp_upload['league_id'];
 $_cp_week_id = $_cp_upload['week_id'];
+$_cp_season_id = $_cp_upload['season_id'];
 
 $_cp_stmt = $conn->prepare("SELECT code FROM leagues WHERE league_id = :id");
 $_cp_stmt->bindParam(':id', $_cp_league_id);
@@ -118,6 +119,14 @@ $_cp_stmt = $conn->prepare("SELECT week_number FROM weeks WHERE week_id = :id");
 $_cp_stmt->bindParam(':id', $_cp_week_id);
 $_cp_stmt->execute();
 $_cp_week_number = (int)$_cp_stmt->fetchColumn();
+
+// Resolved from the upload's own season_id, NOT date('Y') -- see the label-construction fix
+// below for why this matters. The turn's in-league season has no relationship at all to
+// today's real-world calendar year.
+$_cp_stmt = $conn->prepare("SELECT year FROM seasons WHERE season_id = :id");
+$_cp_stmt->bindParam(':id', $_cp_season_id);
+$_cp_stmt->execute();
+$_cp_season_year = (int)$_cp_stmt->fetchColumn();
 
 echo "<p>Upload identified as <strong>" . htmlspecialchars($_cp_league_code) . "</strong>, week_id $_cp_week_id (week $_cp_week_number).</p>";
 
@@ -246,7 +255,7 @@ foreach ($_cp_games as $game) {
     if (!$away_id) { $_cp_unresolved_teams[] = $game['away_team']; }
     if (!$home_id || !$away_id) { continue; }
 
-    $label = "{$_cp_league_code} " . date('Y') . " Wk {$_cp_week_number}: {$game['home_team']} vs {$game['away_team']}";
+    $label = "{$_cp_league_code} {$_cp_season_year} Wk {$_cp_week_number}: {$game['home_team']} vs {$game['away_team']}";
 
     $_cp_game_upsert->execute([
         ':label' => $label, ':week_id' => $_cp_week_id, ':game_type_id' => $game_type_id,
