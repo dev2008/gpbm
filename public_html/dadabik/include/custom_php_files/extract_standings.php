@@ -58,10 +58,19 @@ echo "<h1>Extract Standings</h1>";
 //      table -- pre-season weeks specifically (confirmed directly: nothing meaningful to
 //      show before any games have been played, so the engine substitutes the schedule under
 //      the same block marker).
-// Checked directly against block_text ('%Week%Schedule%') rather than via a dedicated
-// tracking column -- reasonable for two confirmed cases; if a third distinct "nothing to
-// extract" pattern turns up later, a more general flag/column approach would be worth
-// reconsidering rather than continuing to bolt on more LIKE conditions here.
+// Checked against only the FIRST 300 characters of block_text, not the whole thing -- a real
+// bug caught against a genuine, non-pre-season upload (NFLAR Week 15): EVERY Standings block
+// ends with next week's schedule (confirmed: every turn shows that week's own standings AND
+// next week's schedule, not just pre-season ones), so checking the whole block for "Week...
+// Schedule" anywhere matched this completely normal week too, not just genuine pre-season
+// cases -- which would have wrongly excluded nearly every regular-season upload from this
+// list. The real distinguishing signal is POSITION, not presence: confirmed directly, a
+// genuine pre-season block has "Week N Schedule" ~113 characters in, immediately after the
+// header with no real table before it; this normal week had it ~2650+ characters in, after a
+// full standings table. 300 gives comfortable margin above the former, well below the latter.
+// Not via a dedicated tracking column -- reasonable for two confirmed cases; if a third
+// distinct "nothing to extract" pattern turns up later, a more general flag/column approach
+// would be worth reconsidering rather than continuing to bolt on more LIKE conditions here.
 // Also excludes uploads whose week already has standings_weekly rows -- "already processed".
 // Checked via "does standings_weekly have any row for this week_id" rather than a dedicated
 // tracking column, since standings are league-wide per week (every franchise's row gets
@@ -83,7 +92,7 @@ $_cp_sql = "SELECT ru.upload_id, ru.original_filename, ru.turn_number,
                 OR EXISTS (
                     SELECT 1 FROM raw_upload_blocks rub
                     WHERE rub.upload_id = ru.upload_id AND rub.block_type = 'Standings'
-                      AND rub.block_text NOT LIKE '%Week%Schedule%'
+                      AND LEFT(rub.block_text, 300) NOT LIKE '%Week%Schedule%'
                 )
             )
             ORDER BY ru.upload_id ASC";
@@ -169,7 +178,13 @@ $_cp_rows = $_cp_is_pro
     ? parse_standings_pro($_cp_block_text)
     : parse_standings_college($_cp_block_text);
 
-if (empty($_cp_rows) && preg_match('/Week\s+\d+\s+Schedule/', $_cp_block_text)) {
+// Same positional check as the dropdown filter above -- only the first 300 characters, not
+// the whole block. Lower-risk here since $_cp_rows is already confirmed empty by the actual
+// parse before this even runs, but still worth being consistent: every block ends with next
+// week's schedule regardless of whether THIS week's own table was real, so an unanchored
+// check could mislabel a genuine parsing failure as "expected, pre-season" if the block
+// happened to contain the word "Schedule" anywhere later on.
+if (empty($_cp_rows) && preg_match('/Week\s+\d+\s+Schedule/', substr($_cp_block_text, 0, 300))) {
     // Pre-season uploads: the Standings block contains next week's schedule instead of a
     // win-loss table -- there's nothing meaningful to show yet since no games have been
     // played. Confirmed directly against a real pre-season upload's actual block content,

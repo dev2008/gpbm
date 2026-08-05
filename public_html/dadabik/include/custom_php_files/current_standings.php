@@ -45,7 +45,7 @@ echo "<div class='w3-panel w3-theme-d5 w3-text-white w3-round-xxlarge'>";
 // TODO: set this to team.php's actual id_static_page once it's registered in Dadabik --
 // same "Dadabik routes by query parameter, not path" reasoning as build_league_link() below.
 // Using 0 as an obviously-wrong placeholder rather than guessing a real-looking number.
-define('TEAM_PAGE_STATIC_ID', 4);
+define('TEAM_PAGE_STATIC_ID', 0);
 
 $_cp_league = (isset($_GET['league']) && $_GET['league'] === 'NCAA5') ? 'NCAA5' : 'NFLAR';
 
@@ -80,6 +80,15 @@ foreach ($_cp_leagues as $code => $display_name) {
     echo "<a href='$link' class='w3-bar-item w3-button $active'>$display_name</a>";
 }
 echo "</div>";
+
+// Placed here specifically -- after the league selector, not next to the main logo above --
+// per explicit instruction. College has no conference grouping (confirmed earlier this
+// session), so unlike Pro it never gets a second logo later from a conference banner,
+// leaving this spot looking bare by comparison.
+if ($_cp_league === 'NCAA5') {
+    $_cp_league_logo2_url = $images_url . 'NCAA_logo2.png';
+    echo "<p><img src='" . htmlspecialchars($_cp_league_logo2_url) . "' alt='NCAA5 logo' style='width:180px;height:90px;object-fit:contain;object-position:left center'></p>";
+}
 
 // One query for the whole page -- already sorted correctly (league,
 // conference, division in E/C/W order, wins/ties/differential desc)
