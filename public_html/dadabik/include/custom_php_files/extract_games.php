@@ -100,15 +100,14 @@ if (!$_cp_upload_id) {
 // -------------------- Confirm identification --------------------
 $_cp_upload = ddb_api::get_record_details('raw_uploads', 'upload_id', $_cp_upload_id);
 
-if (!$_cp_upload['league_id'] || !$_cp_upload['week_id'] || !$_cp_upload['season_id']) {
-    echo "<p><em>This upload has no league/week/season identified yet. Check its <code>parse_status</code>/<code>parse_notes</code>.</em></p>";
+if (!$_cp_upload['league_id'] || !$_cp_upload['week_id']) {
+    echo "<p><em>This upload has no league/week identified yet. Check its <code>parse_status</code>/<code>parse_notes</code>.</em></p>";
     echo "</div>";
     return;
 }
 
 $_cp_league_id = $_cp_upload['league_id'];
 $_cp_week_id = $_cp_upload['week_id'];
-$_cp_season_id = $_cp_upload['season_id'];
 
 $_cp_stmt = $conn->prepare("SELECT code FROM leagues WHERE league_id = :id");
 $_cp_stmt->bindParam(':id', $_cp_league_id);
@@ -119,14 +118,6 @@ $_cp_stmt = $conn->prepare("SELECT week_number FROM weeks WHERE week_id = :id");
 $_cp_stmt->bindParam(':id', $_cp_week_id);
 $_cp_stmt->execute();
 $_cp_week_number = (int)$_cp_stmt->fetchColumn();
-
-// Resolved from the upload's own season_id, NOT date('Y') -- see the label-construction fix
-// below for why this matters. The turn's in-league season has no relationship at all to
-// today's real-world calendar year.
-$_cp_stmt = $conn->prepare("SELECT year FROM seasons WHERE season_id = :id");
-$_cp_stmt->bindParam(':id', $_cp_season_id);
-$_cp_stmt->execute();
-$_cp_season_year = (int)$_cp_stmt->fetchColumn();
 
 echo "<p>Upload identified as <strong>" . htmlspecialchars($_cp_league_code) . "</strong>, week_id $_cp_week_id (week $_cp_week_number).</p>";
 
@@ -159,14 +150,26 @@ $_cp_games = parse_league_report_games($_cp_block_text);
 echo "<p>Found " . count($_cp_games) . " games in the League Report.</p>";
 
 // -------------------- Resolve game types, franchises, and upsert --------------------
+// uploaded_by, not raw_uploads.id_user -- id_user on raw_uploads turned out to be redundant
+// with a pre-existing, already-working DaDaBIK-native column (uploaded_by), see
+// migration_drop_raw_uploads_id_user.sql. games.id_user/team_game_stats.id_user below are
+// unaffected -- still genuinely new, still worth having -- only this one source changed.
+$_cp_upload_owner = $_cp_upload['uploaded_by'] ?? null;
+
+// games: id_user NOT in the UPDATE clause -- matches this table's own existing
+// "game_id = game_id" no-op-on-conflict pattern (the whole row is first-write-wins already,
+// not just this one column; adding id_user to the UPDATE list here would be the odd one out).
 $_cp_game_upsert = $conn->prepare(
     "INSERT INTO games (label, week_id, game_type_id, home_franchise_id, away_franchise_id,
-         home_score, away_score, went_to_ot, source_upload_id)
+         home_score, away_score, went_to_ot, source_upload_id, id_user)
      VALUES (:label, :week_id, :game_type_id, :home_franchise_id, :away_franchise_id,
-         :home_score, :away_score, :went_to_ot, :upload_id)
+         :home_score, :away_score, :went_to_ot, :upload_id, :id_user)
      ON DUPLICATE KEY UPDATE game_id = game_id"
 );
 
+// team_game_stats: id_user IS in the UPDATE clause -- matches this table's own existing
+// full-refresh-on-conflict pattern (every other real column already updates to the latest
+// parse; id_user should track "most recent source" the same way, not be the one sticky field).
 $_cp_stats_upsert = $conn->prepare(
     "INSERT INTO team_game_stats (game_id, franchise_id, is_home, coach_name,
          q1, q2, q3, q4, ot, score,
@@ -179,7 +182,7 @@ $_cp_stats_upsert = $conn->prepare(
          kr_num, kr_yds, kr_td, pr_num, pr_yds, pr_td,
          ret_type, ret_num, ret_yds, ret_td,
          call_fm1, call_fm2, call_run1, call_run2, call_pass1, call_pass2, call_def1, call_def2,
-         starting_qb_benched, safeties_conceded, played_up)
+         starting_qb_benched, safeties_conceded, played_up, id_user)
      VALUES (:game_id, :franchise_id, :is_home, :coach_name,
          :q1, :q2, :q3, :q4, :ot, :score,
          :fg_att, :fg_made, :ep_att, :ep_made, :cp_att, :cp_made, :punts,
@@ -191,7 +194,7 @@ $_cp_stats_upsert = $conn->prepare(
          :kr_num, :kr_yds, :kr_td, :pr_num, :pr_yds, :pr_td,
          :ret_type, :ret_num, :ret_yds, :ret_td,
          :call_fm1, :call_fm2, :call_run1, :call_run2, :call_pass1, :call_pass2, :call_def1, :call_def2,
-         :starting_qb_benched, :safeties_conceded, :played_up)
+         :starting_qb_benched, :safeties_conceded, :played_up, :id_user)
      ON DUPLICATE KEY UPDATE
          is_home = VALUES(is_home), coach_name = VALUES(coach_name),
          q1 = VALUES(q1), q2 = VALUES(q2), q3 = VALUES(q3), q4 = VALUES(q4), ot = VALUES(ot), score = VALUES(score),
@@ -216,7 +219,8 @@ $_cp_stats_upsert = $conn->prepare(
          call_pass1 = VALUES(call_pass1), call_pass2 = VALUES(call_pass2),
          call_def1 = VALUES(call_def1), call_def2 = VALUES(call_def2),
          starting_qb_benched = VALUES(starting_qb_benched),
-         safeties_conceded = VALUES(safeties_conceded), played_up = VALUES(played_up)"
+         safeties_conceded = VALUES(safeties_conceded), played_up = VALUES(played_up),
+         id_user = VALUES(id_user)"
 );
 
 $_cp_franchise_stmt = $conn->prepare(
@@ -255,14 +259,14 @@ foreach ($_cp_games as $game) {
     if (!$away_id) { $_cp_unresolved_teams[] = $game['away_team']; }
     if (!$home_id || !$away_id) { continue; }
 
-    $label = "{$_cp_league_code} {$_cp_season_year} Wk {$_cp_week_number}: {$game['home_team']} vs {$game['away_team']}";
+    $label = "{$_cp_league_code} " . date('Y') . " Wk {$_cp_week_number}: {$game['home_team']} vs {$game['away_team']}";
 
     $_cp_game_upsert->execute([
         ':label' => $label, ':week_id' => $_cp_week_id, ':game_type_id' => $game_type_id,
         ':home_franchise_id' => $home_id, ':away_franchise_id' => $away_id,
         ':home_score' => $game['home']['score'], ':away_score' => $game['away']['score'],
         ':went_to_ot' => ($game['home']['ot'] !== null) ? 1 : 0,
-        ':upload_id' => $_cp_upload_id,
+        ':upload_id' => $_cp_upload_id, ':id_user' => $_cp_upload_owner,
     ]);
 
     $_cp_stmt = $conn->prepare(
@@ -299,6 +303,7 @@ foreach ($_cp_games as $game) {
             ':call_def1' => $t['call_def1'], ':call_def2' => $t['call_def2'],
             ':starting_qb_benched' => 0,
             ':safeties_conceded' => $t['safeties'], ':played_up' => $t['played_up'],
+            ':id_user' => $_cp_upload_owner,
         ]);
     }
 

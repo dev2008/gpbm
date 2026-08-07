@@ -33,14 +33,22 @@ ini_set('display_errors', '1');
 //      file. Easy to add more to the pool later.
 // ------------------------------------------------------------------
 
-$_cp_myname = $_SESSION['logged_user_infos_ar']['username_user'] ?? 'there';
+// $current_user (DaDaBIK's own global -- confirmed via DaDaBIK's documented custom-code
+// globals) rather than reading the session array directly. Falsy check (?:), not ??, since
+// $current_user is presumably always defined by DaDaBIK in this context but may be an empty
+// string for a guest, which ?? alone wouldn't catch.
+$_cp_myname = $current_user ?: 'there';
 
-// Public/not-logged-in access is group 3 in this Dadabik install (confirmed directly --
-// $_SESSION['logged_user_infos_ar']['id_group'] is already populated, no extra query needed
-// -- and there's only ever one public user by design, so checking the group rather than a
-// specific username is both simpler and correct regardless of what that account happens to
-// be named or whether it's ever renamed).
-$_cp_is_public_user = (($_SESSION['logged_user_infos_ar']['id_group'] ?? null) == 3);
+// Public/not-logged-in access is group 3 in this Dadabik install (confirmed directly). Now
+// reads DaDaBIK's own $current_id_group global rather than
+// $_SESSION['logged_user_infos_ar']['id_group'] directly -- same value, documented API instead
+// of inferred session-array shape. Unlike game.php's admin check, this one still names a
+// specific group id -- DaDaBIK's globals give an $current_user_is_administrator flag but no
+// equivalent "$current_user_is_public" one, so there's no way to ask this question without
+// naming group 3 somewhere. There's only ever one public user by design, so checking the group
+// rather than a specific username is still both simpler and correct regardless of what that
+// account happens to be named or whether it's ever renamed.
+$_cp_is_public_user = ($current_id_group == 3);
 
 echo "<div class='w3-panel w3-theme-d5 w3-text-white w3-round-xxlarge'>";
 echo "<h1>&nbsp;Welcome to the Gameplan PBM site</h1>";

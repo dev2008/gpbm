@@ -49,6 +49,16 @@ echo "<div class='w3-panel w3-theme-d5 w3-text-white w3-round-xxlarge'>";
 //      participation instead -- see playoff_appearances_college().
 // ------------------------------------------------------------------
 
+// game.php's registered id_static_page -- was a 0 placeholder, now the real value.
+define('GAME_PAGE_STATIC_ID', 10);
+
+function build_game_link($game_id) {
+    return htmlspecialchars(
+        'index.php?function=show_static_page&id_static_page=' . GAME_PAGE_STATIC_ID
+        . '&game=' . urlencode($game_id)
+    );
+}
+
 $_cp_league = (isset($_GET['league']) && $_GET['league'] === 'NCAA5') ? 'NCAA5' : 'NFLAR';
 
 // -------------------- League toggle --------------------
@@ -135,6 +145,19 @@ $_cp_stmt->execute();
 $_cp_current_coach = $_cp_stmt->fetchColumn();
 $_cp_current_coach_display = $_cp_current_coach ?: '-';
 
+// Separate query, not folded into v_current_coach -- that view only exposes coach_name, and
+// redefining it to also carry id_user isn't a change to make lightly without knowing what else
+// might depend on its current shape. This mirrors the same join v_current_coach itself uses
+// (franchise_coach_tenures with end_week_id IS NULL), just also selecting coaches.id_user.
+$_cp_sql = "SELECT c.id_user
+            FROM franchise_coach_tenures fct
+            JOIN coaches c ON c.coach_id = fct.coach_id
+            WHERE fct.franchise_id = :fid AND fct.end_week_id IS NULL";
+$_cp_stmt = $conn->prepare($_cp_sql);
+$_cp_stmt->bindParam(':fid', $_cp_franchise_id);
+$_cp_stmt->execute();
+$_cp_current_coach_user_id = $_cp_stmt->fetchColumn();
+
 $_cp_coach_since = coach_since_year($conn, $_cp_franchise_id);
 
 // -------------------- Header --------------------
@@ -176,8 +199,27 @@ if ($_cp_is_pro) {
     echo "<tr><th>National Championship Playoff Appearances:</th><td>$_cp_playoffs</td></tr>";
 }
 
-echo "<tr><th>Coach:</th><td>" . htmlspecialchars($_cp_current_coach_display)
-   . ($_cp_coach_since ? " (Since $_cp_coach_since)" : '') . "</td></tr>";
+// coach.php's registered id_static_page -- was a 0 placeholder, now the real value.
+define('COACH_PAGE_STATIC_ID', 12);
+
+// Takes a zpbm_users.id_user value, sourced (below) via franchise_coach_tenures ->
+// coaches.id_user for whoever currently holds this franchise's open tenure -- not from a
+// franchises-level column, see migration_drop_coach_user_id.sql for why.
+function build_coach_link($coach_user_id) {
+    return htmlspecialchars(
+        'index.php?function=show_static_page&id_static_page=' . COACH_PAGE_STATIC_ID
+        . '&user=' . urlencode($coach_user_id)
+    );
+}
+
+$_cp_coach_name_html = htmlspecialchars($_cp_current_coach_display);
+if ($_cp_current_coach_user_id) {
+    $_cp_coach_name_html = "<a href='" . build_coach_link($_cp_current_coach_user_id)
+        . "' style='color:inherit;text-decoration:underline'>$_cp_coach_name_html</a>";
+}
+echo "<tr><th>Coach:</th><td>" . $_cp_coach_name_html
+   . ($_cp_coach_since ? " (Since $_cp_coach_since)" : '')
+   . "</td></tr>";
 
 $_cp_champ_record_label = $_cp_is_pro ? 'Superbowl record' : 'National Championship Game Record';
 render_honor_record_row($conn, $_cp_franchise_id, 'LEAGUE_WINNER', 'LEAGUE_RUNNERUP', $_cp_champ_record_label);
@@ -206,28 +248,77 @@ render_season_extreme_row($conn, $_cp_franchise_id, 'points_against', 'Most poin
 
 echo "</table><br>";
 
-// -------------------- Current season results --------------------
+// -------------------- Season selector --------------------
+// Dropdown list: every season in franchise_season_records (career-long, includes
+// legacy_rollup seasons -- schema.md section 9 -- which have a season-end record but no
+// individual games rows behind them) PLUS whichever season currently holds this franchise's
+// most recent games row, in case that season hasn't picked up a franchise_season_records row
+// yet -- that table reads like a settled/aggregated one (built once per finished season), not
+// necessarily kept live while a season is still being played, so don't assume the current
+// season is already in it.
+$_cp_sql = "SELECT fsr.season_id, s.label AS season_label, s.year
+            FROM franchise_season_records fsr
+            JOIN seasons s ON s.season_id = fsr.season_id
+            WHERE fsr.franchise_id = :fid";
+$_cp_stmt = $conn->prepare($_cp_sql);
+$_cp_stmt->bindParam(':fid', $_cp_franchise_id);
+$_cp_stmt->execute();
+$_cp_season_options = [];  // season_id => ['label' => ..., 'year' => ...]
+foreach ($_cp_stmt->fetchAll(PDO::FETCH_ASSOC) as $s) {
+    $_cp_season_options[(int)$s['season_id']] = ['label' => $s['season_label'], 'year' => (int)$s['year']];
+}
+
 $_cp_sql = "SELECT MAX(w.season_id) FROM games g JOIN weeks w ON w.week_id = g.week_id
             WHERE g.home_franchise_id = :fid OR g.away_franchise_id = :fid";
 $_cp_stmt = $conn->prepare($_cp_sql);
 $_cp_stmt->bindParam(':fid', $_cp_franchise_id);
 $_cp_stmt->execute();
-$_cp_latest_season_id = $_cp_stmt->fetchColumn();
+$_cp_latest_games_season_id = (int)$_cp_stmt->fetchColumn();
 
-if ($_cp_latest_season_id) {
-    $_cp_sql = "SELECT s.label FROM seasons s WHERE s.season_id = :sid";
+if ($_cp_latest_games_season_id && !isset($_cp_season_options[$_cp_latest_games_season_id])) {
+    $_cp_sql = "SELECT label, year FROM seasons WHERE season_id = :sid";
     $_cp_stmt = $conn->prepare($_cp_sql);
-    $_cp_stmt->bindParam(':sid', $_cp_latest_season_id);
+    $_cp_stmt->bindParam(':sid', $_cp_latest_games_season_id);
     $_cp_stmt->execute();
-    $_cp_season_label = $_cp_stmt->fetchColumn();
+    if ($_cp_extra = $_cp_stmt->fetch(PDO::FETCH_ASSOC)) {
+        $_cp_season_options[$_cp_latest_games_season_id] = ['label' => $_cp_extra['label'], 'year' => (int)$_cp_extra['year']];
+    }
+}
+
+// Most-recent-first by year -- not by season_id, which isn't documented anywhere as being in
+// year order, even though in practice it probably is.
+uasort($_cp_season_options, fn($a, $b) => $b['year'] <=> $a['year']);
+
+$_cp_season_id = isset($_GET['season']) ? (int)$_GET['season'] : 0;
+if (!$_cp_season_id || !isset($_cp_season_options[$_cp_season_id])) {
+    // Default unchanged from before this selector existed -- most recent season with a real
+    // games row -- so existing bookmarks/links to this page keep behaving identically.
+    $_cp_season_id = $_cp_latest_games_season_id ?: (array_key_first($_cp_season_options) ?: 0);
+}
+
+if (!empty($_cp_season_options)) {
+    echo "<form method='get'>";
+    echo "<input type='hidden' name='function' value='" . htmlspecialchars($_GET['function'] ?? 'show_static_page') . "'>";
+    echo "<input type='hidden' name='id_static_page' value='" . htmlspecialchars($_GET['id_static_page'] ?? '') . "'>";
+    echo "<input type='hidden' name='league' value='" . htmlspecialchars($_cp_league) . "'>";
+    echo "<input type='hidden' name='franchise' value='" . htmlspecialchars($_cp_franchise_id) . "'>";
+    echo "<select name='season' onchange='this.form.submit()' style='width:200px'>";
+    foreach ($_cp_season_options as $_cp_sid => $_cp_info) {
+        $sel = ($_cp_sid === $_cp_season_id) ? 'selected' : '';
+        echo "<option value='$_cp_sid' $sel>" . htmlspecialchars($_cp_info['label']) . "</option>";
+    }
+    echo "</select>";
+    echo "</form><br>";
+}
+
+// -------------------- Season results (for whichever season is selected above) --------------------
+if ($_cp_season_id && isset($_cp_season_options[$_cp_season_id])) {
+    $_cp_season_label = $_cp_season_options[$_cp_season_id]['label'];
 
     echo "<div class='w3-panel w3-theme'><h1 class='w3-text-white' style='text-shadow:1px 1px 0 #444'>"
        . "<b>" . htmlspecialchars($_cp_franchise['label'] . ' ' . $_cp_season_label . ' Results') . "</b></h1></div>";
 
-    echo "<table class='w3-table w3-striped w3-bordered w3-theme-l5 w3-text-black' style='width:55%;min-width:480px'>";
-    echo "<tr><th>Week</th><th>Venue</th><th>Opponent</th><th>Score</th><th>Result</th></tr>";
-
-    $_cp_sql = "SELECT w.week_number, g.home_franchise_id, g.away_franchise_id, g.home_score,
+    $_cp_sql = "SELECT g.game_id, w.week_number, g.home_franchise_id, g.away_franchise_id, g.home_score,
                        g.away_score, g.neutral_site,
                        hf.label AS home_label, af.label AS away_label,
                        htgs.coach_name AS home_coach, atgs.coach_name AS away_coach
@@ -240,35 +331,52 @@ if ($_cp_latest_season_id) {
                 WHERE w.season_id = :sid AND (g.home_franchise_id = :fid1 OR g.away_franchise_id = :fid2)
                 ORDER BY w.week_number DESC";
     $_cp_stmt = $conn->prepare($_cp_sql);
-    $_cp_stmt->bindParam(':sid', $_cp_latest_season_id);
+    $_cp_stmt->bindParam(':sid', $_cp_season_id);
     $_cp_stmt->bindParam(':fid1', $_cp_franchise_id);
     $_cp_stmt->bindParam(':fid2', $_cp_franchise_id);
     $_cp_stmt->execute();
     $_cp_games = $_cp_stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    foreach ($_cp_games as $g) {
-        // Explicit (int) cast on BOTH sides, not just the left -- $_cp_franchise_id was
-        // properly cast to int back where it's first set, but bindParam() binds by
-        // reference with a default type of PDO::PARAM_STR, and it's bound repeatedly to
-        // several queries earlier in this file. Confirmed via direct runtime diagnostic
-        // (not just reasoning about it) that this silently turns $_cp_franchise_id back
-        // into a string by the time this comparison runs -- 'X' === X is false in PHP
-        // regardless of the actual values, which is exactly why every game was showing as
-        // a road game (the comparison never matched, home or not) and some weeks showed a
-        // team as its own opponent (falling back to home_label on the specific weeks this
-        // franchise actually was the home team).
-        $_cp_is_home = ((int)$g['home_franchise_id'] === (int)$_cp_franchise_id);
-        $venue = $g['neutral_site'] ? 'Neutral' : ($_cp_is_home ? 'Home' : 'Road');
-        $my_score = $_cp_is_home ? $g['home_score'] : $g['away_score'];
-        $opp_score = $_cp_is_home ? $g['away_score'] : $g['home_score'];
-        $opp_label = $_cp_is_home ? $g['away_label'] : $g['home_label'];
-        $opp_coach = $_cp_is_home ? $g['away_coach'] : $g['home_coach'];
-        $result = ($my_score > $opp_score) ? 'Win' : (($my_score < $opp_score) ? 'Loss' : 'Tie');
-        $opp_display = htmlspecialchars($opp_label) . ($opp_coach ? ' (' . htmlspecialchars($opp_coach) . ')' : '');
-        echo "<tr><td>{$g['week_number']}</td><td>$venue</td><td>$opp_display</td>"
-           . "<td>$my_score-$opp_score</td><td>$result</td></tr>";
+    if (empty($_cp_games)) {
+        // legacy_rollup seasons (schema.md section 9) have a franchise_season_records row but
+        // no individual games rows behind them -- season-end totals only, no per-game detail
+        // was ever migrated for these. Say so plainly instead of showing an empty table --
+        // option (b): every season is selectable, this is the honest result for the ones with
+        // nothing behind them, rather than hiding them from the dropdown entirely.
+        echo "<p><em>No individual game log available for this season &mdash; only the "
+           . "season-end record shown in Season by Season Records below.</em></p>";
+    } else {
+        echo "<table class='w3-table w3-striped w3-bordered w3-theme-l5 w3-text-black' style='width:55%;min-width:480px'>";
+        echo "<tr><th>Week</th><th>Venue</th><th>Opponent</th><th>Score</th><th>Result</th></tr>";
+
+        foreach ($_cp_games as $g) {
+            // Explicit (int) cast on BOTH sides, not just the left -- $_cp_franchise_id was
+            // properly cast to int back where it's first set, but bindParam() binds by
+            // reference with a default type of PDO::PARAM_STR, and it's bound repeatedly to
+            // several queries earlier in this file. Confirmed via direct runtime diagnostic
+            // (not just reasoning about it) that this silently turns $_cp_franchise_id back
+            // into a string by the time this comparison runs -- 'X' === X is false in PHP
+            // regardless of the actual values, which is exactly why every game was showing as
+            // a road game (the comparison never matched, home or not) and some weeks showed a
+            // team as its own opponent (falling back to home_label on the specific weeks this
+            // franchise actually was the home team).
+            $_cp_is_home = ((int)$g['home_franchise_id'] === (int)$_cp_franchise_id);
+            $venue = $g['neutral_site'] ? 'Neutral' : ($_cp_is_home ? 'Home' : 'Road');
+            $my_score = $_cp_is_home ? $g['home_score'] : $g['away_score'];
+            $opp_score = $_cp_is_home ? $g['away_score'] : $g['home_score'];
+            $opp_label = $_cp_is_home ? $g['away_label'] : $g['home_label'];
+            $opp_coach = $_cp_is_home ? $g['away_coach'] : $g['home_coach'];
+            $result = ($my_score > $opp_score) ? 'Win' : (($my_score < $opp_score) ? 'Loss' : 'Tie');
+            $opp_display = htmlspecialchars($opp_label) . ($opp_coach ? ' (' . htmlspecialchars($opp_coach) . ')' : '');
+            // Score is now a link through to the new game detail page (game.php) -- see there
+            // for the full box score, quarter-by-quarter, play-by-play and drive summary.
+            $score_link = build_game_link($g['game_id']);
+            $score_display = "<a href='$score_link' style='text-decoration:underline'>$my_score-$opp_score</a>";
+            echo "<tr><td>{$g['week_number']}</td><td>$venue</td><td>$opp_display</td>"
+               . "<td>$score_display</td><td>$result</td></tr>";
+        }
+        echo "</table><br>";
     }
-    echo "</table><br>";
 }
 
 // -------------------- Season by season --------------------
@@ -315,7 +423,7 @@ foreach ($_cp_seasons as $s) {
         $record_text = "<em>$record_text</em>";
     }
 
-    $points_text = "{$s['points_for']}-{$s['points_against']}";
+    $points_text = number_format($s['points_for']) . '-' . number_format($s['points_against']);
     if ($is_conf_champ) {
         $points_text = "<em>$points_text</em>";
     }
@@ -424,7 +532,7 @@ function render_season_extreme_row($conn, $franchise_id, $column, $label, $unuse
     $occurrences = (int)$stmt->fetchColumn();
 
     $suffix = ($occurrences > 1) ? " (x$occurrences)" : '';
-    echo "<tr><th>$label:</th><td>$max_value$suffix</td></tr>";
+    echo "<tr><th>$label:</th><td>" . number_format($max_value) . "$suffix</td></tr>";
 }
 
 // Head-to-head rivalry record, if this franchise has one -- uses v_rivalry_records (built

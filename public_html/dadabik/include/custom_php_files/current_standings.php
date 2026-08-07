@@ -42,10 +42,9 @@ echo "<div class='w3-panel w3-theme-d5 w3-text-white w3-round-xxlarge'>";
 // width scales safely regardless of each image's real dimensions.
 // ------------------------------------------------------------------
 
-// TODO: set this to team.php's actual id_static_page once it's registered in Dadabik --
-// same "Dadabik routes by query parameter, not path" reasoning as build_league_link() below.
-// Using 0 as an obviously-wrong placeholder rather than guessing a real-looking number.
-define('TEAM_PAGE_STATIC_ID', 0);
+// team.php's registered id_static_page -- was a 0 placeholder, now the real value (confirmed
+// 4, same as game.php/team.php use for the same page).
+define('TEAM_PAGE_STATIC_ID', 4);
 
 $_cp_league = (isset($_GET['league']) && $_GET['league'] === 'NCAA5') ? 'NCAA5' : 'NFLAR';
 
@@ -233,7 +232,7 @@ function standings_table_row($row) {
         'index.php?function=show_static_page&id_static_page=' . TEAM_PAGE_STATIC_ID
         . '&league=' . urlencode($row['league_code']) . '&franchise=' . urlencode($row['franchise_id'])
     );
-    $team_link = "<a href='$team_link_url'>$team</a>";
+    $team_link = "<a href='$team_link_url' style='color:inherit;text-decoration:underline'>$team</a>";
 
     return "<tr>"
          . "<td style='padding:4px 8px'>$team_link</td>"

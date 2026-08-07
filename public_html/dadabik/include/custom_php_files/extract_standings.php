@@ -203,17 +203,36 @@ echo "<p>Found " . count($_cp_rows) . " team rows in the Standings block.</p>";
 $_cp_resolved = 0;
 $_cp_unresolved = [];
 
+// uploaded_by, not raw_uploads.id_user -- id_user on raw_uploads turned out to be redundant
+// with a pre-existing, already-working DaDaBIK-native column (uploaded_by), see
+// migration_drop_raw_uploads_id_user.sql. This standings_weekly.id_user column itself is
+// unaffected -- still genuinely new, still worth having -- only its source changed. Refreshed
+// on conflict (id_user = VALUES(id_user) below), matching every other real column on this
+// table -- source_upload_id already updates to reflect whichever upload most recently supplied
+// a (week, franchise) row's numbers, so id_user should track the same "most recent source"
+// rather than staying sticky to the first.
+//
+// Worth flagging plainly regardless: a single Standings block reports on all 24 franchises in
+// the league, not just the uploading coach's own -- so id_user here ends up meaning "whoever
+// most recently uploaded a turn that included this week's standings," not "whose franchise
+// this row is about." It won't usefully support a future "coach sees only their own data" gate
+// the way it will on raw_upload_blocks/games/team_game_stats/plays (each of those stays scoped
+// to the uploader's own game). Adding the column here anyway, for consistency and as an audit
+// trail of source -- standings are public content regardless (security.md), so nothing is
+// actually relying on ownership-based gating here either way.
+$_cp_upload_owner = $_cp_upload['uploaded_by'] ?? null;
+
 $_cp_upsert_sql = "INSERT INTO standings_weekly
         (week_id, franchise_id, wins, losses, ties, points_for, points_against,
-         division_record, streak, conference, division, source, source_upload_id)
+         division_record, streak, conference, division, source, source_upload_id, id_user)
     VALUES (:week_id, :franchise_id, :wins, :losses, :ties, :points_for, :points_against,
-         :division_record, :streak, :conference, :division, 'parsed', :upload_id)
+         :division_record, :streak, :conference, :division, 'parsed', :upload_id, :id_user)
     ON DUPLICATE KEY UPDATE
         wins = VALUES(wins), losses = VALUES(losses), ties = VALUES(ties),
         points_for = VALUES(points_for), points_against = VALUES(points_against),
         division_record = VALUES(division_record), streak = VALUES(streak),
         conference = VALUES(conference), division = VALUES(division),
-        source = 'parsed', source_upload_id = VALUES(source_upload_id)";
+        source = 'parsed', source_upload_id = VALUES(source_upload_id), id_user = VALUES(id_user)";
 $_cp_upsert_stmt = $conn->prepare($_cp_upsert_sql);
 
 $_cp_franchise_stmt = $conn->prepare(
@@ -243,6 +262,7 @@ foreach ($_cp_rows as $row) {
     $_cp_upsert_stmt->bindValue(':conference', $row['conference']);
     $_cp_upsert_stmt->bindValue(':division', $row['division']);
     $_cp_upsert_stmt->bindValue(':upload_id', $_cp_upload_id);
+    $_cp_upsert_stmt->bindValue(':id_user', $_cp_upload_owner);
     $_cp_upsert_stmt->execute();
     $_cp_resolved++;
 }

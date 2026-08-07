@@ -4,6 +4,9 @@ if(!defined('custom_page_from_inclusion')) { die(); }
 include_once(__DIR__ . '/../error_handler.php');
 ini_set('display_errors', '1');
 
+// replay.php's registered id_static_page -- was a 0 placeholder, now the real value.
+define('REPLAY_PAGE_STATIC_ID', 11);
+
 // ------------------------------------------------------------------
 // Extract Play-by-Play -- third staged extraction page (after Standings, Games).
 // Targets the '1st Quarter' through '4th Quarter' blocks -- per-play granularity for the
@@ -109,6 +112,11 @@ if (!$_cp_upload['league_id'] || !$_cp_upload['week_id'] || !$_cp_upload['franch
 
 $_cp_week_id = $_cp_upload['week_id'];
 $_cp_franchise_id = $_cp_upload['franchise_id'];
+// uploaded_by, not raw_uploads.id_user -- id_user on raw_uploads turned out to be redundant
+// with a pre-existing, already-working DaDaBIK-native column (uploaded_by), see
+// migration_drop_raw_uploads_id_user.sql. plays.id_user below is unaffected -- still genuinely
+// new, still worth having -- only this one source changed.
+$_cp_upload_owner = $_cp_upload['uploaded_by'] ?? null;
 
 $_cp_stmt = $conn->prepare(
     "SELECT g.game_id, g.home_franchise_id, g.away_franchise_id,
@@ -167,7 +175,7 @@ foreach (['1st Quarter', '2nd Quarter', '3rd Quarter', '4th Quarter'] as $qname)
     foreach ($plays as $p) { $_cp_all_plays[] = $p; }
 }
 
-echo "<p>Found " . count($_cp_all_plays) . " plays across " . count($_cp_quarter_blocks) . " quarter block(s).</p>";
+echo "<p>Found " . count($_cp_all_plays) . " plays.</p>";
 
 // -------------------- Resolve team_codes, build final rows, upsert --------------------
 $_cp_team_code_stmt = $conn->prepare("SELECT team_name FROM team_codes WHERE code = :code");
@@ -177,12 +185,12 @@ $_cp_play_upsert = $conn->prepare(
          field_side, field_position, down, yards_to_go, formation, off_call, def_call, result_text,
          yards_gained, is_touchdown, is_fumble, is_turnover, is_penalty, is_penalty_offense,
          is_penalty_defense, is_sack, is_hurry, is_blitz_pickup, is_blitz_no_pickup, is_safety,
-         is_incomplete, is_first_down, score_after, source_upload_id)
+         is_incomplete, is_first_down, score_after, source_upload_id, id_user)
      VALUES (:game_id, :quarter, :play_seq, :time_gone_seconds, :offense_franchise_id,
          :field_side, :field_position, :down, :yards_to_go, :formation, :off_call, :def_call, :result_text,
          :yards_gained, :is_touchdown, :is_fumble, :is_turnover, :is_penalty, :is_penalty_offense,
          :is_penalty_defense, :is_sack, :is_hurry, :is_blitz_pickup, :is_blitz_no_pickup, :is_safety,
-         :is_incomplete, :is_first_down, :score_after, :upload_id)
+         :is_incomplete, :is_first_down, :score_after, :upload_id, :id_user)
      ON DUPLICATE KEY UPDATE
          time_gone_seconds = VALUES(time_gone_seconds), offense_franchise_id = VALUES(offense_franchise_id),
          field_side = VALUES(field_side), field_position = VALUES(field_position), down = VALUES(down),
@@ -193,7 +201,7 @@ $_cp_play_upsert = $conn->prepare(
          is_penalty_defense = VALUES(is_penalty_defense), is_sack = VALUES(is_sack), is_hurry = VALUES(is_hurry),
          is_blitz_pickup = VALUES(is_blitz_pickup), is_blitz_no_pickup = VALUES(is_blitz_no_pickup),
          is_safety = VALUES(is_safety), is_incomplete = VALUES(is_incomplete),
-         is_first_down = VALUES(is_first_down), score_after = VALUES(score_after)"
+         is_first_down = VALUES(is_first_down), score_after = VALUES(score_after), id_user = VALUES(id_user)"
 );
 
 $_cp_patterns = load_play_text_patterns($conn);
@@ -256,7 +264,7 @@ foreach ($_cp_all_plays as $play) {
         ':is_blitz_pickup' => $flags['sets_blitz_pickup'], ':is_blitz_no_pickup' => $flags['sets_blitz_no_pickup'],
         ':is_safety' => $flags['sets_safety'], ':is_incomplete' => $flags['sets_incomplete'],
         ':is_first_down' => $is_first_down, ':score_after' => $play['score_after'],
-        ':upload_id' => $_cp_upload_id,
+        ':upload_id' => $_cp_upload_id, ':id_user' => $_cp_upload_owner,
     ]);
 
     $_cp_written++;
@@ -264,6 +272,18 @@ foreach ($_cp_all_plays as $play) {
 
 echo "<div class='w3-panel w3-pale-green w3-text-black w3-round-large'>";
 echo "<p><strong>$_cp_written</strong> plays written to plays.</p>";
+if ($_cp_written > 0) {
+    // Deliberately links to the standalone replay page (replay.php), not game.php -- this is
+    // the moment right after upload, when the uploading coach is the one person who's about
+    // to watch a game whose outcome they already fully know but would still enjoy replaying
+    // suspensefully play-by-play. Linking to game.php here would put the final score directly
+    // above this link, spoiling the exact experience the link is offering.
+    $_cp_replay_link = htmlspecialchars(
+        'index.php?function=show_static_page&id_static_page=' . REPLAY_PAGE_STATIC_ID
+        . '&game=' . urlencode($_cp_game_id)
+    );
+    echo "<p><a href='$_cp_replay_link' class='w3-button w3-theme'>Watch the Live Replay</a></p>";
+}
 echo "</div>";
 
 if ($_cp_unresolved_sides) {

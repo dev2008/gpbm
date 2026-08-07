@@ -48,10 +48,13 @@ in the first, and open/upcoming work now lives separately in `todo.md`, not here
   explicit instruction (see §4). `is_interception` was the last of these added, well after the
   others — see §8 for the full story of that gap.
 - `franchises.abbr` was **dropped entirely**, replaced by `team_codes` (see §3).
-- `v_playcall_formation_all` / `v_playcall_matchup_all` / `v_playcall_matchup_formation_all` —
-  union views combining `legacy_play_log` and `plays` for the three `v_playcall_*`-style
-  aggregate views, live and verified. First piece of Feature 1; see §8. The four `v_relevant_*`
-  views are the remaining, not-yet-started piece.
+- `v_playcall_formation_all` / `v_playcall_matchup_all` / `v_playcall_matchup_formation_all` /
+  `v_relevant_offense_all` / `v_relevant_offense_formation_all` / `v_relevant_defense_all` /
+  `v_relevant_defense_formation_all` — Feature 1 complete, both stages, all seven union views
+  live and verified; see §8. The original eight legacy-only views are untouched throughout.
+- `extract_games.php`'s `games.label` — fixed and backfilled; was silently using today's
+  real-world date instead of the turn's actual season on every live-created game. Found while
+  verifying Feature 1 stage 2, unrelated to Feature 1 itself; see §9.
 
 **Front-end pages:** `current_standings.php`, `team.php`, `home.php`, `bowl_records.php` — all
 built earlier, standings page recently given a second logo for College (matching Pro's
@@ -391,6 +394,25 @@ check worth running any time a new `is_*`/`sets_*` pattern flag is added in the 
 the parser for every place `$flags[...]` is read, not just where it's written — the write side
 working doesn't confirm the read side does too.
 
+### An unverified assumption pattern-matched against nearby context and got stated as fact —
+### the correction came from the user re-checking, not from re-deriving it independently.
+While walking through Feature 1 stage 2's live verification, a claim was made that "the live
+turns you've been parsing are from season 2032" — stated with full confidence, based purely on
+the project workspace's sample turn files happening to be named `s2032`. No query was ever run
+to check what season the actual live `plays` rows belonged to; the sample filenames were the
+only "evidence," and they aren't the same thing as the real uploads that produced the real
+data. The user's own query (joining `plays` to `games.label`) surfaced "2026" instead, which
+didn't match that guess either — and turned out to be a third, unrelated thing entirely: a real
+bug in `extract_games.php`'s label construction (see §9), while the turns' actual seasons were
+2034/2038/2039, confirmed only once someone actually checked. The governing principle already
+established in this document — when someone asserts something, the default is a query to
+validate it, not acceptance — applies exactly as much to Claude's own inferences drawn from
+surrounding context as it does to the user's assertions or Claude's own prior work. This is the
+same category of mistake as the "0 start"/`AF` cases earlier in this section, just committed by
+a different party within this exact conversation. Worth remembering: pattern-matching to the
+closest available reference material sitting in view (here, sample files in the project
+workspace) is not the same thing as checking the actual data, even when the match feels obvious.
+
 ---
 
 ## 4. Confirmed text-parsing rules (play-by-play specific)
@@ -627,13 +649,32 @@ All in `/mnt/user-data/outputs/` as of this writing:
   `is_interception` going forward; the version in this inventory's first entry above is now
   stale.
 
+**Feature 1 (stage 2) additions — see §8:**
+- `check_relevant_teams_franchise_mapping.sql` — diagnostic confirming all three tracked
+  teams (PE/MV/PI) round-trip cleanly between `legacy_relevant_teams.team_code` and current
+  `franchise_id` before the no-schema-change join was used.
+- `union_views_relevant.sql` — extends `v_plays_normalized` (additive), adds the
+  `v_relevant_teams_franchise` helper, the four `v_relevant_*_all` union views, and
+  verification/test queries.
+
+**`extract_games.php` `games.label` bug fix — see §9:**
+- `check_live_play_season_resolution.sql` — first diagnostic, ruled out the "plays matched
+  onto pre-existing historical games" hypothesis.
+- `check_games_label_bug.sql` — confirmed the bug was cosmetic-only (48/48 rows agreed between
+  the FK-derived season and `raw_uploads`' independently-resolved one).
+- `extract_games.php` — updated in place to resolve the label's season from `seasons.year`
+  instead of `date('Y')`; the version in this inventory's first entry above is now stale.
+- `backfill_games_label.sql` — corrects the label on all 48 already-affected games.
+
 ---
 
-## 8. Feature 1 (stage 1) — union views for `legacy_play_log` + `plays`
+## 8. Feature 1 — union views for `legacy_play_log` + `plays` (both stages)
+
+### Stage 1: the three `v_playcall_*` views
 
 **Scope:** the three `v_playcall_*`-style aggregate views only (`v_playcall_formation`,
 `v_playcall_matchup`, `v_playcall_matchup_formation`). The four `v_relevant_*` views and their
-`v_relevant_current_season` helper are a deliberately separate stage 2, not started.
+`v_relevant_current_season` helper are a deliberately separate stage 2, covered below.
 
 **Design decisions, confirmed with the user before building:**
 - **Special-teams filtering on the `plays` side uses formation only**
@@ -695,3 +736,210 @@ match.
    NULL bucket.
 5. Grain check on all three `_all` views (`GROUP BY` the view's own key, `HAVING COUNT(*) > 1`)
    — all three came back empty, confirming one row per matchup as required.
+
+### Stage 2: the four `v_relevant_*` views
+
+**Scope:** `v_relevant_defense_current`, `v_relevant_defense_formation_current`,
+`v_relevant_offense_current`, `v_relevant_offense_formation_current`, and their
+`v_relevant_current_season` helper — all four left completely untouched, per explicit decision
+below, despite a real defect found in them.
+
+**A genuine design defect found in the existing views before any building started.** The user
+supplied the original legacy `gplan_main` structure — `n_s_pe_off`/`n_s_pe_def` (+ `_f`
+formation variants), and the same for `pi`/`mv` (owner codes for the three tracked
+owner/franchise pairs: PE = Philadelphia Eagles, PI = Pittsburgh Panthers, MV = Minnesota
+Vikings). Every one of those tables carries `season` as a plain data column across full
+multi-season history, with no restriction at the table level at all — filtering by year was
+always an end-user, UI-level concern. The current `v_relevant_current_season` helper instead
+computes `MAX(season)` per team and every `_current` view hard-joins on equality against it —
+meaning these views can only ever surface each team's single most recent season, with no way to
+reach any other one. Confirmed directly by reading the actual view SQL, not assumed. This is a
+real regression relative to the original design, not a simplification.
+
+**Decision: leave the old views and their defect alone; build stage 2 correctly from scratch.**
+The "untouched eight" requirement was originally about not retrofitting the union onto them,
+but touching them to fix this separate, real defect was raised as an option anyway — the user's
+call was to leave them exactly as they are and get stage 2 right instead, rather than change
+behavior on views that may already be depended on elsewhere. New views expose `season` as a
+plain, unrestricted, filterable column, matching the legacy `n_s_*` design exactly — no
+"current" restriction, and no need for an equivalent to `v_relevant_current_season` at all,
+since relevance is about which *teams* are tracked, not which *season*.
+
+**The `plays`-side relevance-matching problem, and how it was resolved.** `legacy_relevant_teams`
+identifies relevant teams by text `team_code` (matching `legacy_play_log` natively); `plays`
+identifies teams by `franchise_id`, a completely different identity system, with no direct link
+between the two. The only bridge available is `franchises.label → team_codes.team_name → code`
+— a text match on the franchise's *current* name, which is fragile in general (the project's own
+`team_codes` build already surfaced a real case, the Washington Redskins/Washington Team
+franchise, where the current name had no code seeded for it at all — a silent, zero-match
+failure were it to be hit here). Rather than assume this fragility didn't apply to the three
+specific teams actually in play, it was checked directly: a round-trip diagnostic
+(`check_relevant_teams_franchise_mapping.sql`) confirmed all three relevant teams
+(`PE`→Philadelphia Eagles/franchise_id 2015, `MV`→Minnesota Vikings/franchise_id 2019,
+`PI`→Pittsburgh Panthers/franchise_id 5008) resolve cleanly 1:1 in both directions, no `NULL`s,
+no fan-out. Given that clean result, the no-schema-change join was used rather than adding a
+`legacy_relevant_teams.franchise_id` column — the schema-change option remains the right call if
+a future relevant team's current name ever lacks a `team_codes` entry, and is worth re-checking
+any time a new row is added to `legacy_relevant_teams`.
+
+**Build:** `v_plays_normalized` (stage 1's helper) extended additively with `league_code`,
+`season`, `offense_franchise_id`, and a derived `defense_franchise_id` (whichever of
+`games.home_franchise_id`/`away_franchise_id` isn't the offense side, explicitly `NULL` rather
+than guessed when `offense_franchise_id` itself is `NULL`) — purely additive, so stage 1's three
+views needed no re-verification. A new small helper, `v_relevant_teams_franchise`, resolves each
+`legacy_relevant_teams` row to its currently-resolvable `franchise_id` via the validated join
+above. The four `_all` views union `legacy_play_log` (filtered via `legacy_relevant_teams`
+directly, no season restriction) with `v_plays_normalized` (filtered via
+`v_relevant_teams_franchise`), grouped by `league_code, team_code, season[, formation_code],
+play_call` — one row per key, `season` now a real dimension instead of a single forced value.
+
+**Live verification results, and a real, concrete illustration of the defect this stage fixed:**
+1. `season_count` per team in the new `v_relevant_offense_all`: PI 33 distinct seasons
+   (2000–2039), MV 31 (2004–2034), PE 30 (2005–2034) — the actual multi-season history now
+   genuinely reachable, versus one row per team through the old views.
+2. Regression check: the legacy-only portion matches the old `_current` views exactly, row for
+   row, for every `play_call` on the one season the old views can reach (spot-checked on
+   MV/2034 across all 85 rows returned).
+3. `v_relevant_teams_franchise` returns exactly the same 3 rows as the earlier standalone
+   diagnostic — franchise resolution is stable.
+4. 477 offense rows and 593 defense rows in `plays` belong to one of the three tracked teams —
+   real data is flowing through the plays-side join, not silently filtered to zero.
+5. Grain check clean on all four views.
+
+Point 4 combined with point 2 initially looked like a contradiction worth chasing — real
+matching plays exist, yet the regression check showed no difference from the old view. It
+wasn't a contradiction: the live turns actually parsed so far are from NFLAR/NCAA5 seasons
+2034/2038/2039, none of which is the single season (2032, at the time) the old `_current` view
+happened to expose for those teams. All ~1070 rows of live play data were sitting in seasons the
+old view could never reach at all — concrete, current evidence the season restriction wasn't a
+theoretical problem, it was actively hiding real data the moment this stage's diagnostic ran.
+(Chasing down exactly *which* season those live rows belonged to also surfaced an unrelated bug
+in a different, already-"completed" parser — see §9, and §3 for the mistaken assumption that
+led there.)
+
+---
+
+## 9. `extract_games.php` bug: `games.label` used today's date, not the turn's season
+
+Found while verifying Feature 1 stage 2 — a real, separate bug in a different, already-
+"completed" parser, unrelated to the union views themselves. See §3 for the mistaken assumption
+that kicked off the investigation (a claim that the live turns were from season 2032, based on
+nothing more than the project workspace's sample filenames, never actually checked).
+
+**Symptom:** every game created via live extraction carried a label like `"NFLAR 2026 Wk 15:
+..."`, regardless of what season the turn was actually for — all 48 affected games showed 2026,
+the same across turns whose filenames (and, it turned out, correctly-resolved `season_id`)
+said 2034, 2038, and 2039.
+
+**First hypothesis, checked and ruled out:** that live plays had been mismatched onto
+pre-existing historical games left over from the original migration (i.e. a `week_id`
+resolution bug landing on the wrong, already-populated week). Ruled out directly:
+`games.source_upload_id` matched `plays.source_upload_id` exactly for every affected game —
+these were genuinely new games, created fresh by this same live-extraction round, with the
+wrong label baked in from the start, not old ones being reused.
+
+**Root cause**, found by reading `extract_games.php` directly rather than continuing to guess:
+```php
+$label = "{$_cp_league_code} " . date('Y') . " Wk {$_cp_week_number}: {$game['home_team']} vs {$game['away_team']}";
+```
+`date('Y')` returns today's real-world wall-clock year — not the turn's actual in-league
+season, which was already sitting resolved and correct in `$_cp_upload['season_id']` the whole
+time, just never read for the label.
+
+**Confirmed cosmetic-only before fixing or backfilling anything** — the same discipline as
+everywhere else in this project: don't assume a bug's blast radius, check it. A query
+cross-referenced `games.week_id → weeks → seasons` (what the union views and everything else
+downstream actually reads) against `raw_uploads`' independently-resolved season (set by
+`operational_hooks.php`, before `extract_games.php` ever ran) for all 48 affected games. All 48
+rows agreed exactly with each other — 2038/2039/2034, matching the turn filenames — while every
+one disagreed with the label's "2026." Conclusive: the actual `week_id` FK, and therefore every
+one of Feature 1's union views (both stages), was correct throughout. Only the display text was
+ever wrong — Feature 1's live verification results above stand as reported, no correction
+needed there.
+
+**Fixed:** `extract_games.php` now resolves `season_year` from `seasons.year` via the upload's
+own `season_id` (same pattern already used for `league_code`/`week_number` two lines above it in
+the same file), with a `season_id` `NULL` guard added alongside the existing `league_id`/
+`week_id` check. `backfill_games_label.sql` corrects the label on all 48 already-affected games
+by reconstructing it from the same FK chain (`games.week_id → weeks → seasons → leagues`, plus
+`franchises.label` for the two team names), restricted to `source_upload_id IS NOT NULL` so
+migration-era games are left untouched. Also worth noting for next time this kind of bug shows
+up: `extract_games.php`'s own upload dropdown excludes any `week_id` that already has `games`
+rows, so simply re-running the parser against these same uploads would never have picked these
+48 rows up again — the backfill was the only way to correct them, the same "a hook/parser only
+ever runs once" shape as the NCAA5 `franchise_id` gap in §5.
+
+---
+
+## 10. Deleting an uploaded game: `games.source_upload_id` is many-to-one, not one-to-one
+
+**One upload's `games` rows are one-to-many, not one-to-one — same shape as `standings_weekly`.**
+A turn's Results/League Report block reports on every game played league-wide that week, not
+just the uploader's own — confirmed directly while testing a full delete-and-reupload cycle: a
+single NFLAR upload (`upload_id 12`) produced 12 `games` rows, one per game across all 24
+franchises that week, not one. `games.source_upload_id` is genuinely many-to-one: many game rows
+share one upload's ID as their "first upload this result was captured from" source, exactly per
+the schema comment already on that column (§2) — just not previously written down as a
+many-per-upload fact, only as a "which upload wins on conflict" fact.
+
+**Consequence: deleting an uploaded game means deleting by `source_upload_id`, not by a single
+`game_id`.** Targeting only the one `game_id` of interest leaves the other ~11 games from that
+same upload still referencing it. Since `games.source_upload_id → raw_uploads.upload_id` has no
+`ON DELETE CASCADE` (confirmed directly against `new_schema.sql`), attempting to delete the
+`raw_uploads` row afterward fails with a foreign key error (`#1451`) until every game from that
+upload is gone, not just the first one attempted — found directly, live, mid-test.
+
+**Correct procedure, in order:**
+```sql
+-- 1. Find every game this upload touched (there will likely be more than one)
+SELECT game_id, label, week_id FROM games WHERE source_upload_id = {upload_id};
+
+-- 2. Safety check -- franchise_honors.game_id also has no cascade
+SELECT * FROM franchise_honors
+WHERE game_id IN (SELECT game_id FROM games WHERE source_upload_id = {upload_id});
+
+-- 3. Delete all of them -- cascades to team_game_stats/plays/drives automatically
+DELETE FROM games WHERE source_upload_id = {upload_id};
+
+-- 4. That week's standings will regenerate identically on re-processing, safe to
+--    wipe entirely rather than trying to selectively unlink
+DELETE FROM standings_weekly WHERE week_id = {week_id};
+
+-- 5. Now safe -- cascades to raw_upload_blocks automatically
+DELETE FROM raw_uploads WHERE upload_id = {upload_id};
+```
+
+**Cascade map worth having alongside this, confirmed directly against `new_schema.sql`'s actual
+constraints rather than assumed:** `team_game_stats`, `plays`, `drives` → `games`, and
+`raw_upload_blocks` → `raw_uploads`, all cascade automatically. `games.source_upload_id`,
+`standings_weekly.source_upload_id`, and `franchise_honors.game_id` do not — those are the ones
+that block a delete if handled out of order.
+
+---
+
+## 11. Schema-check discipline: DESCRIBE the whole table before adding to it
+
+**Two redundant columns added this same session, both from the identical mistake.**
+`franchises.coach_user_id` (`coaches.id_user` already existed for exactly that purpose) and
+`raw_uploads.id_user` (`uploaded_by` already existed, already configured as DaDaBIK field type
+`ID_user`, already working). Both times, a new column was designed by reasoning about the
+feature being built, without first checking the table's actual, complete definition. The first
+case at least checked `schema.md`'s narrative summary — just not `new_schema.sql`'s own DDL,
+where the real answer was sitting in a comment. The second case checked neither, only whatever
+custom PHP code happened to already be visible.
+
+**Standing habit going forward: run a full `DESCRIBE` (or view the complete `CREATE TABLE`) on
+any table before adding a column to it — every time, not just when something feels like it
+might already exist.** Checking only the specific thing in mind, rather than the table's actual
+complete definition, is what let both of these slip through undetected until they were live and
+populated.
+
+**One live operational detail surfaced while investigating the second case, confirmed by an
+actual live insert, not just theorized:** DaDaBIK's `ID_user` field-type auto-population only
+populates one field when a table has two configured at once — `raw_uploads` briefly had both
+`uploaded_by` (pre-existing) and `id_user` (freshly configured) set to type `ID_user`
+simultaneously, and a real upload inserted during that window came back with `uploaded_by =
+'AlanM'`, `id_user = NULL`. `uploaded_by` sits earlier in the column order; `id_user`, added
+later via `ALTER TABLE`, sits at position 16 (last) — column position as the tie-break is a
+clean fit for this result, though confirmed from one instance, not proven as a hard rule for
+every case.

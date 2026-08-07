@@ -202,7 +202,14 @@ function dadabik_process_raw_upload($upload_id) {
         }
 
         // -------------------- Step 4: split into blocks --------------------
-        $block_count = dadabik_split_into_blocks($conn, $upload_id, $raw_text);
+        // uploaded_by, not id_user -- raw_uploads already had a working, DaDaBIK-native "who
+        // uploaded this" column (uploaded_by, populated by DaDaBIK itself, confirmed no custom
+        // code sets it) before id_user was ever added this session. id_user on raw_uploads has
+        // been dropped as redundant -- see migration_drop_raw_uploads_id_user.sql. Every OTHER
+        // table's id_user column (raw_upload_blocks, standings_weekly, games, team_game_stats,
+        // plays) stays exactly as designed -- only this one source changed, not the shape of
+        // what gets propagated downstream.
+        $block_count = dadabik_split_into_blocks($conn, $upload_id, $raw_text, $upload['uploaded_by'] ?? null);
 
         // 'partial', not 'parsed' -- this hook only identifies the upload and splits it into
         // blocks; the domain-table extraction stages (standings, play-by-play, ...) are
@@ -276,7 +283,7 @@ function dadabik_identify_upload($raw_text) {
 // turn, not data to extract. Upsert (ON DUPLICATE KEY UPDATE) rather than plain INSERT, since
 // raw_upload_blocks has UNIQUE KEY (upload_id, block_seq) specifically so re-running this
 // safely re-splits rather than creating a second, duplicate set of blocks.
-function dadabik_split_into_blocks($conn, $upload_id, $raw_text) {
+function dadabik_split_into_blocks($conn, $upload_id, $raw_text, $id_user) {
     if (!preg_match_all('/<BK\.([^>]+)>/', $raw_text, $matches, PREG_OFFSET_CAPTURE)) {
         return 0;
     }
@@ -287,10 +294,15 @@ function dadabik_split_into_blocks($conn, $upload_id, $raw_text) {
     $seq = 1;
     $inserted = 0;
 
+    // id_user refreshed on conflict, same as block_type/block_text -- consistent with every
+    // other real column here. In practice it'll never actually change across re-runs of the
+    // same upload (upload_id is part of the unique key, so a re-split always traces back to
+    // the same uploader), but there's no reason to special-case it as sticky when nothing else
+    // on this table is.
     $stmt = $conn->prepare(
-        "INSERT INTO raw_upload_blocks (upload_id, block_seq, block_type, block_text)
-         VALUES (:upload_id, :block_seq, :block_type, :block_text)
-         ON DUPLICATE KEY UPDATE block_type = VALUES(block_type), block_text = VALUES(block_text)"
+        "INSERT INTO raw_upload_blocks (upload_id, block_seq, block_type, block_text, id_user)
+         VALUES (:upload_id, :block_seq, :block_type, :block_text, :id_user)
+         ON DUPLICATE KEY UPDATE block_type = VALUES(block_type), block_text = VALUES(block_text), id_user = VALUES(id_user)"
     );
 
     for ($i = 0; $i < $count; $i++) {
@@ -307,6 +319,7 @@ function dadabik_split_into_blocks($conn, $upload_id, $raw_text) {
         $stmt->bindValue(':block_seq', $seq);
         $stmt->bindValue(':block_type', $block_type);
         $stmt->bindValue(':block_text', $block_text);
+        $stmt->bindValue(':id_user', $id_user);
         $stmt->execute();
         $seq++;
         $inserted++;
